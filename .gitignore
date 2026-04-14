@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Node / build tools (if ever added)
+node_modules/
+dist/
+.cache/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Paperclip / internal working files
+goraaa25-comment.json
+
+# Output / working directories (not for deployment)
+output/
+html-references/
+reference/

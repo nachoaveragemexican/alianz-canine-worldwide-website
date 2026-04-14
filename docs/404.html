@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada · Alianz Canine Worldwide</title>
+<meta name="description" content="La página que buscas no existe o ha sido movida.">
+<meta name="robots" content="noindex, follow">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================
+   ACW GLOBAL STYLES — 404.html
+   Paleta: Navy #1B2A4A | Gold #C5A55A | Teal #2A7B88
+   Móvil primero → tablet → escritorio
+   ============================================= */
+:root {
+  --navy:        #1B2A4A;
+  --navy-deep:   #0D1929;
+  --navy-mid:    #243656;
+  --gold:        #C5A55A;
+  --gold-soft:   #D9C88C;
+  --gold-dark:   #A68B3E;
+  --teal:        #2A7B88;
+  --teal-soft:   #357F8C;
+  --cream:       #FAF8F4;
+  --warm-gray:   #F3F1ED;
+  --stone:       #E8E4DD;
+  --text:        #1A1A1A;
+  --text-mid:    #5A5A5A;
+  --text-light:  #6B6B6B;
+  --white:       #FFFFFF;
+  --serif:       'DM Serif Display', Georgia, serif;
+  --sans:        'Outfit', system-ui, sans-serif;
+  --ease:        cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all .35s var(--ease);
+}
+.btn-gold { background: var(--gold); color: var(--white); }
+.btn-gold:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(197, 165, 90, .25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, .3);
+}
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .06);
+}
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13, 25, 41, .85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  transition: background .4s;
+}
+header.solid { background: var(--navy-deep); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255, 255, 255, .55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+.nav-menu a.current { color: var(--gold-soft); }
+.nav-cta {
+  padding: 9px 22px !important;
+  border: 1.5px solid rgba(197, 165, 90, .4) !important;
+  border-radius: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600 !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; display: block; }
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    padding: 16px 0;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; }
+  .burger { display: flex; }
+}
+
+/* =============================================
+   404 MAIN SECTION
+   ============================================= */
+.error-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px 80px; /* top padding clears fixed header */
+}
+
+/* Decorative grain overlay */
+.error-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px;
+  opacity: .5;
+  pointer-events: none;
+}
+
+/* Decorative gradient line */
+.error-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--teal), var(--gold), transparent);
+  opacity: .4;
+}
+
+.error-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 640px;
+}
+
+.error-code {
+  font-family: var(--serif);
+  font-size: clamp(6rem, 18vw, 12rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(197, 165, 90, .25);
+  letter-spacing: -4px;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.error-eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.error-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.error-body {
+  font-size: .92rem;
+  color: rgba(255, 255, 255, .5);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Quick-links strip below CTA */
+.error-links {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  justify-content: center;
+}
+
+.error-links a {
+  font-size: .8rem;
+  color: rgba(255, 255, 255, .35);
+  transition: color .3s;
+}
+.error-links a:hover { color: var(--gold-soft); }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--navy-deep);
+  padding: 64px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, .04);
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255, 255, 255, .3); line-height: 1.75; max-width: 280px; }
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.ft-social a:hover { border-color: var(--gold); background: rgba(197, 165, 90, .08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255, 255, 255, .4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+.ft-col h4 {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: .82rem; color: rgba(255, 255, 255, .35); }
+.ft-col a:hover { color: var(--white); }
+.ft-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .72rem;
+  color: rgba(255, 255, 255, .2);
+}
+.ft-bottom a { color: rgba(255, 255, 255, .2); }
+.ft-bottom a:hover { color: rgba(255, 255, 255, .5); }
+
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- =============================================
+     HEADER / NAV
+     Misma estructura que el resto del sitio
+     ============================================= -->
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="/">Inicio</a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/eventos">Eventos</a>
+      <a href="/razas">Razas</a>
+      <a href="/jueces">Jueces</a>
+      <a href="/reglamentos">Reglamentos</a>
+      <a href="/blog">Blog</a>
+      <a href="/contacto">Contacto</a>
+      <a href="/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =============================================
+     404 PRINCIPAL
+     Sección única: hero-estilo oscuro, mensaje
+     amigable, botón de regreso al inicio
+     ============================================= -->
+<main>
+  <section class="error-section">
+    <div class="error-inner rv">
+      <p class="error-code" aria-hidden="true">404</p>
+      <p class="error-eyebrow">Página no encontrada</p>
+      <h1 class="error-title">Esta página no existe<br>o ha sido movida</h1>
+      <p class="error-body">
+        Es posible que la URL haya cambiado o que el contenido que buscas<br>
+        todavía esté en desarrollo. Vuelve al inicio y navega desde allí.
+      </p>
+      <div class="error-actions">
+        <a href="/" class="btn btn-gold">Volver al Inicio</a>
+        <a href="/contacto" class="btn btn-outline">Contactar</a>
+      </div>
+
+      <!-- Accesos directos a las secciones principales -->
+      <nav class="error-links" aria-label="Accesos rápidos">
+        <a href="/nosotros">Nosotros</a>
+        <a href="/eventos">Eventos</a>
+        <a href="/razas">Razas</a>
+        <a href="/jueces">Jueces</a>
+        <a href="/reglamentos">Reglamentos</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<!-- =============================================
+     FOOTER
+     Idéntico al resto del sitio
+     ============================================= -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/eventos">Eventos</a></li>
+          <li><a href="/razas">Razas</a></li>
+          <li><a href="/jueces">Jueces</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/reglamentos">Reglamentos</a></li>
+          <li><a href="/404.html">Formación</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>12024, Blvd. Agua Caliente</li>
+          <li>Hipodromo Agua Caliente, 22420 Tijuana, B.C.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- Sticky header ----
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+
+// ---- Mobile burger with aria-expanded ----
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+// ---- Scroll reveal ----
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

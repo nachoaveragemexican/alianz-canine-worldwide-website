@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Alianz Canine Worldwide</title>
+<meta name="description" content="Afiliación de clubs, información sobre eventos, pedigrees, formación profesional y certificaciones. Respondemos en 24 a 48 horas hábiles.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contacto | Alianz Canine Worldwide">
+<meta property="og:description" content="Escríbenos para afiliación, eventos, pedigrees o formación. Respuesta en 24–48 horas hábiles.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================
+   ACW GLOBAL STYLES — contacto.html
+   Paleta: Navy #1B2A4A | Gold #C5A55A | Teal #2A7B88
+   ============================================= */
+:root {
+  --navy:       #1B2A4A;
+  --navy-deep:  #0D1929;
+  --navy-mid:   #243656;
+  --gold:       #C5A55A;
+  --gold-soft:  #D9C88C;
+  --gold-dark:  #A68B3E;
+  --teal:       #2A7B88;
+  --teal-soft:  #357F8C;
+  --cream:      #FAF8F4;
+  --stone:      #E8E4DD;
+  --text:       #1A1A1A;
+  --text-mid:   #5A5A5A;
+  --text-light: #6B6B6B; /* darkened from #8A8A8A for WCAG AA 4.5:1 on white/cream */
+  --white:      #FFFFFF;
+  --serif:      'DM Serif Display', Georgia, serif;
+  --sans:       'Outfit', system-ui, sans-serif;
+  --ease:       cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13,25,41,.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background .4s;
+}
+header.solid { background: var(--navy-deep); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+.nav-menu a.current { color: var(--gold-soft); }
+.nav-cta {
+  padding: 9px 22px !important;
+  border: 1.5px solid rgba(197,165,90,.4) !important;
+  border-radius: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600 !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: 16px 0;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; }
+  .burger { display: flex; }
+}
+
+/* =============================================
+   PAGE HERO
+   ============================================= */
+.page-hero {
+  padding: 160px 0 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%);
+}
+.page-hero .wrap { position: relative; z-index: 2; }
+.page-hero .eyebrow { color: var(--gold-soft); }
+.page-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* =============================================
+   CONTACT SECTION — two columns
+   ============================================= */
+.contact {
+  padding: clamp(80px, 10vw, 120px) 0;
+  background: var(--white);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ---- FORM COLUMN ---- */
+.contact-form h2 {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.contact-form > p {
+  font-size: .9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--stone);
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color .3s, box-shadow .3s;
+  outline: none;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(42,123,136,.08);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-light); }
+
+/* Custom dropdown arrow */
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A8A8A' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  background: var(--gold);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all .35s var(--ease);
+  margin-top: 8px;
+}
+.form-submit:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(197,165,90,.25);
+}
+
+/* Success message (hidden by default) */
+.form-success {
+  display: none;
+  padding: 20px 24px;
+  background: rgba(42,123,136,.08);
+  border: 1px solid rgba(42,123,136,.2);
+  border-radius: 12px;
+  margin-top: 24px;
+  font-size: .9rem;
+  color: var(--teal);
+  line-height: 1.6;
+}
+.form-success.visible { display: block; }
+
+/* ---- SIDEBAR ---- */
+.contact-info { position: sticky; top: 100px; }
+
+.info-card {
+  padding: 36px;
+  background: var(--cream);
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+.info-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+.info-item { display: flex; gap: 14px; margin-bottom: 20px; }
+.info-item:last-child { margin-bottom: 0; }
+.info-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.info-icon svg {
+  width: 18px; height: 18px;
+  stroke: var(--gold-soft);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.info-item-text h4 { font-size: .82rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.info-item-text p { font-size: .82rem; color: var(--text-mid); line-height: 1.5; }
+.info-item-text a { color: var(--teal); font-weight: 500; }
+.info-item-text a:hover { color: var(--teal-soft); }
+
+/* Hours card on navy background */
+.hours-card {
+  padding: 36px;
+  background: var(--navy);
+  border-radius: 20px;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.hours-card h3 { font-family: var(--serif); font-size: 1.2rem; color: var(--white); margin-bottom: 16px; }
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  font-size: .85rem;
+}
+.hours-row:last-child { border: none; }
+.hours-day { color: rgba(255,255,255,.5); }
+.hours-time { color: var(--gold-soft); font-weight: 500; }
+
+/* Social links below sidebar cards */
+.social-bar { display: flex; gap: 10px; }
+.social-bar a {
+  width: 44px; height: 44px;
+  border: 1.5px solid var(--stone);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+}
+.social-bar a:hover { border-color: var(--gold); background: rgba(197,165,90,.06); }
+.social-bar svg { width: 18px; height: 18px; fill: var(--text-light); }
+.social-bar a:hover svg { fill: var(--gold); }
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-info { position: static; }
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--navy-deep);
+  padding: 64px 0 0;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+.ft-col h4 {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
+.ft-col a:hover { color: var(--white); }
+.ft-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .72rem;
+  color: rgba(255,255,255,.2);
+}
+.ft-bottom a { color: rgba(255,255,255,.2); }
+.ft-bottom a:hover { color: rgba(255,255,255,.5); }
+
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="/">Inicio</a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/eventos">Eventos</a>
+      <a href="/razas">Razas</a>
+      <a href="/jueces">Jueces</a>
+      <a href="/reglamentos">Reglamentos</a>
+      <a href="/blog">Blog</a>
+      <a href="/contacto" class="current">Contacto</a>
+      <a href="/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =================== PAGE HERO =================== -->
+<section class="page-hero" aria-label="Encabezado de página Contacto">
+  <div class="wrap">
+    <div class="eyebrow rv">Contacto</div>
+    <h1 class="rv">Escríbenos</h1>
+    <p class="rv">Afiliación de clubs, información sobre eventos, pedigrees, formación profesional y certificaciones. Respondemos en 24 a 48 horas hábiles.</p>
+  </div>
+</section>
+
+<!-- =================== CONTACT SECTION =================== -->
+<section class="contact" aria-labelledby="contact-form-heading">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- FORM COLUMN -->
+      <div class="contact-form rv">
+        <h2 id="contact-form-heading">Envíanos un Mensaje</h2>
+        <p>Completa el formulario y te responderemos en un plazo de 24 a 48 horas hábiles.</p>
+
+        <!--
+          NOTA TÉCNICA: Este formulario conecta al pipeline "Leads Web" en GoHighLevel.
+          Cada lead entra como contacto con tag automático según el tipo de consulta seleccionado.
+          Para integración GHL: reemplazar <form> con el snippet nativo de GHL Form Builder
+          o configurar el webhook correspondiente al campo "tipo".
+        -->
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre Completo <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre completo"
+                required
+                autocomplete="name"
+              >
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electrónico <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+                autocomplete="email"
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pais">País</label>
+              <input
+                type="text"
+                id="pais"
+                name="pais"
+                placeholder="Tu país"
+                autocomplete="country-name"
+              >
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tipo de Consulta <span aria-hidden="true">*</span></label>
+              <select id="tipo" name="tipo" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="afiliacion">Afiliación de Club</option>
+                <option value="general">Información General</option>
+                <option value="eventos">Eventos y Competencias</option>
+                <option value="pedigrees">Pedigrees y Registros</option>
+                <option value="formacion">Formación Profesional</option>
+                <option value="salud">Certificaciones de Salud</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="¿En qué podemos ayudarte?"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Enviar Mensaje
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Confirmation message shown after successful submission -->
+        <div class="form-success" id="formSuccess" role="alert">
+          Mensaje enviado correctamente. Te responderemos en un plazo de 24 a 48 horas hábiles.
+        </div>
+      </div>
+
+      <!-- SIDEBAR COLUMN -->
+      <div class="contact-info rv">
+        <!-- Contacto directo -->
+        <div class="info-card">
+          <h3>Información de Contacto</h3>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <path d="M22 6l-10 7L2 6"/>
+              </svg>
+            </div>
+            <div class="info-item-text">
+              <h4>Email</h4>
+              <p><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="info-item-text">
+              <h4>WhatsApp</h4>
+              <p><a href="https://wa.me/526625183938" target="_blank" rel="noopener noreferrer">+52 662 518 3938</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="info-item-text">
+              <h4>Sede</h4>
+              <p>12024, Blvd. Agua Caliente<br>Hipodromo Agua Caliente, 22420<br>Tijuana, B.C.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horario -->
+        <div class="hours-card">
+          <h3>Horario de Atención</h3>
+          <div class="hours-row">
+            <span class="hours-day">Lunes — Viernes</span>
+            <span class="hours-time">10:00 — 18:00 h</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Hora de España</span>
+            <span class="hours-time">(CET / CEST)</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sábado</span>
+            <span class="hours-time">Cerrado</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Domingo</span>
+            <span class="hours-time">Cerrado</span>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <!-- NOTA TÉCNICA: Verificar URL de Instagram antes de publicar —
+             el enlace estaba roto en el sitio anterior. -->
+        <div class="social-bar" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/eventos">Eventos</a></li>
+          <li><a href="/razas">Razas</a></li>
+          <li><a href="/jueces">Jueces</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/reglamentos">Reglamentos</a></li>
+          <li><a href="/404.html">Formación</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>12024, Blvd. Agua Caliente</li>
+          <li>Hipodromo Agua Caliente, 22420 Tijuana, B.C.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- Sticky header ----
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+
+// ---- Mobile burger with aria-expanded ----
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+// ---- Scroll reveal ----
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// ---- Form submission (client-side only — wire to GHL webhook in production) ----
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Clear previous error state
+  this.querySelectorAll('.field-error').forEach(el => el.remove());
+  this.querySelectorAll('[aria-invalid]').forEach(el => {
+    el.removeAttribute('aria-invalid');
+    el.style.borderColor = '';
+  });
+
+  const required = this.querySelectorAll('[required]');
+  let valid = true;
+
+  required.forEach(field => {
+    let errorMsg = '';
+    if (!field.value.trim()) {
+      errorMsg = 'Este campo es obligatorio.';
+    } else if (field.type === 'email') {
+      // Validate email format since novalidate disables browser check
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRe.test(field.value.trim())) {
+        errorMsg = 'Ingresa un correo electrónico válido.';
+      }
+    }
+    if (errorMsg) {
+      field.style.borderColor = '#B91C1C'; /* red — not gold — for color-agnostic error */
+      field.setAttribute('aria-invalid', 'true');
+      const err = document.createElement('span');
+      err.className = 'field-error';
+      err.setAttribute('role', 'alert');
+      err.style.cssText = 'display:block;font-size:.75rem;color:#B91C1C;margin-top:4px;';
+      err.textContent = errorMsg;
+      field.parentNode.appendChild(err);
+      valid = false;
+    }
+  });
+
+  if (!valid) {
+    // Move focus to first invalid field for keyboard/screen reader users
+    const firstInvalid = this.querySelector('[aria-invalid]');
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  // TODO: Replace with actual GHL webhook POST
+  // fetch('https://services.leadconnectorhq.com/hooks/...', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(Object.fromEntries(new FormData(this)))
+  // });
+
+  // Show success message
+  this.style.display = 'none';
+  document.getElementById('formSuccess').classList.add('visible');
+  document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+</script>
+</body>
+</html>

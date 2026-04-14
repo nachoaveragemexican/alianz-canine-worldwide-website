@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220">
+  <!-- Background -->
+  <rect width="400" height="220" fill="#1B2A4A"/>
+  <!-- Subtle pattern overlay -->
+  <rect width="400" height="220" fill="url(#grid)" opacity="0.08"/>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#C5A55A" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <!-- Dog paw icon -->
+  <g transform="translate(200,100)" fill="#C5A55A" opacity="0.6">
+    <!-- Central pad -->
+    <ellipse cx="0" cy="10" rx="14" ry="11"/>
+    <!-- Toe pads -->
+    <ellipse cx="-16" cy="-4" rx="7" ry="8"/>
+    <ellipse cx="-6" cy="-16" rx="7" ry="8"/>
+    <ellipse cx="6" cy="-16" rx="7" ry="8"/>
+    <ellipse cx="16" cy="-4" rx="7" ry="8"/>
+  </g>
+  <!-- ACW text -->
+  <text x="200" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#C5A55A" opacity="0.7" letter-spacing="4">ALIANZ CANINE WORLDWIDE</text>
+  <!-- Imagen próximamente -->
+  <text x="200" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7A90A8" letter-spacing="2">IMAGEN NO DISPONIBLE</text>
+</svg>

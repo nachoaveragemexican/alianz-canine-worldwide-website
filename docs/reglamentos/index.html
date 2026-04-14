@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reglamentos | Alianz Canine Worldwide</title>
+<meta name="description" content="Documentación oficial de Alianz Canine Worldwide: estatutos, reglamentos de exposiciones, normativa de jueces, registros de pedigrees y directivas de la UE.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Reglamentos | Alianz Canine Worldwide">
+<meta property="og:description" content="Normativa técnica y reglamentaria oficial de Alianz Canine Worldwide. Exposiciones, deportes caninos, registros genealógicos y certificaciones de salud.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================
+   ACW GLOBAL STYLES — reglamentos.html
+   Paleta: Navy #1B2A4A | Gold #C5A55A | Teal #2A7B88
+   ============================================= */
+:root {
+  --navy:       #1B2A4A;
+  --navy-deep:  #0D1929;
+  --navy-mid:   #243656;
+  --gold:       #C5A55A;
+  --gold-soft:  #D9C88C;
+  --gold-dark:  #A68B3E;
+  --teal:       #2A7B88;
+  --teal-soft:  #357F8C;
+  --cream:      #FAF8F4;
+  --warm-gray:  #F3F1ED;
+  --stone:      #E8E4DD;
+  --text:       #1A1A1A;
+  --text-mid:   #5A5A5A;
+  --text-light: #6B6B6B;
+  --white:      #FFFFFF;
+  --serif:      'DM Serif Display', Georgia, serif;
+  --sans:       'Outfit', system-ui, sans-serif;
+  --ease:       cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all .35s var(--ease);
+}
+.btn-gold { background: var(--gold); color: var(--white); }
+.btn-gold:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(197,165,90,.25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,.3);
+}
+.btn-outline:hover {
+  border-color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.06);
+}
+.btn-outline-navy {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+  padding: 10px 20px;
+  font-size: .8rem;
+}
+.btn-outline-navy:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+.btn-sm-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(42,123,136,.3);
+  color: var(--teal);
+  background: rgba(42,123,136,.05);
+  cursor: pointer;
+  transition: all .3s var(--ease);
+}
+.btn-sm-pdf:hover {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+/* Disabled state — document not yet available */
+.btn-sm-pdf--disabled,
+.btn-sm-pdf--disabled:hover {
+  opacity: .45;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: rgba(27,42,74,.04);
+  color: var(--text-light);
+  border-color: rgba(27,42,74,.15);
+}
+.btn-sm-pdf svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.btn-arrow { width: 18px; height: 18px; }
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13,25,41,.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background .4s;
+}
+header.solid { background: var(--navy-deep); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+.nav-menu a.current { color: var(--gold-soft); }
+.nav-cta {
+  padding: 9px 22px !important;
+  border: 1.5px solid rgba(197,165,90,.4) !important;
+  border-radius: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600 !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: 16px 0;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; width: auto !important; }
+  .burger { display: flex; }
+}
+
+/* =============================================
+   PAGE HERO
+   ============================================= */
+.page-hero {
+  padding: 160px 0 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%);
+}
+.page-hero .wrap { position: relative; z-index: 2; }
+.page-hero .eyebrow { color: var(--gold-soft); }
+.page-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* =============================================
+   QUICK NAV — anchor links to categories
+   ============================================= */
+.quick-nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--stone);
+  position: sticky;
+  top: 70px;
+  z-index: 50;
+}
+.quick-nav-inner {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.quick-nav-inner::-webkit-scrollbar { display: none; }
+.quick-nav-link {
+  flex-shrink: 0;
+  padding: 16px 20px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .4px;
+  color: var(--text-light);
+  border-bottom: 2px solid transparent;
+  transition: all .25s;
+  white-space: nowrap;
+}
+.quick-nav-link:hover {
+  color: var(--navy);
+  border-bottom-color: var(--teal);
+}
+
+/* =============================================
+   DOCUMENT CATEGORIES — alternating cream/white sections
+   ============================================= */
+
+/* Section heading shared by all 6 categories */
+.doc-section {
+  padding: clamp(64px, 8vw, 100px) 0;
+}
+.doc-section:nth-child(even) { background: var(--cream); }
+.doc-section:nth-child(odd)  { background: var(--white); }
+
+.doc-section-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  align-items: flex-start;
+}
+.doc-section-label {
+  position: sticky;
+  top: 130px; /* below header + quick-nav */
+}
+.doc-section-label .eyebrow { margin-bottom: 10px; }
+.doc-section-label h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.doc-section-label p {
+  font-size: .82rem;
+  color: var(--text-light);
+  line-height: 1.75;
+}
+
+/* Document list */
+.doc-list { display: flex; flex-direction: column; gap: 14px; }
+
+.doc-item {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: all .35s var(--ease);
+}
+/* On cream sections, doc items use white background naturally;
+   on white sections, items get cream background for contrast */
+.doc-section:nth-child(odd) .doc-item { background: var(--cream); }
+
+.doc-item:hover {
+  border-color: rgba(42,123,136,.3);
+  box-shadow: 0 8px 24px rgba(27,42,74,.06);
+  transform: translateX(4px);
+}
+
+/* PDF icon badge */
+.doc-icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: rgba(42,123,136,.08);
+  border: 1px solid rgba(42,123,136,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.doc-icon svg {
+  width: 20px; height: 20px;
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.doc-item-content { flex: 1; }
+.doc-item-content h4 {
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.doc-item-content p {
+  font-size: .8rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.doc-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.doc-version {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.doc-lang {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 3px 8px;
+  background: rgba(27,42,74,.06);
+  border-radius: 4px;
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .doc-section-inner { grid-template-columns: 1fr; gap: 32px; }
+  .doc-section-label { position: static; }
+}
+@media (max-width: 500px) {
+  .doc-item { flex-direction: column; gap: 12px; }
+}
+
+/* =============================================
+   UPDATE NOTICE — navy band
+   ============================================= */
+.update-notice {
+  padding: clamp(48px, 6vw, 72px) 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.update-notice::before {
+  content: '';
+  position: absolute;
+  top: -150px; right: -150px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,165,90,.06), transparent 70%);
+}
+.update-notice-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.update-notice-text h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.update-notice-text p {
+  font-size: .85rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) { .update-notice-inner { grid-template-columns: 1fr; } }
+
+/* =============================================
+   CTA — dark band
+   ============================================= */
+.cta {
+  padding: clamp(80px, 10vw, 120px) 0;
+  background: var(--navy-deep);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,123,136,.08), transparent 70%);
+}
+.cta::after {
+  content: '';
+  position: absolute;
+  bottom: -250px; left: -150px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,165,90,.06), transparent 70%);
+}
+.cta-inner { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+.cta-inner .eyebrow { color: var(--gold-soft); margin-bottom: 16px; }
+.cta-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.cta-inner p {
+  font-size: .95rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--navy-deep);
+  padding: 64px 0 0;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+.ft-col h4 {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
+.ft-col a:hover { color: var(--white); }
+.ft-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .72rem;
+  color: rgba(255,255,255,.2);
+}
+.ft-bottom a { color: rgba(255,255,255,.2); }
+.ft-bottom a:hover { color: rgba(255,255,255,.5); }
+
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+
+/* Accessibility: eyebrow on light backgrounds */
+.doc-section .eyebrow { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/eventos">Eventos</a>
+      <a href="/razas">Razas</a>
+      <a href="/jueces">Jueces</a>
+      <a href="/reglamentos" class="current">Reglamentos</a>
+      <a href="/blog">Blog</a>
+      <a href="/contacto">Contacto</a>
+      <a href="/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =================== PAGE HERO =================== -->
+<section class="page-hero" aria-label="Encabezado de página Reglamentos">
+  <div class="wrap">
+    <div class="eyebrow rv">NORMATIVA OFICIAL ACW</div>
+    <h1 class="rv">Reglamentos y Normativa</h1>
+    <p class="rv">La documentación oficial que rige cada actividad de Alianz Canine Worldwide — desde exposiciones hasta registros genealógicos, accesible y actualizada.</p>
+  </div>
+</section>
+
+<!-- =================== QUICK NAV =================== -->
+<nav class="quick-nav" aria-label="Ir a categoría de reglamentos">
+  <div class="wrap">
+    <div class="quick-nav-inner">
+      <a href="#estatutos" class="quick-nav-link">Estatutos</a>
+      <a href="#exposiciones" class="quick-nav-link">Exposiciones</a>
+      <a href="#jueces-reg" class="quick-nav-link">Jueces</a>
+      <a href="#registros" class="quick-nav-link">Registros y Pedigrees</a>
+      <a href="#directivas" class="quick-nav-link">Directivas UE</a>
+      <a href="#especificos" class="quick-nav-link">Reglamentos Específicos</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== SECCIÓN 1: ESTATUTOS =================== -->
+<section class="doc-section" id="estatutos" aria-labelledby="estatutos-heading">
+  <div class="wrap">
+    <div class="doc-section-inner">
+      <div class="doc-section-label rv">
+        <div class="eyebrow">Categoría 01</div>
+        <h2 id="estatutos-heading">Estatutos y Reglamento General</h2>
+        <p>Los documentos fundacionales que definen la estructura, principios y gobierno de Alianz Canine Worldwide como organización internacional.</p>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Estatutos de ACW</h4>
+            <p>Marco legal constitutivo de la organización y su actividad a nivel internacional.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN · PT</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento General</h4>
+            <p>Normas que rigen el funcionamiento interno, la membresía de clubes y los derechos y obligaciones de los asociados.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SECCIÓN 2: EXPOSICIONES =================== -->
+<section class="doc-section" id="exposiciones" aria-labelledby="exposiciones-heading">
+  <div class="wrap">
+    <div class="doc-section-inner">
+      <div class="doc-section-label rv">
+        <div class="eyebrow">Categoría 02</div>
+        <h2 id="exposiciones-heading">Exposiciones y Competencias</h2>
+        <p>Normativa aplicable a todas las exposiciones de conformación, deportes caninos y eventos oficiales avalados por Alianz.</p>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento de Exposiciones de Conformación</h4>
+            <p>Criterios de participación, evaluación y títulos para exposiciones bajo el sello Alianz.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN · DE</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento de Deportes Caninos</h4>
+            <p>Normas para IGP, FastCat, FlyBall, Canicross y disciplinas deportivas oficiales.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SECCIÓN 3: JUECES =================== -->
+<section class="doc-section" id="jueces-reg" aria-labelledby="jueces-reg-heading">
+  <div class="wrap">
+    <div class="doc-section-inner">
+      <div class="doc-section-label rv">
+        <div class="eyebrow">Categoría 03</div>
+        <h2 id="jueces-reg-heading">Jueces</h2>
+        <p>Requisitos de formación, certificación, ética profesional y actualización para jueces reconocidos por Alianz Canine Worldwide.</p>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento de Jueces Internacionales</h4>
+            <p>Proceso de certificación, código ético y facultades de los jueces en eventos oficiales.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN · PT · FR</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Criterios de Evaluación por Grupo</h4>
+            <p>Guías técnicas de evaluación morfológica por cada grupo de razas.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SECCIÓN 4: REGISTROS =================== -->
+<section class="doc-section" id="registros" aria-labelledby="registros-heading">
+  <div class="wrap">
+    <div class="doc-section-inner">
+      <div class="doc-section-label rv">
+        <div class="eyebrow">Categoría 04</div>
+        <h2 id="registros-heading">Registros y Pedigrees</h2>
+        <p>Procedimientos y requisitos para el registro genealógico, emisión de pedigrees, verificación por ADN e inscripción de afijos bajo los Libros de Orígenes Caninos de Alianz.</p>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Normativa de Registros y Pedigrees</h4>
+            <p>Requisitos para el registro de ejemplares, afijos y transferencias con validez internacional.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Protocolo de Verificación por ADN</h4>
+            <p>Procedimiento para la identificación genética obligatoria en criaderos certificados.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SECCIÓN 5: DIRECTIVAS =================== -->
+<section class="doc-section" id="directivas" aria-labelledby="directivas-heading">
+  <div class="wrap">
+    <div class="doc-section-inner">
+      <div class="doc-section-label rv">
+        <div class="eyebrow">Categoría 05</div>
+        <h2 id="directivas-heading">Directivas Legales de la Unión Europea</h2>
+        <p>Marco legal europeo que respalda la actividad de Alianz: directivas vinculantes en materia de pureza racial, bienestar animal e identificación de animales de compañía.</p>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Directiva 77/504/CEE</h4>
+            <p>Marco de referencia para razas puras en la Unión Europea.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">25 julio 1977</span>
+              <span class="doc-lang">ES · EN</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Directiva 91/174/CEE</h4>
+            <p>Condiciones zootécnicas y genealógicas que rigen la comercialización de animales de raza.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">25 marzo 1991</span>
+              <span class="doc-lang">ES · EN</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Real Decreto 558/2001</h4>
+            <p>Marco normativo español de aplicación de las directivas europeas.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">25 mayo 2001 — mod. RD 1557/2005</span>
+              <span class="doc-lang">ES</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SECCIÓN 6: ESPECÍFICOS =================== -->
+<section class="doc-section" id="especificos" aria-labelledby="especificos-heading">
+  <div class="wrap">
+    <div class="doc-section-inner">
+      <div class="doc-section-label rv">
+        <div class="eyebrow">Categoría 06</div>
+        <h2 id="especificos-heading">Reglamentos Específicos</h2>
+        <p>Normativa de aplicación especializada para disciplinas concretas: peluquería canina, trabajo de protección (IGP), perros de rescate y otras competencias oficiales.</p>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento de Grooming y Peluquería Canina</h4>
+            <p>Criterios técnicos para concursos y certificaciones profesionales.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN · PT · FR</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento de IGP (Schutzhund)</h4>
+            <p>Normativa para la prueba de trabajo de protección en sus tres fases.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="doc-item rv">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="doc-item-content">
+            <h4>Reglamento de Perros de Rescate</h4>
+            <p>Requisitos y evaluación para unidades caninas de búsqueda y rescate.</p>
+            <div class="doc-item-meta">
+              <span class="doc-version">Vigente 2026</span>
+              <span class="doc-lang">ES · EN</span>
+              <a href="#" class="btn-sm-pdf btn-sm-pdf--disabled" aria-disabled="true" tabindex="-1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== UPDATE NOTICE =================== -->
+<section class="update-notice" aria-labelledby="update-heading">
+  <div class="wrap">
+    <div class="update-notice-inner">
+      <div class="update-notice-text rv">
+        <h3 id="update-heading">¿No encuentras el documento que buscas?</h3>
+        <p>Los reglamentos se actualizan periódicamente. Si necesitas una versión específica, una traducción a otro idioma o un documento no listado aquí, contacta a tu federación miembro o escríbenos directamente.</p>
+      </div>
+      <div class="rv">
+        <a href="/contacto" class="btn btn-gold">
+          Contactar
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA =================== -->
+<section class="cta" aria-labelledby="cta-reglamentos-heading">
+  <div class="wrap">
+    <div class="cta-inner rv">
+      <div class="eyebrow">Área de Miembros</div>
+      <h2 id="cta-reglamentos-heading">Acceso Completo para Miembros Alianz</h2>
+      <p>Los miembros registrados tienen acceso a versiones de trabajo, borradores de nuevas normativas y el repositorio completo de documentación técnica a través del Área de Miembros.</p>
+      <a href="/404.html" class="btn btn-gold">
+        Iniciar Sesión
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/eventos">Eventos</a></li>
+          <li><a href="/razas">Razas</a></li>
+          <li><a href="/jueces">Jueces</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/reglamentos">Reglamentos</a></li>
+          <li><a href="/404.html">Formación</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>12024, Blvd. Agua Caliente</li>
+          <li>Hipodromo Agua Caliente, 22420 Tijuana, B.C.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky header
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+
+// Mobile burger with aria-expanded
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+// Scroll reveal with staggered delay
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// Quick nav: highlight active section on scroll
+const sections = document.querySelectorAll('.doc-section[id]');
+const navLinks = document.querySelectorAll('.quick-nav-link');
+const quickNavObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.style.color = '');
+      const active = document.querySelector(`.quick-nav-link[href="#${entry.target.id}"]`);
+      if (active) active.style.color = 'var(--teal)';
+    }
+  });
+}, { threshold: .3 });
+sections.forEach(s => quickNavObserver.observe(s));
+</script>
+
+</body>
+</html>

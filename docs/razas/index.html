@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razas y Grupos Reconocidos | Alianz Canine Worldwide</title>
+<meta name="description" content="Clasificación oficial de las razas caninas según los estándares de Alianz Canine Worldwide. Ocho grupos internacionales para criadores, jueces y clubes de 50 países.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Razas y Grupos Reconocidos | Alianz Canine Worldwide">
+<meta property="og:description" content="Los 8 grupos de razas caninas reconocidos internacionalmente por Alianz, con estándares morfológicos y criterios de evaluación validados bajo normativa europea.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================
+   ACW GLOBAL STYLES — razas.html
+   Paleta: Navy #1B2A4A | Gold #C5A55A | Teal #2A7B88
+   ============================================= */
+:root {
+  --navy:       #1B2A4A;
+  --navy-deep:  #0D1929;
+  --navy-mid:   #243656;
+  --gold:       #C5A55A;
+  --gold-soft:  #D9C88C;
+  --gold-dark:  #A68B3E;
+  --teal:       #2A7B88;
+  --teal-soft:  #357F8C;
+  --cream:      #FAF8F4;
+  --warm-gray:  #F3F1ED;
+  --stone:      #E8E4DD;
+  --text:       #1A1A1A;
+  --text-mid:   #5A5A5A;
+  --text-light: #6B6B6B;
+  --white:      #FFFFFF;
+  --serif:      'DM Serif Display', Georgia, serif;
+  --sans:       'Outfit', system-ui, sans-serif;
+  --ease:       cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all .35s var(--ease);
+}
+.btn-gold { background: var(--gold); color: var(--white); }
+.btn-gold:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(197,165,90,.25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,.3);
+}
+.btn-outline:hover {
+  border-color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.06);
+}
+.btn-arrow { width: 18px; height: 18px; }
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13,25,41,.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background .4s;
+}
+header.solid { background: var(--navy-deep); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+.nav-menu a.current { color: var(--gold-soft); }
+.nav-cta {
+  padding: 9px 22px !important;
+  border: 1.5px solid rgba(197,165,90,.4) !important;
+  border-radius: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600 !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: 16px 0;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; width: auto !important; }
+  .burger { display: flex; }
+}
+
+/* =============================================
+   PAGE HERO — internal page banner
+   ============================================= */
+.page-hero {
+  padding: 160px 0 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%);
+}
+.page-hero .wrap { position: relative; z-index: 2; }
+.page-hero .eyebrow { color: var(--gold-soft); }
+.page-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* =============================================
+   INTRO — brief text block before grid
+   ============================================= */
+.razas-intro {
+  padding: clamp(64px, 8vw, 100px) 0 clamp(40px, 6vw, 64px);
+  background: var(--white);
+}
+.razas-intro-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.razas-intro-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.razas-intro-text p {
+  font-size: .95rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+.razas-intro-text p:last-child { margin-bottom: 0; }
+.razas-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.razas-stat {
+  padding: 28px 24px;
+  background: var(--cream);
+  border-radius: 14px;
+  border: 1px solid var(--stone);
+  text-align: center;
+}
+.razas-stat-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.razas-stat-lbl {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .razas-intro-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* =============================================
+   BREED GROUPS GRID — 4-col desktop, 2-col tablet, 1-col mobile
+   ============================================= */
+.breed-groups {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--cream);
+}
+.breed-groups-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.breed-groups-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.breed-groups-head p {
+  font-size: .95rem;
+  color: var(--text-mid);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+.breed-groups-head .eyebrow { color: var(--teal); }
+
+/* 4-column grid matching homepage pillars pattern */
+.breed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Individual breed group card */
+.breed-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--stone);
+  overflow: hidden;
+  transition: all .5s var(--ease);
+  cursor: pointer;
+}
+.breed-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(27,42,74,.08);
+  border-color: transparent;
+}
+
+/* Card image placeholder — uses navy + teal gradient */
+.breed-card-img {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--teal) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.breed-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Decorative pattern overlay for cards without photos */
+.breed-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(197,165,90,.15) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(42,123,136,.12) 0%, transparent 50%);
+}
+
+/* Group badge overlay */
+.breed-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(13,25,41,.8);
+  backdrop-filter: blur(8px);
+  color: var(--gold-soft);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(197,165,90,.25);
+}
+
+/* SVG paw silhouette inside card image */
+.breed-card-icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  opacity: .25;
+}
+.breed-card-icon svg { width: 40px; height: 40px; fill: var(--white); }
+
+.breed-card-body {
+  padding: 22px 22px 24px;
+}
+.breed-card-num {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.breed-card-body h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.breed-card-body p {
+  font-size: .8rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.breed-card-count {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text-mid);
+}
+.breed-card-count span { color: var(--navy); }
+
+@media (max-width: 900px) { .breed-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .breed-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   STANDARDS BAND — teal accent strip
+   ============================================= */
+.standards-band {
+  padding: clamp(64px, 8vw, 100px) 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.standards-band::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,123,136,.1), transparent 70%);
+}
+.standards-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+.standard-item { text-align: center; }
+.standard-item-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.standard-item-icon svg {
+  width: 26px; height: 26px;
+  stroke: var(--gold-soft);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.standard-item h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.standard-item p {
+  font-size: .82rem;
+  color: rgba(255,255,255,.4);
+  line-height: 1.75;
+}
+
+@media (max-width: 700px) { .standards-inner { grid-template-columns: 1fr; } }
+
+/* =============================================
+   CTA — afiliación
+   ============================================= */
+.cta {
+  padding: clamp(80px, 10vw, 120px) 0;
+  background: var(--navy-deep);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,123,136,.08), transparent 70%);
+}
+.cta::after {
+  content: '';
+  position: absolute;
+  bottom: -250px; left: -150px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,165,90,.06), transparent 70%);
+}
+.cta-inner { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+.cta-inner .eyebrow { color: var(--gold-soft); margin-bottom: 16px; }
+.cta-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.cta-inner p {
+  font-size: .95rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* =============================================
+   FOOTER — shared across pages
+   ============================================= */
+footer {
+  background: var(--navy-deep);
+  padding: 64px 0 0;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+.ft-col h4 {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
+.ft-col a:hover { color: var(--white); }
+.ft-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .72rem;
+  color: rgba(255,255,255,.2);
+}
+.ft-bottom a { color: rgba(255,255,255,.2); }
+.ft-bottom a:hover { color: rgba(255,255,255,.5); }
+
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+
+/* Accessibility: eyebrow overrides on light backgrounds */
+.razas-intro .eyebrow,
+.breed-groups-head .eyebrow { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/nosotros">Nosotros</a>
+      <a href="/eventos">Eventos</a>
+      <a href="/razas" class="current">Razas</a>
+      <a href="/jueces">Jueces</a>
+      <a href="/reglamentos">Reglamentos</a>
+      <a href="/blog">Blog</a>
+      <a href="/contacto">Contacto</a>
+      <a href="/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =================== PAGE HERO =================== -->
+<section class="page-hero" aria-label="Encabezado de página Razas">
+  <div class="wrap">
+    <div class="eyebrow rv">RAZAS RECONOCIDAS INTERNACIONALMENTE</div>
+    <h1 class="rv">Razas y Grupos Reconocidos</h1>
+    <p class="rv">La clasificación oficial de razas caninas según los estándares de Alianz Canine Worldwide — el sistema de referencia para criadores, jueces y clubes en más de 50 países.</p>
+  </div>
+</section>
+
+<!-- =================== INTRO =================== -->
+<section class="razas-intro" aria-labelledby="razas-intro-heading">
+  <div class="wrap">
+    <div class="razas-intro-inner">
+      <div class="razas-intro-text rv">
+        <div class="eyebrow">Clasificación Internacional</div>
+        <h2 id="razas-intro-heading">Un Sistema de Clasificación Basado en Función y Origen</h2>
+        <p>Alianz reconoce y clasifica las razas caninas conforme a los criterios científicos y cinológicos internacionales. Cada raza está adscrita a uno de los ocho grupos oficiales, definidos por su origen, función y morfología.</p>
+        <p>Esta clasificación es el estándar de referencia para exposiciones, registros genealógicos y certificaciones en todos los países miembro.</p>
+      </div>
+      <div class="razas-stats rv">
+        <div class="razas-stat">
+          <div class="razas-stat-num">8</div>
+          <div class="razas-stat-lbl">Grupos de Razas</div>
+        </div>
+        <div class="razas-stat">
+          <div class="razas-stat-num">394</div>
+          <div class="razas-stat-lbl">Razas Reconocidas</div>
+        </div>
+        <div class="razas-stat">
+          <div class="razas-stat-num">50+</div>
+          <div class="razas-stat-lbl">Países Miembro</div>
+        </div>
+        <div class="razas-stat">
+          <div class="razas-stat-num">30</div>
+          <div class="razas-stat-lbl">Años de Registros</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== BREED GROUPS GRID =================== -->
+<section class="breed-groups" aria-labelledby="groups-heading">
+  <div class="wrap">
+    <div class="breed-groups-head">
+      <div class="eyebrow rv">Los 8 Grupos</div>
+      <h2 id="groups-heading" class="rv">Grupos de Razas Alianz</h2>
+      <p class="rv">Cada grupo reúne razas con origen y aptitudes afines, evaluadas bajo un estándar morfológico y funcional común.</p>
+    </div>
+
+    <div class="breed-grid">
+
+      <!-- Grupo 1 -->
+      <article class="breed-card rv" aria-label="Grupo 1: Pastoreo y Guarda Mayor">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 1</span>
+          <img src="../assets/images/breed-group-1.png" alt="Pastoreo y Guarda Mayor — Grupo 1 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 1</div>
+          <h3>Pastoreo y Guarda Mayor</h3>
+          <p>Pastores alemanes, collies, corgis y boyeros de todo el mundo: razas forjadas para conducir el ganado y custodiar el territorio, con inteligencia de trabajo sin igual.</p>
+          <div class="breed-card-count">Razas registradas: <span>87</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 2 -->
+      <article class="breed-card rv" aria-label="Grupo 2: Trabajo y Utilidad">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 2</span>
+          <img src="../assets/images/breed-group-2.png" alt="Trabajo y Utilidad — Grupo 2 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 2</div>
+          <h3>Trabajo y Utilidad</h3>
+          <p>Mastines, Dóbermans, Huskies Siberianos y Rottweilers: razas de gran porte criadas para la guarda, la tracción y el rescate en las condiciones más exigentes.</p>
+          <div class="breed-card-count">Razas registradas: <span>49</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 3 -->
+      <article class="breed-card rv" aria-label="Grupo 3: Terriers">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 3</span>
+          <img src="../assets/images/breed-group-3.png" alt="Terriers — Grupo 3 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 3</div>
+          <h3>Terriers</h3>
+          <p>Todas las variedades de la familia, desde el Fox Terrier de pelo liso hasta el Airedale: carácter determinado, origen en la caza de madriguera y presencia reconocible a nivel mundial.</p>
+          <div class="breed-card-count">Razas registradas: <span>36</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 4 -->
+      <article class="breed-card rv" aria-label="Grupo 4: Caza de Aves y Perdigueros">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 4</span>
+          <img src="../assets/images/breed-group-4.png" alt="Caza de Aves y Perdigueros — Grupo 4 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 4</div>
+          <h3>Caza de Aves y Perdigueros</h3>
+          <p>Bracos, Setters, Spanieles y Cobradores: perros de muestra y cobro seleccionados por su precisión olfativa y su capacidad de trabajo en estrecha colaboración con el cazador.</p>
+          <div class="breed-card-count">Razas registradas: <span>30</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 5 -->
+      <article class="breed-card rv" aria-label="Grupo 5: Caza Mayor">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 5</span>
+          <img src="../assets/images/breed-group-5.png" alt="Caza Mayor — Grupo 5 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 5</div>
+          <h3>Caza Mayor</h3>
+          <p>Galgos, sabuesos, podencos y Teckels de talla estándar: razas concebidas para la caza en campo abierto, con velocidad, resistencia o olfato como herramienta principal según el tipo.</p>
+          <div class="breed-card-count">Razas registradas: <span>95</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 6 -->
+      <article class="breed-card rv" aria-label="Grupo 6: Compañía Mayor a 35 cm">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 6</span>
+          <img src="../assets/images/breed-group-6.png" alt="Compañía Mayor a 35 cm — Grupo 6 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 6</div>
+          <h3>Compañía Mayor a 35 cm</h3>
+          <p>Bulldogs, Dálmatas, Chow Chows, Spitz alemanes y Xoloitzcuintles: perros de compañía de talla media con historia propia, personalidad firme y presencia inconfundible.</p>
+          <div class="breed-card-count">Razas registradas: <span>32</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 7 -->
+      <article class="breed-card rv" aria-label="Grupo 7: Compañía Hasta 35 cm">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 7</span>
+          <img src="../assets/images/breed-group-7.png" alt="Compañía Hasta 35 cm — Grupo 7 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 7</div>
+          <h3>Compañía Hasta 35 cm</h3>
+          <p>Chihuahuas, Yorkshire Terriers, Pugs, Bichones y Pomeranios: las razas de pequeño formato con mayor implantación en hogares de todos los continentes.</p>
+          <div class="breed-card-count">Razas registradas: <span>39</span></div>
+        </div>
+      </article>
+
+      <!-- Grupo 8 -->
+      <article class="breed-card rv" aria-label="Grupo 8: Misceláneos">
+        <div class="breed-card-img">
+          <span class="breed-card-badge">Grupo 8</span>
+          <img src="../assets/images/breed-group-8.png" alt="Misceláneos — Grupo 8 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
+        </div>
+        <div class="breed-card-body">
+          <div class="breed-card-num">Grupo 8</div>
+          <h3>Misceláneos</h3>
+          <p>Razas en proceso de reconocimiento, variedades experimentales y perros sin patrón establecido: un grupo en evolución que refleja la diversidad real del mundo canino.</p>
+          <div class="breed-card-count">Razas registradas: <span>80</span></div>
+        </div>
+      </article>
+
+    </div><!-- /breed-grid -->
+  </div>
+</section>
+
+<!-- =================== STANDARDS BAND =================== -->
+<section class="standards-band" aria-labelledby="standards-heading">
+  <div class="wrap">
+    <div class="standards-inner">
+      <div class="standard-item rv">
+        <div class="standard-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3 id="standards-heading">Estándares Internacionales</h3>
+        <p>Cada raza reconocida por Alianz cuenta con un estándar morfológico detallado, revisado por comités técnicos y armonizado con la normativa europea vigente.</p>
+      </div>
+      <div class="standard-item rv">
+        <div class="standard-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Pedigríes con Validez Legal</h3>
+        <p>Los registros genealógicos emitidos por Alianz tienen validez jurídica internacional respaldada por el marco legal de la Unión Europea y convenios bilaterales.</p>
+      </div>
+      <div class="standard-item rv">
+        <div class="standard-item-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <h3>Salud Hereditaria Certificada</h3>
+        <p>Los programas de salud de Alianz — en colaboración con la UNAM y la Universidad de Murcia — evalúan displasia, ADN y condiciones hereditarias por raza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA =================== -->
+<section class="cta" aria-labelledby="cta-razas-heading">
+  <div class="wrap">
+    <div class="cta-inner rv">
+      <div class="eyebrow">Registra tu Ejemplar</div>
+      <h2 id="cta-razas-heading">Pedigríes Reconocidos Internacionalmente</h2>
+      <p>Registra a tu perro bajo los estándares de Alianz y accede a un pedigrí con validez en más de 50 países. El proceso comienza en la página de contacto o a través de tu federación miembro local.</p>
+      <a href="/contacto" class="btn btn-gold">
+        Solicitar Registro
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/eventos">Eventos</a></li>
+          <li><a href="/razas">Razas</a></li>
+          <li><a href="/jueces">Jueces</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/reglamentos">Reglamentos</a></li>
+          <li><a href="/404.html">Formación</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>12024, Blvd. Agua Caliente</li>
+          <li>Hipodromo Agua Caliente, 22420 Tijuana, B.C.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky header
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+
+// Mobile burger with aria-expanded
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+// Scroll reveal with staggered delay
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
