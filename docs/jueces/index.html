@@ -364,16 +364,17 @@ header.solid { background: var(--navy-deep); }
   height: 100%;
   object-fit: cover;
   transition: transform .6s var(--ease);
+  filter: grayscale(100%) contrast(1.1) brightness(0.85);
 }
 .continent-card:hover .continent-card-img img { transform: scale(1.04); }
 
-/* Overlay gradient for readability */
+/* Navy-tinted overlay with gold accent for brand cohesion */
 .continent-card-img::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,25,41,.7) 0%, transparent 60%);
-  z-index: 1; /* sits above the silhouette, below text badges */
+  background: linear-gradient(to top, rgba(13,25,41,.85) 0%, rgba(27,42,74,.35) 50%, rgba(27,42,74,.25) 100%);
+  z-index: 1;
 }
 
 /* Continent name badge inside image */
@@ -386,14 +387,6 @@ header.solid { background: var(--navy-deep); }
   font-size: 1.5rem;
   color: var(--white);
   font-weight: 400;
-}
-.continent-flag {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 2;
-  font-size: 1.8rem;
-  line-height: 1;
 }
 
 
@@ -784,8 +777,7 @@ footer {
       <!-- Europa -->
       <article class="continent-card rv" aria-label="Jueces en Europa">
         <div class="continent-card-img europe">
-          <img src="../assets/images/judges/continent-europe.jpg" alt="Handler presenting a purebred dog at a professional dog show in London, Europe" width="1260" height="710" loading="lazy">
-          <span class="continent-flag" aria-hidden="true">🇪🇺</span>
+          <img src="../assets/images/judges/continent-europe.jpg" alt="Vista panorámica de la Torre Eiffel y París, representando Europa" width="1260" height="710" loading="lazy">
           <div class="continent-name">Europa</div>
         </div>
         <div class="continent-card-body">
@@ -819,8 +811,7 @@ footer {
       <!-- América -->
       <article class="continent-card rv" aria-label="Jueces en América">
         <div class="continent-card-img america">
-          <img src="../assets/images/judges/continent-america.jpg" alt="International dog show with handlers and German Shepherd in a professional conformation ring" width="1260" height="710" loading="lazy">
-          <span class="continent-flag" aria-hidden="true">🌎</span>
+          <img src="../assets/images/judges/continent-america.jpg" alt="Vista aérea de Machu Picchu en los Andes peruanos, representando América" width="1260" height="710" loading="lazy">
           <div class="continent-name">América</div>
         </div>
         <div class="continent-card-body">
@@ -855,8 +846,7 @@ footer {
       <!-- Asia y Oceanía -->
       <article class="continent-card rv" aria-label="Jueces en Asia y Oceanía">
         <div class="continent-card-img asia">
-          <img src="../assets/images/judges/continent-asia.jpg" alt="Woman presenting a Pomeranian at a dog show in Tbilisi, Georgia — Asia and Oceania region" width="1260" height="710" loading="lazy">
-          <span class="continent-flag" aria-hidden="true">🌏</span>
+          <img src="../assets/images/judges/continent-asia.jpg" alt="Castillo de Osaka rodeado de cerezos en flor, representando Asia y Oceanía" width="1260" height="710" loading="lazy">
           <div class="continent-name">Asia &amp; Oceanía</div>
         </div>
         <div class="continent-card-body">
