@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alianz Canine Worldwide | Organización Cinológica Internacional</title>
+<meta name="description" content="Alianz Canine Worldwide une a criadores, jueces y entusiastas en más de 50 países. Pedigrees internacionales, eventos, formación profesional y comunidad canina global con respaldo de la Unión Europea.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A4A;--navy-deep:#0D1929;--navy-mid:#243656;--gold:#C5A55A;--gold-soft:#D9C88C;--gold-dark:#A68B3E;--teal:#2A7B88;--teal-soft:#357F8C;--cream:#FAF8F4;--warm-gray:#F3F1ED;--stone:#E8E4DD;--text:#1A1A1A;--text-mid:#5A5A5A;--text-light:#8A8A8A;--white:#FFF;--serif:'DM Serif Display',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--sans);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .35s var(--ease)}.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 34px;font-family:var(--sans);font-size:.88rem;font-weight:600;letter-spacing:.3px;border-radius:8px;border:none;cursor:pointer;transition:all .35s var(--ease)}.btn-gold{background:var(--gold);color:var(--white)}.btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 12px 32px rgba(197,165,90,.25)}.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3)}.btn-outline:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.06)}.btn-arrow{width:18px;height:18px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,25,41,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);transition:background .4s}header.solid{background:var(--navy-deep)}.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}.logo-text{font-family:var(--serif);font-size:1.25rem;color:var(--white);letter-spacing:.5px}.logo-text em{font-style:italic;color:var(--gold-soft)}.nav-menu{display:flex;align-items:center;gap:32px}.nav-menu a{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:.4px}.nav-menu a:hover{color:var(--white)}.nav-menu a.current{color:var(--gold-soft)}.nav-cta{padding:9px 22px!important;border:1.5px solid rgba(197,165,90,.4);border-radius:6px;color:var(--gold-soft)!important;font-weight:600!important}.nav-cta:hover{background:var(--gold);color:var(--white)!important;border-color:var(--gold)}.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}.burger span{width:22px;height:1.5px;background:var(--white);border-radius:2px}@media(max-width:960px){.nav-menu{display:none}.burger{display:flex}}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy-deep);overflow:hidden}.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,rgba(13,25,41,.94) 0%,rgba(27,42,74,.78) 40%,rgba(42,123,136,.55) 100%),url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1920&q=80') center/cover}.hero-grain{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px;pointer-events:none}.hero-content{position:relative;z-index:2;max-width:720px;padding:0 clamp(20px,4vw,40px);animation:heroIn 1.2s var(--ease)}.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:28px}.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold)}.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,4.2rem);font-weight:400;color:var(--white);line-height:1.12;margin-bottom:24px}.hero h1 em{font-style:italic;color:var(--gold-soft)}.hero-sub{font-size:clamp(.95rem,1.8vw,1.1rem);font-weight:300;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:40px;max-width:560px}.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}.hero-rule{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--teal),var(--gold));opacity:.6}@keyframes heroIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.stats{background:var(--navy);padding:56px 0}.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}.stat{position:relative}.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:40px;background:rgba(255,255,255,.08)}.stat-num{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--gold);line-height:1;margin-bottom:6px}.stat-lbl{font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35)}@media(max-width:600px){.stats-row{grid-template-columns:repeat(2,1fr);gap:32px 0}.stat:not(:last-child)::after{display:none}}
+.trust{background:var(--cream);padding:40px 0;border-bottom:1px solid var(--stone);position:relative;overflow:hidden}.trust-label{text-align:center;font-size:.68rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:24px}.trust-track-wrap{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}.trust-track{display:flex;align-items:center;gap:64px;width:max-content;animation:marquee 35s linear infinite}.trust-track:hover{animation-play-state:paused}.trust-logo{height:28px;opacity:.35;filter:grayscale(100%);transition:all .4s var(--ease);flex-shrink:0;display:flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-mid)}.trust-logo:hover{opacity:.7;filter:grayscale(0%)}.trust-logo svg{height:24px;width:auto;flex-shrink:0}.trust-logo img{height:28px;width:auto;flex-shrink:0;filter:grayscale(100%);opacity:.5}.trust-logo img:hover{filter:grayscale(0%);opacity:.8}@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.services{padding:clamp(80px,10vw,120px) 0;background:var(--white)}.services-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}.services-top .eyebrow,.events-head .eyebrow,.news-head .eyebrow,.about-text .eyebrow,.cta-inner .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase}.services-top .eyebrow,.events-head .eyebrow,.news-head .eyebrow{color:var(--gold);margin-bottom:12px}.services-top h2,.events-head h2,.news-head h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--navy);line-height:1.15}.services-top p{font-size:.95rem;color:var(--text-mid);line-height:1.8;max-width:480px;margin-left:auto}.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.svc{padding:36px 28px;background:var(--cream);border-radius:16px;position:relative;overflow:hidden;transition:all .5s var(--ease);border:1px solid transparent}.svc::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--teal));opacity:0;transition:opacity .4s}.svc:hover{background:var(--white);border-color:var(--stone);transform:translateY(-6px);box-shadow:0 24px 48px rgba(27,42,74,.06)}.svc:hover::after{opacity:1}.svc-icon{width:48px;height:48px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:24px}.svc-icon svg{width:24px;height:24px;stroke:var(--gold-soft);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.svc h3{font-family:var(--serif);font-size:1.15rem;color:var(--navy);margin-bottom:10px}.svc p{font-size:.85rem;color:var(--text-light);line-height:1.75}@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}.services-top{grid-template-columns:1fr}}@media(max-width:520px){.services-grid{grid-template-columns:1fr}}
+.about-strip{padding:clamp(80px,10vw,120px) 0;background:var(--navy);position:relative;overflow:hidden}.about-strip::before{content:'';position:absolute;top:-300px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(42,123,136,.15),transparent 70%)}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}.about-text .eyebrow{color:var(--gold-soft);margin-bottom:16px}.about-text h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--white);line-height:1.2;margin-bottom:20px}.about-text p{font-size:.92rem;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:32px}.about-badges{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}.about-badge{padding:8px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:100px;font-size:.75rem;font-weight:500;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px}.about-badge .dot{width:5px;height:5px;background:var(--teal-soft);border-radius:50%}.about-image{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy-mid),var(--teal))}.about-image img{width:100%;height:100%;object-fit:cover}.about-image::after{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,.08);border-radius:20px}@media(max-width:768px){.about-inner{grid-template-columns:1fr;gap:40px}}
+.events{padding:clamp(80px,10vw,120px) 0;background:var(--cream)}.events-head,.news-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;gap:24px;flex-wrap:wrap}.events-head a,.news-head a{font-size:.85rem;font-weight:600;color:var(--teal);display:flex;align-items:center;gap:6px;white-space:nowrap}.events-head a:hover,.news-head a:hover{gap:10px}.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.ev{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--stone);transition:all .5s var(--ease)}.ev:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(27,42,74,.06);border-color:transparent}.ev-img{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy),var(--teal))}.ev-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}.ev:hover .ev-img img{transform:scale(1.04)}.ev-date{position:absolute;top:14px;left:14px;background:var(--white);border-radius:10px;padding:7px 12px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.1)}.ev-date-m{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}.ev-date-d{font-family:var(--serif);font-size:1.4rem;color:var(--navy);line-height:1}.ev-body{padding:24px}.ev-body h3{font-family:var(--serif);font-size:1.05rem;color:var(--navy);margin-bottom:8px;line-height:1.3}.ev-loc{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text-light);margin-bottom:16px}.ev-loc svg{width:13px;height:13px;stroke:var(--teal);fill:none;stroke-width:2}.ev-link{font-size:.82rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:4px}.ev-link:hover{gap:8px}@media(max-width:900px){.ev-grid{grid-template-columns:1fr;max-width:480px}}
+.news{padding:clamp(80px,10vw,120px) 0;background:var(--white)}.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.nw{transition:all .4s var(--ease)}.nw:hover{transform:translateY(-4px)}.nw-img{height:220px;overflow:hidden;border-radius:14px;margin-bottom:20px}.nw-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}.nw:hover .nw-img img{transform:scale(1.04)}.nw-meta{font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}.nw h3{font-family:var(--serif);font-size:1.1rem;color:var(--navy);margin-bottom:8px;line-height:1.3}.nw p{font-size:.85rem;color:var(--text-light);line-height:1.75}@media(max-width:900px){.news-grid{grid-template-columns:1fr;max-width:480px}}
+.cta{padding:clamp(80px,10vw,120px) 0;background:var(--navy-deep);position:relative;overflow:hidden;text-align:center}.cta::before{content:'';position:absolute;top:-250px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(42,123,136,.12),transparent 70%)}.cta::after{content:'';position:absolute;bottom:-250px;left:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(197,165,90,.06),transparent 70%)}.cta-inner{position:relative;z-index:2;max-width:640px;margin:0 auto}.cta-inner .eyebrow{color:var(--gold-soft);margin-bottom:16px}.cta-inner h2{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);color:var(--white);line-height:1.2;margin-bottom:20px}.cta-inner p{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.85;margin-bottom:40px}.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.cta-sub{margin-top:28px;font-size:.82rem;color:rgba(255,255,255,.25)}.cta-sub a{color:var(--gold-soft)}.cta-sub a:hover{color:var(--gold)}
+footer{background:var(--navy-deep);padding:64px 0 0;border-top:1px solid rgba(255,255,255,.04)}.ft-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06)}.ft-brand h3{font-family:var(--serif);font-size:1.15rem;color:var(--white);margin-bottom:12px}.ft-brand h3 em{font-style:italic;color:var(--gold-soft)}.ft-brand p{font-size:.82rem;color:rgba(255,255,255,.3);line-height:1.75;max-width:280px}.ft-social{display:flex;gap:10px;margin-top:20px}.ft-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:all .3s}.ft-social a:hover{border-color:var(--gold);background:rgba(197,165,90,.08)}.ft-social svg{width:15px;height:15px;fill:rgba(255,255,255,.4)}.ft-social a:hover svg{fill:var(--gold-soft)}.ft-col h4{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.ft-col ul{display:flex;flex-direction:column;gap:11px}.ft-col a{font-size:.82rem;color:rgba(255,255,255,.35)}.ft-col a:hover{color:var(--white)}.ft-bottom{padding:24px 0;text-align:center;font-size:.72rem;color:rgba(255,255,255,.2)}.ft-bottom a{color:rgba(255,255,255,.2)}.ft-bottom a:hover{color:rgba(255,255,255,.5)}@media(max-width:768px){.ft-grid{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:500px){.ft-grid{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(28px);transition:all .8s var(--ease)}.rv.vis{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<header id="hdr">
+<div class="header-inner">
+<a href="/" class="logo"><span class="logo-text">Alianz <em>Canine Worldwide</em></span></a>
+<nav class="nav-menu">
+<a href="/" class="current">Inicio</a>
+<a href="/nosotros">Nosotros</a>
+<a href="/eventos">Eventos</a>
+<a href="/razas">Razas</a>
+<a href="/jueces">Jueces</a>
+<a href="/reglamentos">Reglamentos</a>
+<a href="/blog">Blog</a>
+<a href="/contacto">Contacto</a>
+<a href="/login" class="nav-cta">Iniciar Sesión</a>
+</nav>
+<div class="burger" onclick="this.closest('header').querySelector('.nav-menu').classList.toggle('open')"><span></span><span></span><span></span></div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-grain"></div>
+<div class="wrap">
+<div class="hero-content">
+<div class="hero-eyebrow">Fundación reconocida por la Unión Europea</div>
+<h1>La Organización Cinológica <em>Internacional</em></h1>
+<p class="hero-sub">Unimos a criadores, jueces y entusiastas en más de 50 países para promover la excelencia canina, el bienestar animal y la crianza responsable — con el respaldo de las directivas europeas.</p>
+<div class="hero-buttons">
+<a href="/contacto" class="btn btn-gold">Únete a Alianz <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<a href="/nosotros" class="btn btn-outline">Conoce Nuestra Historia</a>
+</div>
+</div>
+</div>
+<div class="hero-rule"></div>
+</section>
+
+<section class="stats">
+<div class="wrap">
+<div class="stats-row">
+<div class="stat rv"><div class="stat-num">50+</div><div class="stat-lbl">Países Miembro</div></div>
+<div class="stat rv"><div class="stat-num">30+</div><div class="stat-lbl">Años de Trayectoria</div></div>
+<div class="stat rv"><div class="stat-num">8</div><div class="stat-lbl">Grupos de Razas</div></div>
+<div class="stat rv"><div class="stat-num">1000+</div><div class="stat-lbl">Jueces Certificados</div></div>
+</div>
+</div>
+</section>
+
+<section class="trust">
+<div class="trust-label">Respaldo Institucional</div>
+<div class="trust-track-wrap">
+<div class="trust-track">
+<!-- Set 1 -->
+<div class="trust-logo"><svg viewBox="0 0 48 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#1B2A4A" stroke-width="1.5"/><path d="M10 20 L16 10 L22 20" stroke="#1B2A4A" stroke-width="1.5" fill="none"/><circle cx="16" cy="16" r="3" fill="#1B2A4A" opacity=".3"/></svg>Unión Europea</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="4" stroke="#1B2A4A" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="#1B2A4A" stroke-width="1.5"/></svg>Ministerio de Agricultura</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#1B2A4A" stroke-width="1.5"/><path d="M8 16h16M16 8v16M10 10l12 12M22 10l-12 12" stroke="#1B2A4A" stroke-width=".8" opacity=".5"/></svg>UNAM</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><path d="M6 24V12l10-6 10 6v12" stroke="#1B2A4A" stroke-width="1.5" fill="none"/><rect x="12" y="16" width="8" height="8" stroke="#1B2A4A" stroke-width="1.2"/></svg>CEU UCH Valencia</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="8" stroke="#1B2A4A" stroke-width="1.5"/><path d="M8 26c0-4 3.6-8 8-8s8 4 8 8" stroke="#1B2A4A" stroke-width="1.5"/></svg>Universidad de Murcia</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><polygon points="16,4 28,12 28,24 16,28 4,24 4,12" stroke="#1B2A4A" stroke-width="1.5" fill="none"/></svg>Universidad Central del Ecuador</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><path d="M4 24L16 6l12 18H4z" stroke="#1B2A4A" stroke-width="1.5" fill="none"/><circle cx="16" cy="18" r="3" stroke="#1B2A4A" stroke-width="1.2"/></svg>UMaza Argentina</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><rect x="6" y="8" width="20" height="16" rx="2" stroke="#1B2A4A" stroke-width="1.5"/><path d="M6 14h20" stroke="#1B2A4A" stroke-width="1"/><circle cx="11" cy="20" r="2" stroke="#1B2A4A" stroke-width="1"/></svg>Directiva 91/174/CEE</div>
+<!-- Set 2 (duplicate for seamless loop) -->
+<div class="trust-logo"><svg viewBox="0 0 48 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#1B2A4A" stroke-width="1.5"/><path d="M10 20 L16 10 L22 20" stroke="#1B2A4A" stroke-width="1.5" fill="none"/><circle cx="16" cy="16" r="3" fill="#1B2A4A" opacity=".3"/></svg>Unión Europea</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="4" stroke="#1B2A4A" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="#1B2A4A" stroke-width="1.5"/></svg>Ministerio de Agricultura</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="#1B2A4A" stroke-width="1.5"/><path d="M8 16h16M16 8v16M10 10l12 12M22 10l-12 12" stroke="#1B2A4A" stroke-width=".8" opacity=".5"/></svg>UNAM</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><path d="M6 24V12l10-6 10 6v12" stroke="#1B2A4A" stroke-width="1.5" fill="none"/><rect x="12" y="16" width="8" height="8" stroke="#1B2A4A" stroke-width="1.2"/></svg>CEU UCH Valencia</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="8" stroke="#1B2A4A" stroke-width="1.5"/><path d="M8 26c0-4 3.6-8 8-8s8 4 8 8" stroke="#1B2A4A" stroke-width="1.5"/></svg>Universidad de Murcia</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><polygon points="16,4 28,12 28,24 16,28 4,24 4,12" stroke="#1B2A4A" stroke-width="1.5" fill="none"/></svg>Universidad Central del Ecuador</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><path d="M4 24L16 6l12 18H4z" stroke="#1B2A4A" stroke-width="1.5" fill="none"/><circle cx="16" cy="18" r="3" stroke="#1B2A4A" stroke-width="1.2"/></svg>UMaza Argentina</div>
+<div class="trust-logo"><svg viewBox="0 0 32 32" fill="none"><rect x="6" y="8" width="20" height="16" rx="2" stroke="#1B2A4A" stroke-width="1.5"/><path d="M6 14h20" stroke="#1B2A4A" stroke-width="1"/><circle cx="11" cy="20" r="2" stroke="#1B2A4A" stroke-width="1"/></svg>Directiva 91/174/CEE</div>
+</div>
+</div>
+</section>
+
+<section class="services" id="servicios">
+<div class="wrap">
+<div class="services-top rv">
+<div><div class="eyebrow">Nuestra Labor</div><h2>Excelencia Canina en Cada Dimensión</h2></div>
+<p>Más de tres décadas promoviendo la ciencia, la ética y la pasión por el mundo canino. Desde registros genealógicos hasta certificación de perros de servicio.</p>
+</div>
+<div class="services-grid">
+<div class="svc rv">
+<div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></div>
+<h3>Pedigrees y Registros</h3>
+<p>Libros de Orígenes Caninos con validez legal internacional, verificación por ADN y trazabilidad garantizada bajo normativa de la Unión Europea.</p>
+</div>
+<div class="svc rv">
+<div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+<h3>Eventos y Deportes</h3>
+<p>Exposiciones de conformación, FastCat, FlyBall, IGP, Mondioring, Disc Dog, Canicross y competencias de grooming en los cinco continentes.</p>
+</div>
+<div class="svc rv">
+<div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 10 3 12 0v-5"/></svg></div>
+<h3>Formación Profesional</h3>
+<p>Certificaciones con validez europea en peluquería canina, asistencia veterinaria, adiestramiento y crianza responsable. Convenios con UNAM y universidades de España y Latinoamérica.</p>
+</div>
+<div class="svc rv">
+<div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+<h3>Salud y Bienestar</h3>
+<p>Programa de certificación de displasia de cadera y codo respaldado por catedráticos de la UNAM. Identificación por ADN y pruebas genéticas para crianza responsable.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="about-strip">
+<div class="wrap">
+<div class="about-inner">
+<div class="about-text rv">
+<div class="eyebrow">Quiénes Somos</div>
+<h2>Respaldo Legal Europeo y Alcance Global</h2>
+<p>La Fundación Alianz Canine Worldwide es una institución de utilidad pública reconocida oficialmente por el Ministerio de Agricultura de España y bajo el protectorado del Ministerio de Educación, Cultura y Deporte. Operamos bajo las Directivas de la Unión Europea para la gestión de registros genealógicos y la certificación profesional.</p>
+<div class="about-badges">
+<span class="about-badge"><span class="dot"></span>Europa y Eurasia</span>
+<span class="about-badge"><span class="dot"></span>Norteamérica</span>
+<span class="about-badge"><span class="dot"></span>América del Sur</span>
+<span class="about-badge"><span class="dot"></span>Asia y Medio Oriente</span>
+<span class="about-badge"><span class="dot"></span>África</span>
+</div>
+<a href="/nosotros" class="btn btn-outline">Conocer Más <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+<div class="about-image rv">
+<img src="https://images.squarespace-cdn.com/content/v1/699d09d7b94936607b510521/1771899369647-Z1MPLR1YZRG8WUJ4JYIW/acw+banner.png" alt="Alianz Canine Worldwide">
+</div>
+</div>
+</div>
+</section>
+
+<section class="events" id="eventos">
+<div class="wrap">
+<div class="events-head rv">
+<div><div class="eyebrow">Calendario</div><h2>Próximos Eventos</h2></div>
+<a href="/eventos">Ver Calendario Completo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+<div class="ev-grid">
+<div class="ev rv">
+<div class="ev-img"><img src="https://images.squarespace-cdn.com/content/v1/699d09d7b94936607b510521/1771991194787-77ROOPKQAPZGZVY1KNXV/iGP.png" alt="IGP Tijuana Trial"><div class="ev-date"><div class="ev-date-m">Abr</div><div class="ev-date-d">25</div></div></div>
+<div class="ev-body"><h3>IGP Tijuana Trial</h3><div class="ev-loc"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tijuana, México</div><a href="/eventos" class="ev-link">Ver Detalles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+</div>
+<div class="ev rv">
+<div class="ev-img"><img src="https://images.squarespace-cdn.com/content/v1/699d09d7b94936607b510521/1771991567846-CPHOOUDSPQINO0HFT0HO/Perros+de+recate+2.png" alt="Perros de Rescate"><div class="ev-date"><div class="ev-date-m">Mar</div><div class="ev-date-d">21</div></div></div>
+<div class="ev-body"><h3>Curso de Titulación: Perros de Rescate</h3><div class="ev-loc"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Baja California, México</div><a href="/eventos" class="ev-link">Ver Detalles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+</div>
+<div class="ev rv">
+<div class="ev-img"><img src="https://images.squarespace-cdn.com/content/v1/699d09d7b94936607b510521/1771899354416-D73LX7B6SXFFKJ4LD39M/20250719_172200.jpg" alt="Feria Mundial ACW 2027"><div class="ev-date"><div class="ev-date-m">Jul</div><div class="ev-date-d">22</div></div></div>
+<div class="ev-body"><h3>Feria Mundial ACW 2027</h3><div class="ev-loc"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>México</div><a href="/eventos" class="ev-link">Ver Detalles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="news" id="noticias">
+<div class="wrap">
+<div class="news-head rv">
+<div><div class="eyebrow">Noticias</div><h2>Últimas Novedades</h2></div>
+<a href="/blog">Ver Todas <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+<div class="news-grid">
+<div class="nw rv"><div class="nw-img"><img src="https://www.alianzfederation.org/wp-content/uploads/2026/02/Captura-de-pantalla-2026-02-23-141849-685x1024.png" alt="Seminário K9"></div><div class="nw-meta">Febrero 2026</div><h3>Seminário de Combate K9 — Edição Elite</h3><p>Evento de alta especialización para profesionales del entrenamiento canino de seguridad y defensa.</p></div>
+<div class="nw rv"><div class="nw-img"><img src="https://www.alianzfederation.org/wp-content/uploads/2025/12/ANO-NUEVO-ALIANZ-1024x1024.png" alt="Año Nuevo 2026"></div><div class="nw-meta">Diciembre 2025</div><h3>¡Feliz Año Nuevo 2026 desde Alianz Canine Worldwide!</h3><p>Un nuevo año lleno de eventos internacionales, comunidad global y excelencia canina.</p></div>
+<div class="nw rv"><div class="nw-img"><img src="https://www.alianzfederation.org/wp-content/uploads/2025/12/1-738x1024.jpeg" alt="Federación Cinológica Peruana"></div><div class="nw-meta">Diciembre 2025</div><h3>Federación Cinológica Peruana nombra nuevo Director Nacional</h3><p>Iván Bavutti asume como Director Nacional de Razas Autóctonas del Perú.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="wrap">
+<div class="cta-inner rv">
+<div class="eyebrow">Forma Parte</div>
+<h2>Únete a la Red Cinológica Más Grande del Mundo</h2>
+<p>Ya sea como club nacional, criador profesional, juez certificado o entusiasta — hay un lugar para ti en Alianz Canine Worldwide.</p>
+<div class="cta-btns"><a href="/contacto" class="btn btn-gold">Solicitar Afiliación</a><a href="/nosotros" class="btn btn-outline">Conocer Más</a></div>
+<div class="cta-sub">¿Ya eres miembro? <a href="/login">Inicia Sesión →</a></div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="ft-grid">
+<div class="ft-brand"><h3>Alianz <em>Canine Worldwide</em></h3><p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p><div class="ft-social"><a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div>
+<div class="ft-col"><h4>Navegación</h4><ul><li><a href="/nosotros">Nosotros</a></li><li><a href="/eventos">Eventos</a></li><li><a href="/razas">Razas</a></li><li><a href="/jueces">Jueces</a></li><li><a href="/blog">Blog</a></li></ul></div>
+<div class="ft-col"><h4>Recursos</h4><ul><li><a href="/reglamentos">Reglamentos</a></li><li><a href="/cursos">Formación</a></li><li><a href="/contacto">Contacto</a></li><li><a href="/login">Área de Miembros</a></li></ul></div>
+<div class="ft-col"><h4>Contacto</h4><ul><li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li><li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li><li><a href="#">Ctra. Nacional 301, Km. 384</a></li><li><a href="#">Molina de Segura, Murcia, España</a></li></ul></div>
+</div>
+<div class="ft-bottom">© 2026 Alianz Canine Worldwide. Todos los derechos reservados. &nbsp;·&nbsp; <a href="/privacidad">Privacidad</a> &nbsp;·&nbsp; <a href="/aviso-legal">Aviso Legal</a> &nbsp;·&nbsp; <a href="/cookies">Cookies</a></div>
+</div>
+</footer>
+
+<script>
+const h=document.getElementById('hdr');window.addEventListener('scroll',()=>h.classList.toggle('solid',scrollY>60));
+const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*80);obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

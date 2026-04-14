@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | Alianz Canine Worldwide</title>
+<meta name="description" content="Conoce la Fundación Alianz Canine Worldwide: más de 30 años de trayectoria, respaldo legal europeo y presencia en más de 50 países.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A4A;--navy-deep:#0D1929;--navy-mid:#243656;--gold:#C5A55A;--gold-soft:#D9C88C;--gold-dark:#A68B3E;--teal:#2A7B88;--teal-soft:#357F8C;--cream:#FAF8F4;--stone:#E8E4DD;--text:#1A1A1A;--text-mid:#5A5A5A;--text-light:#8A8A8A;--white:#FFF;--serif:'DM Serif Display',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--sans);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .35s var(--ease)}.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 34px;font-family:var(--sans);font-size:.88rem;font-weight:600;letter-spacing:.3px;border-radius:8px;border:none;cursor:pointer;transition:all .35s var(--ease)}.btn-gold{background:var(--gold);color:var(--white)}.btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 12px 32px rgba(197,165,90,.25)}.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--stone)}.btn-outline:hover{border-color:var(--navy)}
+
+/* NAV — same as homepage */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,25,41,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);transition:background .4s}header.solid{background:var(--navy-deep)}.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}.logo-text{font-family:var(--serif);font-size:1.25rem;color:var(--white);letter-spacing:.5px}.logo-text em{font-style:italic;color:var(--gold-soft)}.nav-menu{display:flex;align-items:center;gap:32px}.nav-menu a{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:.4px}.nav-menu a:hover{color:var(--white)}.nav-menu a.current{color:var(--gold-soft)}.nav-cta{padding:9px 22px!important;border:1.5px solid rgba(197,165,90,.4);border-radius:6px;color:var(--gold-soft)!important;font-weight:600!important}.nav-cta:hover{background:var(--gold);color:var(--white)!important;border-color:var(--gold)}.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}.burger span{width:22px;height:1.5px;background:var(--white);border-radius:2px}@media(max-width:960px){.nav-menu{display:none}.burger{display:flex}}
+
+/* PAGE HERO */
+.page-hero{padding:160px 0 80px;background:var(--navy);position:relative;overflow:hidden}.page-hero::after{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(42,123,136,.12),transparent 70%)}.page-hero .wrap{position:relative;z-index:2}.page-hero .eyebrow{color:var(--gold-soft)}.page-hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.5rem);font-weight:400;color:var(--white);line-height:1.15;margin-bottom:16px}.page-hero p{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.8;max-width:600px}
+
+/* ABOUT INTRO */
+.about-intro{padding:clamp(80px,10vw,120px) 0;background:var(--white)}.about-intro-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center}.about-intro-text h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px}.about-intro-text p{font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:16px}.about-intro-img{border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:var(--cream)}.about-intro-img img{width:100%;height:100%;object-fit:cover}@media(max-width:768px){.about-intro-grid{grid-template-columns:1fr;gap:40px}}
+
+/* PILLARS */
+.pillars{padding:clamp(80px,10vw,120px) 0;background:var(--cream)}.pillars-head{text-align:center;margin-bottom:64px}.pillars-head h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--navy);line-height:1.2}.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.pillar{padding:36px 28px;background:var(--white);border-radius:16px;border:1px solid var(--stone);transition:all .5s var(--ease)}.pillar:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(27,42,74,.06);border-color:transparent}.pillar-icon{width:48px;height:48px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:20px}.pillar-icon svg{width:24px;height:24px;stroke:var(--gold-soft);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.pillar h3{font-family:var(--serif);font-size:1.1rem;color:var(--navy);margin-bottom:10px}.pillar p{font-size:.85rem;color:var(--text-light);line-height:1.75}@media(max-width:900px){.pillars-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.pillars-grid{grid-template-columns:1fr}}
+
+/* LEGAL / EU SECTION */
+.legal{padding:clamp(80px,10vw,120px) 0;background:var(--navy);position:relative;overflow:hidden}.legal::before{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(197,165,90,.08),transparent 70%)}.legal-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.legal-text h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--white);line-height:1.2;margin-bottom:20px}.legal-text .eyebrow{color:var(--gold-soft)}.legal-text p{font-size:.92rem;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:20px}.legal-list{display:flex;flex-direction:column;gap:16px}.legal-item{padding:20px 24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px;transition:all .3s}.legal-item:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1)}.legal-item h4{font-size:.88rem;font-weight:600;color:var(--gold-soft);margin-bottom:4px}.legal-item p{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.6;margin:0}@media(max-width:768px){.legal-inner{grid-template-columns:1fr;gap:40px}}
+
+/* UNIVERSITIES */
+.universities{padding:clamp(80px,10vw,120px) 0;background:var(--white)}.uni-head{text-align:center;margin-bottom:64px}.uni-head h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:12px}.uni-head p{font-size:.95rem;color:var(--text-mid);max-width:600px;margin:0 auto;line-height:1.8}.uni-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;align-items:center}.uni-card{padding:32px 20px;background:var(--cream);border-radius:16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .4s var(--ease);border:1px solid transparent}.uni-card:hover{background:var(--white);border-color:var(--stone);transform:translateY(-4px);box-shadow:0 16px 32px rgba(27,42,74,.06)}.uni-card-logo{height:48px;display:flex;align-items:center;justify-content:center;filter:grayscale(100%);opacity:.5;transition:all .4s}.uni-card:hover .uni-card-logo{filter:grayscale(0%);opacity:1}.uni-card-logo img{max-height:48px;max-width:100px;object-fit:contain}.uni-card h4{font-size:.78rem;font-weight:600;color:var(--navy);line-height:1.3}.uni-card p{font-size:.7rem;color:var(--text-light)}@media(max-width:900px){.uni-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:520px){.uni-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* SPORTS / ACTIVITIES */
+.activities{padding:clamp(80px,10vw,120px) 0;background:var(--cream)}.act-head{margin-bottom:64px}.act-head h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:12px}.act-head p{font-size:.95rem;color:var(--text-mid);line-height:1.8;max-width:600px}.act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.act{padding:28px 24px;background:var(--white);border-radius:14px;border:1px solid var(--stone);transition:all .4s var(--ease)}.act:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(27,42,74,.05);border-color:transparent}.act h4{font-family:var(--serif);font-size:1rem;color:var(--navy);margin-bottom:8px}.act p{font-size:.82rem;color:var(--text-light);line-height:1.7}@media(max-width:768px){.act-grid{grid-template-columns:1fr}}
+
+/* SERVICE DOGS */
+.service-dogs{padding:clamp(80px,10vw,120px) 0;background:var(--white)}.sd-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.sd-text h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px}.sd-text p{font-size:.92rem;color:var(--text-mid);line-height:1.85;margin-bottom:16px}.sd-types{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sd-type{padding:16px;background:var(--cream);border-radius:10px}.sd-type h4{font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:4px}.sd-type p{font-size:.75rem;color:var(--text-light);line-height:1.6;margin:0}@media(max-width:768px){.sd-inner{grid-template-columns:1fr;gap:40px}.sd-types{grid-template-columns:1fr}}
+
+/* CTA */
+.cta{padding:clamp(80px,10vw,100px) 0;background:var(--navy-deep);text-align:center;position:relative;overflow:hidden}.cta::before{content:'';position:absolute;top:-250px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(42,123,136,.12),transparent 70%)}.cta-inner{position:relative;z-index:2;max-width:600px;margin:0 auto}.cta-inner h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--white);line-height:1.2;margin-bottom:16px}.cta-inner p{font-size:.95rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:36px}
+
+/* FOOTER — same as homepage */
+footer{background:var(--navy-deep);padding:64px 0 0;border-top:1px solid rgba(255,255,255,.04)}.ft-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06)}.ft-brand h3{font-family:var(--serif);font-size:1.15rem;color:var(--white);margin-bottom:12px}.ft-brand h3 em{font-style:italic;color:var(--gold-soft)}.ft-brand p{font-size:.82rem;color:rgba(255,255,255,.3);line-height:1.75;max-width:280px}.ft-social{display:flex;gap:10px;margin-top:20px}.ft-social a{width:36px;height:36px;border:1px solid rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:all .3s}.ft-social a:hover{border-color:var(--gold);background:rgba(197,165,90,.08)}.ft-social svg{width:15px;height:15px;fill:rgba(255,255,255,.4)}.ft-social a:hover svg{fill:var(--gold-soft)}.ft-col h4{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.ft-col ul{display:flex;flex-direction:column;gap:11px}.ft-col a{font-size:.82rem;color:rgba(255,255,255,.35)}.ft-col a:hover{color:var(--white)}.ft-bottom{padding:24px 0;text-align:center;font-size:.72rem;color:rgba(255,255,255,.2)}.ft-bottom a{color:rgba(255,255,255,.2)}.ft-bottom a:hover{color:rgba(255,255,255,.5)}@media(max-width:768px){.ft-grid{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:500px){.ft-grid{grid-template-columns:1fr}}
+
+.rv{opacity:0;transform:translateY(28px);transition:all .8s var(--ease)}.rv.vis{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="hdr"><div class="header-inner"><a href="/" class="logo"><span class="logo-text">Alianz <em>Canine Worldwide</em></span></a><nav class="nav-menu"><a href="/">Inicio</a><a href="/nosotros" class="current">Nosotros</a><a href="/eventos">Eventos</a><a href="/razas">Razas</a><a href="/jueces">Jueces</a><a href="/reglamentos">Reglamentos</a><a href="/blog">Blog</a><a href="/contacto">Contacto</a><a href="/login" class="nav-cta">Iniciar Sesión</a></nav><div class="burger" onclick="this.closest('header').querySelector('.nav-menu').classList.toggle('open')"><span></span><span></span><span></span></div></div></header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+<div class="wrap">
+<div class="eyebrow rv">Sobre Nosotros</div>
+<h1 class="rv">Nuestra Historia, Nuestra Misión</h1>
+<p class="rv">Más de 30 años construyendo el estándar global de excelencia canina con el respaldo de la Unión Europea.</p>
+</div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="about-intro">
+<div class="wrap">
+<div class="about-intro-grid">
+<div class="about-intro-text rv">
+<div class="eyebrow">Quiénes Somos</div>
+<h2>La Unión Global de Asociaciones Cinológicas</h2>
+<p>Alianz Canine Worldwide es la unión global de asociaciones cinológicas nacionales, unificadas bajo criterios de excelencia y reconocimiento internacional.</p>
+<p>Nuestra misión va más allá de la morfología canina: nos enfocamos en el bienestar integral, la cría ética, la formación profesional y el fortalecimiento del vínculo humano-canino. Entendemos que un perro equilibrado es pilar de una familia sana.</p>
+<p>La cinología moderna ha evolucionado de una disciplina centrada en la estética morfológica hacia un ecosistema integral que prioriza la funcionalidad, el bienestar animal y el respaldo científico. En este panorama, Alianz Canine Worldwide se posiciona como la institución líder para la obtención de titulaciones internacionales en las diversas actividades del mundo canino.</p>
+</div>
+<div class="about-intro-img rv">
+<!-- NANO BANANA PRO: "Professional photograph of an international dog show judging ring,
+     a judge examining a champion dog on the table, handler in formal attire, audience watching,
+     warm arena lighting, shallow depth of field, premium photography" -->
+<img src="https://images.squarespace-cdn.com/content/v1/699d09d7b94936607b510521/1771899369647-Z1MPLR1YZRG8WUJ4JYIW/acw+banner.png" alt="Alianz Canine Worldwide">
+</div>
+</div>
+</div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars">
+<div class="wrap">
+<div class="pillars-head rv">
+<div class="eyebrow">Nuestros Pilares</div>
+<h2>Compromiso con el Bienestar y la Excelencia</h2>
+</div>
+<div class="pillars-grid">
+<div class="pillar rv">
+<div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+<h3>Bienestar Animal</h3>
+<p>Promovemos el desarrollo de cualidades físicas y biológicas que garanticen perros sanos, evitando zoonosis y fomentando entornos de convivencia seguros para la familia.</p>
+</div>
+<div class="pillar rv">
+<div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+<h3>Formación y Ciencia</h3>
+<p>Convenios con universidades de prestigio, investigación cinológica y programas de certificación profesional con validez legal europea.</p>
+</div>
+<div class="pillar rv">
+<div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h3>Ética y Legislación</h3>
+<p>Apoyamos la creación de leyes que protejan la actividad cinófila y defendemos los derechos de criadores, aficionados y consumidores.</p>
+</div>
+<div class="pillar rv">
+<div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+<h3>Red Global</h3>
+<p>Presencia en más de 50 países con intercambio constante de jueces, especialistas y conocimiento. Cada título emitido tiene validez internacional.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LEGAL / EU BACKING -->
+<section class="legal">
+<div class="wrap">
+<div class="legal-inner">
+<div class="legal-text rv">
+<div class="eyebrow">Fundación Alianz Canine Worldwide</div>
+<h2>Respaldo Legal Europeo</h2>
+<p>La Fundación Alianz Canine Worldwide es una institución de utilidad pública e interés social, reconocida oficialmente por el Ministerio de Agricultura y bajo el protectorado del Ministerio de Educación, Cultura y Deporte de España.</p>
+<p>Nuestra solidez se fundamenta en el estricto cumplimiento de la legislación europea y española, lo cual otorga a nuestras titulaciones y certificaciones una ventaja competitiva y legal que otras organizaciones no pueden igualar.</p>
+</div>
+<div class="legal-list rv">
+<div class="legal-item">
+<h4>Directiva 77/504/CEE</h4>
+<p>Definición de Libro de Orígenes Genealógico, permitiendo a organizaciones independientes gestionar registros bajo estándares de calidad supervisados.</p>
+</div>
+<div class="legal-item">
+<h4>Directiva 91/174/CEE</h4>
+<p>Establece que el intercambio y la comercialización de animales de raza pura no pueden ser prohibidos ni obstaculizados por razones genealógicas o zootécnicas.</p>
+</div>
+<div class="legal-item">
+<h4>Real Decreto 558/2001</h4>
+<p>Regula el reconocimiento oficial de las organizaciones de criadores de perros de raza pura en España, con posterior modificación por el R.D. 1557/2005.</p>
+</div>
+<div class="legal-item">
+<h4>Formación Profesional</h4>
+<p>Programas diseñados bajo los estándares del Instituto Nacional de las Cualificaciones (INCUAL) con títulos de validez legal para empleo en la Unión Europea.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- UNIVERSITIES -->
+<section class="universities">
+<div class="wrap">
+<div class="uni-head rv">
+<div class="eyebrow">Alianzas Académicas</div>
+<h2>Convenios Universitarios</h2>
+<p>Nuestros programas de salud y formación cuentan con el respaldo de instituciones académicas de prestigio internacional.</p>
+</div>
+<div class="uni-grid rv">
+<div class="uni-card">
+<div class="uni-card-logo">
+<!-- Replace with actual UNAM escudo PNG -->
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='48' viewBox='0 0 80 48'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='serif' font-size='11' font-weight='bold' fill='%231B2A4A'%3EUNAM%3C/text%3E%3C/svg%3E" alt="UNAM">
+</div>
+<h4>UNAM</h4>
+<p>México</p>
+</div>
+<div class="uni-card">
+<div class="uni-card-logo">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='48' viewBox='0 0 80 48'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='serif' font-size='9' font-weight='bold' fill='%231B2A4A'%3ECEU UCH%3C/text%3E%3C/svg%3E" alt="CEU UCH">
+</div>
+<h4>CEU Cardenal Herrera</h4>
+<p>Valencia, España</p>
+</div>
+<div class="uni-card">
+<div class="uni-card-logo">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='48' viewBox='0 0 80 48'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='serif' font-size='11' font-weight='bold' fill='%231B2A4A'%3EUMU%3C/text%3E%3C/svg%3E" alt="UMU">
+</div>
+<h4>Universidad de Murcia</h4>
+<p>Murcia, España</p>
+</div>
+<div class="uni-card">
+<div class="uni-card-logo">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='48' viewBox='0 0 80 48'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='serif' font-size='11' font-weight='bold' fill='%231B2A4A'%3EUCE%3C/text%3E%3C/svg%3E" alt="UCE">
+</div>
+<h4>Universidad Central del Ecuador</h4>
+<p>Quito, Ecuador</p>
+</div>
+<div class="uni-card">
+<div class="uni-card-logo">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='48' viewBox='0 0 80 48'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='serif' font-size='9' font-weight='bold' fill='%231B2A4A'%3EUMaza%3C/text%3E%3C/svg%3E" alt="UMaza">
+</div>
+<h4>Universidad Juan Agustín Maza</h4>
+<p>Mendoza, Argentina</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SPORTS / ACTIVITIES -->
+<section class="activities">
+<div class="wrap">
+<div class="act-head rv">
+<div class="eyebrow">Deportes y Disciplinas</div>
+<h2>El Universo Deportivo Canino</h2>
+<p>El deporte no es solo competencia: es la base fundamental de la salud integral y la expresión de comportamientos naturales propios de la especie.</p>
+</div>
+<div class="act-grid">
+<div class="act rv"><h4>FastCat y FlyBall</h4><p>Disciplinas de velocidad e instinto que canalizan la energía natural del perro y evalúan su estructura ósea y muscular óptima.</p></div>
+<div class="act rv"><h4>IGP y Mondioring</h4><p>Deportes de guardia y protección centrados en el control, la obediencia extrema y la estabilidad psíquica del animal.</p></div>
+<div class="act rv"><h4>Canicross y Reto Painani</h4><p>Pruebas de resistencia y biomecánica que fortalecen el vínculo humano-canino y promueven la salud familiar.</p></div>
+<div class="act rv"><h4>Disc Dog</h4><p>Combinación de acrobacia, precisión y captura que mejora la propiocepción y coordinación del perro.</p></div>
+<div class="act rv"><h4>Deportes de Tracción</h4><p>Recuperación de la herencia funcional de los perros de transporte, con educación en uso correcto de arneses.</p></div>
+<div class="act rv"><h4>Grooming Profesional</h4><p>Competencias internacionales de estética canina con certificación y rankings oficiales.</p></div>
+</div>
+</div>
+</section>
+
+<!-- SERVICE DOGS -->
+<section class="service-dogs">
+<div class="wrap">
+<div class="sd-inner">
+<div class="sd-text rv">
+<div class="eyebrow">Compromiso Social</div>
+<h2>Certificación de Perros de Servicio y Asistencia</h2>
+<p>Alianz otorga importancia capital a los perros que desempeñan funciones críticas para la sociedad. La certificación garantiza que el binomio humano-canino cumple con los estándares internacionales de seguridad y eficacia.</p>
+<p>Nuestros programas cubren desde perros policiales y de rescate hasta asistencia médica, apoyo para veteranos con PTSD, y soporte emocional.</p>
+</div>
+<div class="sd-types rv">
+<div class="sd-type"><h4>Asistencia a la Movilidad</h4><p>Recuperar objetos, abrir puertas, apoyo en equilibrio, activar interruptores.</p></div>
+<div class="sd-type"><h4>Alerta Médica</h4><p>Detección de cambios químicos previos a crisis de diabetes, epilepsia y migraña.</p></div>
+<div class="sd-type"><h4>Psiquiátrico / PTSD</h4><p>Interrupción de pánico, alerta de disociación y acompañamiento para veteranos.</p></div>
+<div class="sd-type"><h4>Asistencia para Autismo</h4><p>Anclaje, calma sensorial y seguridad en espacios públicos.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="wrap">
+<div class="cta-inner rv">
+<div class="eyebrow" style="color:var(--gold-soft)">Forma Parte</div>
+<h2>El Futuro de la Cinología Está en Alianz</h2>
+<p>Ya sea para un criador que busca el máximo prestigio, un deportista que desea reconocimiento biomecánico, o un profesional que depende de la certificación — Alianz proporciona la garantía de excelencia a nivel mundial.</p>
+<a href="/contacto" class="btn btn-gold">Solicitar Afiliación <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer><div class="wrap"><div class="ft-grid"><div class="ft-brand"><h3>Alianz <em>Canine Worldwide</em></h3><p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p><div class="ft-social"><a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div class="ft-col"><h4>Navegación</h4><ul><li><a href="/nosotros">Nosotros</a></li><li><a href="/eventos">Eventos</a></li><li><a href="/razas">Razas</a></li><li><a href="/jueces">Jueces</a></li><li><a href="/blog">Blog</a></li></ul></div><div class="ft-col"><h4>Recursos</h4><ul><li><a href="/reglamentos">Reglamentos</a></li><li><a href="/cursos">Formación</a></li><li><a href="/contacto">Contacto</a></li><li><a href="/login">Área de Miembros</a></li></ul></div><div class="ft-col"><h4>Contacto</h4><ul><li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li><li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li><li><a href="#">Ctra. Nacional 301, Km. 384</a></li><li><a href="#">Molina de Segura, Murcia, España</a></li></ul></div></div><div class="ft-bottom">© 2026 Alianz Canine Worldwide. Todos los derechos reservados. &nbsp;·&nbsp; <a href="/privacidad">Privacidad</a> &nbsp;·&nbsp; <a href="/aviso-legal">Aviso Legal</a> &nbsp;·&nbsp; <a href="/cookies">Cookies</a></div></div></footer>
+
+<script>
+const h=document.getElementById('hdr');window.addEventListener('scroll',()=>h.classList.toggle('solid',scrollY>60));
+const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*80);obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

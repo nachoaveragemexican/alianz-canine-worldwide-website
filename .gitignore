@@ -19,10 +19,12 @@ dist/
 *.swp
 *.swo
 
-# Paperclip / internal working files
-goraaa25-comment.json
+# Firecrawl cache
+.firecrawl/
 
 # Output / working directories (not for deployment)
 output/
-html-references/
-reference/
+
+# Temporary and log files
+*.tmp
+*.log
