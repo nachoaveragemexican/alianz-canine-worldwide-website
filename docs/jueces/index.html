@@ -355,10 +355,36 @@ header.solid { background: var(--navy-deep); }
   overflow: hidden;
 }
 
-/* Solid fallback backgrounds (shown if photo fails to load) */
-.continent-card-img.europe  { background: #2A7B88; }
-.continent-card-img.america { background: #A68B3E; }
-.continent-card-img.asia    { background: #357F8C; }
+/* Each continent gets a distinct gradient + topographic contour lines.
+   The repeating-radial-gradient creates concentric rings like a topo map —
+   focal point is positioned per-continent for visual variety. */
+.continent-card-img.europe {
+  background:
+    repeating-radial-gradient(
+      ellipse 200% 80% at 72% 110%,
+      transparent, transparent 22px,
+      rgba(255,255,255,0.028) 23px, rgba(255,255,255,0.028) 24px
+    ),
+    linear-gradient(145deg, #0D1929 0%, #1B2A4A 40%, #1F3C54 70%, #2A7B88 100%);
+}
+.continent-card-img.america {
+  background:
+    repeating-radial-gradient(
+      ellipse 180% 90% at 28% 115%,
+      transparent, transparent 22px,
+      rgba(255,255,255,0.028) 23px, rgba(255,255,255,0.028) 24px
+    ),
+    linear-gradient(145deg, #0D1929 0%, #1B2A4A 35%, #2E2210 65%, #A68B3E 100%);
+}
+.continent-card-img.asia {
+  background:
+    repeating-radial-gradient(
+      ellipse 220% 75% at 50% 120%,
+      transparent, transparent 22px,
+      rgba(255,255,255,0.028) 23px, rgba(255,255,255,0.028) 24px
+    ),
+    linear-gradient(145deg, #0D1929 0%, #1A2C48 35%, #1E3352 65%, #1A4F6A 100%);
+}
 .continent-card-img img {
   width: 100%;
   height: 100%;
@@ -384,11 +410,86 @@ header.solid { background: var(--navy-deep); }
   left: 24px;
   z-index: 2;
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   color: var(--white);
   font-weight: 400;
+  letter-spacing: .01em;
+  text-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+.continent-flag {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+}
+/* Small coordinate label — cartographic detail bottom-right */
+.continent-coord {
+  position: absolute;
+  bottom: 22px;
+  right: 20px;
+  z-index: 2;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
 }
 
+/* Gold accent bar at the top of every continent card — premium brand touch */
+.continent-card-img.europe::before,
+.continent-card-img.america::before,
+.continent-card-img.asia::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #C5A55A 30%, #D9C88C 55%, #C5A55A 80%, transparent 100%);
+  z-index: 3;
+}
+
+/* ── Continent silhouette SVG overlay ─────────────────────────────────────
+   Atlas-style illustrated map silhouette. Stroke-forward design: the outline
+   reads as a cartographic line drawing rather than a flat blob.
+   z-index: 0 stays below the ::after readability gradient (z-index: 1) and
+   the text badges (.continent-name / .continent-flag at z-index: 2).
+   ─────────────────────────────────────────────────────────────────────── */
+.continent-silhouette {
+  position: absolute;
+  fill: rgba(255,255,255,0.06);
+  stroke: rgba(255,255,255,0.28);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+  z-index: 0;
+  pointer-events: none;
+  transition: fill .5s ease, stroke .5s ease;
+}
+.continent-card:hover .continent-silhouette {
+  fill: rgba(255,255,255,0.10);
+  stroke: rgba(255,255,255,0.40);
+}
+
+/* Europe: fills most of the card, anchored lower-right */
+.continent-card-img.europe .continent-silhouette {
+  width: 95%;
+  bottom: -5%;
+  right: -5%;
+}
+/* Americas: tall shape, centered */
+.continent-card-img.america .continent-silhouette {
+  height: 95%;
+  bottom: -5%;
+  right: 5%;
+}
+/* Asia: wide, anchored lower-left */
+.continent-card-img.asia .continent-silhouette {
+  width: 100%;
+  bottom: -5%;
+  left: -2%;
+}
 
 .continent-card-body {
   padding: 28px 28px 32px;
@@ -777,8 +878,30 @@ footer {
       <!-- Europa -->
       <article class="continent-card rv" aria-label="Jueces en Europa">
         <div class="continent-card-img europe">
-          <img src="../assets/images/judges/continent-europe.jpg" alt="Vista panorámica de la Torre Eiffel y París, representando Europa" width="1260" height="710" loading="lazy">
+          <!-- Europe silhouette — clockwise Atlantic coast, Scandinavian peninsula,
+               Baltic/Eastern coast, Mediterranean, Italian peninsula, Iberian peninsula -->
+          <svg class="continent-silhouette" aria-hidden="true" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <path d="
+              M 68,280 L 55,255 L 48,230 L 46,208 L 50,188 L 50,170
+              L 44,155 L 38,142 L 44,130 L 58,120 L 72,112 L 84,102
+              L 88,90 L 82,75 L 72,60 L 68,42 L 80,25 L 105,12
+              L 138,5 L 170,5 L 200,10 L 228,22 L 248,42 L 255,68
+              L 258,96 L 252,118 L 242,132 L 240,148 L 244,168 L 252,188
+              L 260,210 L 270,228 L 282,240 L 298,235 L 315,224
+              L 328,212 L 335,196 L 330,178 L 318,162 L 305,148
+              L 295,135 L 288,120 L 290,105 L 298,95 L 288,100
+              L 278,110 L 268,122 L 260,138 L 258,155 L 260,172
+              L 262,190 L 258,208 L 248,218 L 235,212 L 225,200
+              L 218,185 L 215,168 L 210,152 L 202,138 L 192,128
+              L 185,138 L 180,152 L 175,168 L 172,185 L 175,200
+              L 178,215 L 172,228 L 160,225 L 150,212 L 144,196
+              L 140,178 L 138,160 L 128,152 L 115,155 L 105,165
+              L 98,180 L 94,198 L 98,218 L 108,238 L 118,255
+              L 105,268 L 90,275 Z"/>
+          </svg>
+          <span class="continent-flag" aria-hidden="true">🇪🇺</span>
           <div class="continent-name">Europa</div>
+          <div class="continent-coord">36°N – 71°N</div>
         </div>
         <div class="continent-card-body">
           <div class="continent-card-meta">
@@ -811,8 +934,25 @@ footer {
       <!-- América -->
       <article class="continent-card rv" aria-label="Jueces en América">
         <div class="continent-card-img america">
-          <img src="../assets/images/judges/continent-america.jpg" alt="Vista aérea de Machu Picchu en los Andes peruanos, representando América" width="1260" height="710" loading="lazy">
+          <!-- Americas silhouette — North America broad top, Central America isthmus,
+               South America with Amazon coast bulge and Patagonian tip -->
+          <svg class="continent-silhouette" aria-hidden="true" viewBox="0 0 280 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <path d="
+              M 18,45 L 28,22 L 62,8 L 98,4 L 128,10 L 148,25
+              L 152,48 L 145,70 L 148,92 L 142,112 L 132,128
+              L 136,142 L 148,135 L 158,125 L 165,135 L 168,152
+              L 170,168 L 175,182 L 178,198 L 182,212 L 185,228
+              L 182,248 L 186,268 L 192,295 L 196,322 L 200,352
+              L 205,382 L 198,400 L 188,388 L 190,360 L 196,332
+              L 200,305 L 208,278 L 218,255 L 228,232 L 238,208
+              L 245,185 L 250,162 L 242,140 L 228,122 L 215,108
+              L 202,95 L 188,82 L 175,68 L 165,52 L 155,38
+              L 142,32 L 128,35 L 112,42 L 95,52 L 78,65
+              L 62,78 L 48,90 L 32,85 L 18,70 Z"/>
+          </svg>
+          <span class="continent-flag" aria-hidden="true">🌎</span>
           <div class="continent-name">América</div>
+          <div class="continent-coord">60°N – 56°S</div>
         </div>
         <div class="continent-card-body">
           <div class="continent-card-meta">
@@ -846,8 +986,27 @@ footer {
       <!-- Asia y Oceanía -->
       <article class="continent-card rv" aria-label="Jueces en Asia y Oceanía">
         <div class="continent-card-img asia">
-          <img src="../assets/images/judges/continent-asia.jpg" alt="Castillo de Osaka rodeado de cerezos en flor, representando Asia y Oceanía" width="1260" height="710" loading="lazy">
+          <!-- Asia silhouette — broad N landmass, Arabian peninsula SW,
+               Indian subcontinent S, SE Asian peninsula SE -->
+          <svg class="continent-silhouette" aria-hidden="true" viewBox="0 0 450 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <path d="
+              M 10,92 L 10,68 L 22,48 L 52,32 L 88,20 L 128,12
+              L 172,8 L 215,10 L 258,14 L 295,22 L 322,35 L 340,52
+              L 345,72 L 338,92 L 325,108 L 315,128 L 312,148
+              L 302,162 L 288,175 L 272,185 L 260,198 L 252,215
+              L 248,232 L 252,215 L 242,205 L 228,198 L 215,188
+              L 205,175 L 198,160 L 195,145 L 192,128 L 188,112
+              L 182,98 L 175,82 L 168,65 L 162,50 L 158,35
+              L 165,22 L 175,32 L 182,48 L 185,65 L 188,82
+              L 192,98 L 195,115 L 198,132 L 202,148 L 205,165
+              L 208,180 L 205,195 L 198,208 L 188,218 L 175,225
+              L 162,228 L 148,222 L 138,210 L 130,195 L 125,178
+              L 122,162 L 118,145 L 112,128 L 105,112 L 98,95
+              L 88,80 L 75,68 L 62,62 L 48,65 L 35,75 L 22,88 Z"/>
+          </svg>
+          <span class="continent-flag" aria-hidden="true">🌏</span>
           <div class="continent-name">Asia &amp; Oceanía</div>
+          <div class="continent-coord">1°N – 77°N</div>
         </div>
         <div class="continent-card-body">
           <div class="continent-card-meta">
