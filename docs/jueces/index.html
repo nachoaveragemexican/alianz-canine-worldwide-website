@@ -390,16 +390,15 @@ header.solid { background: var(--navy-deep); }
   height: 100%;
   object-fit: cover;
   transition: transform .6s var(--ease);
-  filter: grayscale(100%) contrast(1.1) brightness(0.85);
 }
 .continent-card:hover .continent-card-img img { transform: scale(1.04); }
 
-/* Navy-tinted overlay with gold accent for brand cohesion */
+/* Gradient overlay for continent name readability */
 .continent-card-img::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,25,41,.85) 0%, rgba(27,42,74,.35) 50%, rgba(27,42,74,.25) 100%);
+  background: linear-gradient(to top, rgba(13,25,41,.6) 0%, rgba(27,42,74,.1) 50%, transparent 100%);
   z-index: 1;
 }
 
@@ -878,28 +877,7 @@ footer {
       <!-- Europa -->
       <article class="continent-card rv" aria-label="Jueces en Europa">
         <div class="continent-card-img europe">
-          <!-- Europe silhouette — clockwise Atlantic coast, Scandinavian peninsula,
-               Baltic/Eastern coast, Mediterranean, Italian peninsula, Iberian peninsula -->
-          <svg class="continent-silhouette" aria-hidden="true" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <path d="
-              M 68,280 L 55,255 L 48,230 L 46,208 L 50,188 L 50,170
-              L 44,155 L 38,142 L 44,130 L 58,120 L 72,112 L 84,102
-              L 88,90 L 82,75 L 72,60 L 68,42 L 80,25 L 105,12
-              L 138,5 L 170,5 L 200,10 L 228,22 L 248,42 L 255,68
-              L 258,96 L 252,118 L 242,132 L 240,148 L 244,168 L 252,188
-              L 260,210 L 270,228 L 282,240 L 298,235 L 315,224
-              L 328,212 L 335,196 L 330,178 L 318,162 L 305,148
-              L 295,135 L 288,120 L 290,105 L 298,95 L 288,100
-              L 278,110 L 268,122 L 260,138 L 258,155 L 260,172
-              L 262,190 L 258,208 L 248,218 L 235,212 L 225,200
-              L 218,185 L 215,168 L 210,152 L 202,138 L 192,128
-              L 185,138 L 180,152 L 175,168 L 172,185 L 175,200
-              L 178,215 L 172,228 L 160,225 L 150,212 L 144,196
-              L 140,178 L 138,160 L 128,152 L 115,155 L 105,165
-              L 98,180 L 94,198 L 98,218 L 108,238 L 118,255
-              L 105,268 L 90,275 Z"/>
-          </svg>
-          <span class="continent-flag" aria-hidden="true">🇪🇺</span>
+          <img src="../assets/images/judges/continent-europe.png" alt="Mapa estilizado del continente europeo sobre fondo azul marino" width="1260" height="710" loading="lazy">
           <div class="continent-name">Europa</div>
           <div class="continent-coord">36°N – 71°N</div>
         </div>
@@ -934,23 +912,7 @@ footer {
       <!-- América -->
       <article class="continent-card rv" aria-label="Jueces en América">
         <div class="continent-card-img america">
-          <!-- Americas silhouette — North America broad top, Central America isthmus,
-               South America with Amazon coast bulge and Patagonian tip -->
-          <svg class="continent-silhouette" aria-hidden="true" viewBox="0 0 280 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <path d="
-              M 18,45 L 28,22 L 62,8 L 98,4 L 128,10 L 148,25
-              L 152,48 L 145,70 L 148,92 L 142,112 L 132,128
-              L 136,142 L 148,135 L 158,125 L 165,135 L 168,152
-              L 170,168 L 175,182 L 178,198 L 182,212 L 185,228
-              L 182,248 L 186,268 L 192,295 L 196,322 L 200,352
-              L 205,382 L 198,400 L 188,388 L 190,360 L 196,332
-              L 200,305 L 208,278 L 218,255 L 228,232 L 238,208
-              L 245,185 L 250,162 L 242,140 L 228,122 L 215,108
-              L 202,95 L 188,82 L 175,68 L 165,52 L 155,38
-              L 142,32 L 128,35 L 112,42 L 95,52 L 78,65
-              L 62,78 L 48,90 L 32,85 L 18,70 Z"/>
-          </svg>
-          <span class="continent-flag" aria-hidden="true">🌎</span>
+          <img src="../assets/images/judges/continent-america.png" alt="Mapa estilizado del continente americano sobre fondo azul marino" width="1260" height="710" loading="lazy">
           <div class="continent-name">América</div>
           <div class="continent-coord">60°N – 56°S</div>
         </div>
@@ -986,25 +948,7 @@ footer {
       <!-- Asia y Oceanía -->
       <article class="continent-card rv" aria-label="Jueces en Asia y Oceanía">
         <div class="continent-card-img asia">
-          <!-- Asia silhouette — broad N landmass, Arabian peninsula SW,
-               Indian subcontinent S, SE Asian peninsula SE -->
-          <svg class="continent-silhouette" aria-hidden="true" viewBox="0 0 450 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <path d="
-              M 10,92 L 10,68 L 22,48 L 52,32 L 88,20 L 128,12
-              L 172,8 L 215,10 L 258,14 L 295,22 L 322,35 L 340,52
-              L 345,72 L 338,92 L 325,108 L 315,128 L 312,148
-              L 302,162 L 288,175 L 272,185 L 260,198 L 252,215
-              L 248,232 L 252,215 L 242,205 L 228,198 L 215,188
-              L 205,175 L 198,160 L 195,145 L 192,128 L 188,112
-              L 182,98 L 175,82 L 168,65 L 162,50 L 158,35
-              L 165,22 L 175,32 L 182,48 L 185,65 L 188,82
-              L 192,98 L 195,115 L 198,132 L 202,148 L 205,165
-              L 208,180 L 205,195 L 198,208 L 188,218 L 175,225
-              L 162,228 L 148,222 L 138,210 L 130,195 L 125,178
-              L 122,162 L 118,145 L 112,128 L 105,112 L 98,95
-              L 88,80 L 75,68 L 62,62 L 48,65 L 35,75 L 22,88 Z"/>
-          </svg>
-          <span class="continent-flag" aria-hidden="true">🌏</span>
+          <img src="../assets/images/judges/continent-asia.png" alt="Mapa estilizado de Asia, Oceanía y Australia sobre fondo azul marino" width="1260" height="710" loading="lazy">
           <div class="continent-name">Asia &amp; Oceanía</div>
           <div class="continent-coord">1°N – 77°N</div>
         </div>
