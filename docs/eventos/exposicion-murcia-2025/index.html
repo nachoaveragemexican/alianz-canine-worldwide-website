@@ -32,7 +32,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,25,41,
 .page-hero{padding:160px 0 80px;background:linear-gradient(rgba(13,25,41,.7), rgba(27,42,74,.85)), url('/alianz-canine-worldwide-website/assets/images/hero-dog-show.jpg') center/cover no-repeat;position:relative;overflow:hidden;}.page-hero::after{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(42,123,136,.12),transparent 70%);}.page-hero .wrap{position:relative;z-index:2;}.page-hero .eyebrow{color:var(--gold-soft);}.page-hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.5rem);font-weight:400;color:var(--white);line-height:1.15;margin-bottom:16px;}.page-hero p{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.8;max-width:600px;}
 .breadcrumb{padding:16px 0;background:var(--warm-gray);border-bottom:1px solid var(--stone);}.breadcrumb-inner{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--text-light);}.breadcrumb-inner a{color:var(--teal);}.breadcrumb-inner a:hover{color:var(--navy);}.breadcrumb-sep{color:var(--stone);}
 .event-detail{padding:clamp(60px,8vw,100px) 0;background:var(--cream);}.event-layout{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start;}
-.event-image{width:100%;height:360px;border-radius:16px;background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy-deep) 100%);margin-bottom:40px;display:flex;align-items:center;justify-content:center;}.event-image-label{font-family:var(--serif);font-size:1.5rem;color:rgba(255,255,255,.25);text-align:center;padding:20px;line-height:1.4;}
+.event-image{width:100%;height:360px;border-radius:16px;overflow:hidden;margin-bottom:40px;}.event-image img{width:100%;height:100%;object-fit:cover;display:block;}
 .event-content h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);line-height:1.2;margin-bottom:24px;}.event-content p{font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:20px;}.event-content .back-link{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--teal);margin-top:32px;}.event-content .back-link:hover{gap:10px;}
 .event-card{background:var(--white);border-radius:16px;border:1px solid var(--stone);padding:32px;position:sticky;top:90px;}.event-card .eyebrow{color:var(--teal);margin-bottom:20px;}
 .event-card-row{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--stone);}.event-card-row:last-of-type{border-bottom:none;}
@@ -98,8 +98,8 @@ footer{background:var(--navy-deep);padding:64px 0 0;border-top:1px solid rgba(25
   <div class="wrap">
     <div class="event-layout">
       <div>
-        <div class="event-image rv" role="img" aria-label="Imagen representativa de la Exposición Canina Nacional en Murcia">
-          <span class="event-image-label">Exposición Canina Nacional<br>ZigZag, Murcia</span>
+        <div class="event-image rv">
+          <img src="/alianz-canine-worldwide-website/assets/images/hero-dog-show.jpg" alt="Exposición Canina Nacional — ZigZag, Murcia" width="800" height="360">
         </div>
         <div class="event-content rv">
           <h2>Acerca del Evento</h2>

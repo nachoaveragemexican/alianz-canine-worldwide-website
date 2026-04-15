@@ -57,8 +57,7 @@ header.solid{background:var(--navy-deep);}
 .breadcrumb-sep{color:var(--stone);}
 .event-detail{padding:clamp(60px,8vw,100px) 0;background:var(--cream);}
 .event-layout{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start;}
-.event-image{width:100%;height:360px;border-radius:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--teal-soft) 100%);margin-bottom:40px;display:flex;align-items:center;justify-content:center;}
-.event-image-label{font-family:var(--serif);font-size:1.5rem;color:rgba(255,255,255,.25);text-align:center;padding:20px;line-height:1.4;}
+.event-image{width:100%;height:360px;border-radius:16px;overflow:hidden;margin-bottom:40px;}.event-image img{width:100%;height:100%;object-fit:cover;display:block;}
 .event-content h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);line-height:1.2;margin-bottom:24px;}
 .event-content p{font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:20px;}
 .event-content .back-link{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--teal);margin-top:32px;}
@@ -149,8 +148,8 @@ footer{background:var(--navy-deep);padding:64px 0 0;border-top:1px solid rgba(25
   <div class="wrap">
     <div class="event-layout">
       <div>
-        <div class="event-image rv" role="img" aria-label="Imagen representativa de la Cumbre Iberoamericana Ecuador ACW">
-          <span class="event-image-label">Cumbre Iberoamericana<br>Ecuador ACW</span>
+        <div class="event-image rv">
+          <img src="/alianz-canine-worldwide-website/assets/images/cumbre-iberoamericana-2025.jpg" alt="Cumbre Iberoamericana Ecuador ACW" width="800" height="360">
         </div>
         <div class="event-content rv">
           <h2>Acerca del Evento</h2>

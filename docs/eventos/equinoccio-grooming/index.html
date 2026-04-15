@@ -37,8 +37,7 @@ header.solid{background:var(--navy-deep);}
 .breadcrumb{padding:16px 0;background:var(--warm-gray);border-bottom:1px solid var(--stone);}.breadcrumb-inner{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--text-light);}.breadcrumb-inner a{color:var(--teal);}.breadcrumb-inner a:hover{color:var(--navy);}.breadcrumb-sep{color:var(--stone);}
 .event-detail{padding:clamp(60px,8vw,100px) 0;background:var(--cream);}
 .event-layout{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start;}
-.event-image{width:100%;height:360px;border-radius:16px;background:linear-gradient(135deg,var(--teal) 0%,var(--navy) 100%);margin-bottom:40px;display:flex;align-items:center;justify-content:center;}
-.event-image-label{font-family:var(--serif);font-size:1.5rem;color:rgba(255,255,255,.25);text-align:center;padding:20px;line-height:1.4;}
+.event-image{width:100%;height:360px;border-radius:16px;overflow:hidden;margin-bottom:40px;}.event-image img{width:100%;height:100%;object-fit:cover;display:block;}
 .event-content h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);line-height:1.2;margin-bottom:24px;}.event-content p{font-size:.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:20px;}.event-content .back-link{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:600;color:var(--teal);margin-top:32px;}.event-content .back-link:hover{gap:10px;}
 .event-card{background:var(--white);border-radius:16px;border:1px solid var(--stone);padding:32px;position:sticky;top:90px;}.event-card .eyebrow{color:var(--teal);margin-bottom:20px;}
 .event-card-row{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--stone);}.event-card-row:last-of-type{border-bottom:none;}
@@ -105,8 +104,8 @@ footer{background:var(--navy-deep);padding:64px 0 0;border-top:1px solid rgba(25
   <div class="wrap">
     <div class="event-layout">
       <div>
-        <div class="event-image rv" role="img" aria-label="Imagen representativa del Equinoccio Grooming">
-          <span class="event-image-label">Equinoccio Grooming</span>
+        <div class="event-image rv">
+          <img src="/alianz-canine-worldwide-website/assets/images/equinoccio-grooming-2025.jpg" alt="Equinoccio Grooming" width="800" height="360">
         </div>
         <div class="event-content rv">
           <h2>Acerca del Evento</h2>
