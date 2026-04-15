@@ -399,6 +399,7 @@ header.solid { background: var(--navy-deep); }
   height: 100%;
   object-fit: cover;
   transition: transform .6s var(--ease);
+  filter: grayscale(100%) contrast(1.1) brightness(0.85);
 }
 .continent-card:hover .continent-card-img img { transform: scale(1.04); }
 
@@ -407,7 +408,7 @@ header.solid { background: var(--navy-deep); }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,25,41,.6) 0%, rgba(27,42,74,.1) 50%, transparent 100%);
+  background: linear-gradient(to top, rgba(13,25,41,.85) 0%, rgba(27,42,74,.35) 50%, rgba(27,42,74,.25) 100%);
   z-index: 1;
 }
 
@@ -424,15 +425,6 @@ header.solid { background: var(--navy-deep); }
   letter-spacing: .01em;
   text-shadow: 0 2px 12px rgba(0,0,0,.5);
 }
-.continent-flag {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 2;
-  font-size: 1.6rem;
-  line-height: 1;
-  filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
-}
 /* Gold accent bar at the top of every continent card — premium brand touch */
 .continent-card-img.europe::before,
 .continent-card-img.america::before,
@@ -444,46 +436,6 @@ header.solid { background: var(--navy-deep); }
   height: 3px;
   background: linear-gradient(90deg, transparent 0%, #C5A55A 30%, #D9C88C 55%, #C5A55A 80%, transparent 100%);
   z-index: 3;
-}
-
-/* ── Continent silhouette SVG overlay ─────────────────────────────────────
-   Atlas-style illustrated map silhouette. Stroke-forward design: the outline
-   reads as a cartographic line drawing rather than a flat blob.
-   z-index: 0 stays below the ::after readability gradient (z-index: 1) and
-   the text badges (.continent-name / .continent-flag at z-index: 2).
-   ─────────────────────────────────────────────────────────────────────── */
-.continent-silhouette {
-  position: absolute;
-  fill: rgba(255,255,255,0.06);
-  stroke: rgba(255,255,255,0.28);
-  stroke-width: 1.2;
-  stroke-linejoin: round;
-  z-index: 0;
-  pointer-events: none;
-  transition: fill .5s ease, stroke .5s ease;
-}
-.continent-card:hover .continent-silhouette {
-  fill: rgba(255,255,255,0.10);
-  stroke: rgba(255,255,255,0.40);
-}
-
-/* Europe: fills most of the card, anchored lower-right */
-.continent-card-img.europe .continent-silhouette {
-  width: 95%;
-  bottom: -5%;
-  right: -5%;
-}
-/* Americas: tall shape, centered */
-.continent-card-img.america .continent-silhouette {
-  height: 95%;
-  bottom: -5%;
-  right: 5%;
-}
-/* Asia: wide, anchored lower-left */
-.continent-card-img.asia .continent-silhouette {
-  width: 100%;
-  bottom: -5%;
-  left: -2%;
 }
 
 .continent-card-body {
@@ -875,7 +827,7 @@ footer {
       <!-- Europa -->
       <article class="continent-card rv" aria-label="Jueces en Europa">
         <div class="continent-card-img europe">
-          <img src="../assets/images/judges/continent-europe.png" alt="Mapa estilizado del continente europeo sobre fondo azul marino" width="1260" height="710" loading="lazy">
+          <img src="../assets/images/judges/continent-europe.jpg" alt="Vista panoramica de la Torre Eiffel y Paris, representando Europa" width="1260" height="710" loading="lazy">
           <div class="continent-name">Europa</div>
         </div>
         <div class="continent-card-body">
@@ -909,7 +861,7 @@ footer {
       <!-- América -->
       <article class="continent-card rv" aria-label="Jueces en América">
         <div class="continent-card-img america">
-          <img src="../assets/images/judges/continent-america.png" alt="Mapa estilizado del continente americano sobre fondo azul marino" width="1260" height="710" loading="lazy">
+          <img src="../assets/images/judges/continent-america.jpg" alt="Vista aerea de Machu Picchu en los Andes peruanos, representando America" width="1260" height="710" loading="lazy">
           <div class="continent-name">América</div>
         </div>
         <div class="continent-card-body">
@@ -944,7 +896,7 @@ footer {
       <!-- Asia -->
       <article class="continent-card rv" aria-label="Jueces en Asia">
         <div class="continent-card-img asia">
-          <img src="../assets/images/judges/continent-asia.png" alt="Mapa estilizado de Asia, Oceanía y Australia sobre fondo azul marino" width="1260" height="710" loading="lazy">
+          <img src="../assets/images/judges/continent-asia.jpg" alt="Castillo de Osaka rodeado de cerezos en flor, representando Asia y Oceania" width="1260" height="710" loading="lazy">
           <div class="continent-name">Asia &amp; Oceanía</div>
           <div class="continent-coord">1°N – 77°N</div>
         </div>
