@@ -61,7 +61,7 @@ header.solid { background: var(--navy-deep); }
   .burger { display: flex; }
 }
 
-.page-hero { padding: 160px 0 80px; background: var(--navy); position: relative; overflow: hidden; }
+.page-hero { padding: 160px 0 80px; background: linear-gradient(rgba(13,25,41,.7), rgba(27,42,74,.85)), url('/alianz-canine-worldwide-website/assets/images/sports/canicross.jpg') center/cover no-repeat; position: relative; overflow: hidden; }
 .page-hero::after { content: ''; position: absolute; top: -200px; right: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%); }
 .page-hero .wrap { position: relative; z-index: 2; }
 .page-hero .eyebrow { color: var(--gold-soft); }
@@ -75,9 +75,7 @@ header.solid { background: var(--navy-deep); }
 .breadcrumb-sep { color: var(--stone); }
 
 .discipline-visual { width: 100%; height: 340px; border-radius: 20px; overflow: hidden; position: relative; }
-.discipline-visual .grad { position: absolute; inset: 0; }
-.discipline-visual .icon-center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-.discipline-visual .icon-center svg { width: 80px; height: 80px; stroke: rgba(255,255,255,.6); fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 4px 16px rgba(0,0,0,.4)); }
+.discipline-visual img { width: 100%; height: 100%; object-fit: cover; }
 
 .discipline-content { padding: clamp(80px, 10vw, 120px) 0; background: var(--white); }
 .discipline-grid { display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: start; }
@@ -194,14 +192,8 @@ footer { background: var(--navy-deep); padding: 64px 0 0; border-top: 1px solid 
       </div>
 
       <div class="rv">
-        <div class="discipline-visual" role="img" aria-label="Ilustración decorativa Canicross">
-          <div class="grad" style="background: linear-gradient(135deg, #243656 0%, #2A7B88 55%, #D9C88C 100%);"></div>
-          <div class="icon-center">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="5" r="2"/>
-              <path d="M12 7v8M8 11l4 2 4-2M9 19l3-2 3 2"/>
-            </svg>
-          </div>
+        <div class="discipline-visual">
+          <img src="/alianz-canine-worldwide-website/assets/images/sports/canicross.jpg" alt="Persona corriendo con su perro en competencia de canicross" width="800" height="450" loading="lazy">
         </div>
       </div>
 

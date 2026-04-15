@@ -61,7 +61,7 @@ header.solid { background: var(--navy-deep); }
   .burger { display: flex; }
 }
 
-.page-hero { padding: 160px 0 80px; background: var(--navy); position: relative; overflow: hidden; }
+.page-hero { padding: 160px 0 80px; background: linear-gradient(rgba(13,25,41,.7), rgba(27,42,74,.85)), url('/alianz-canine-worldwide-website/assets/images/sports/traccion.jpg') center/cover no-repeat; position: relative; overflow: hidden; }
 .page-hero::after { content: ''; position: absolute; top: -200px; right: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%); }
 .page-hero .wrap { position: relative; z-index: 2; }
 .page-hero .eyebrow { color: var(--gold-soft); }
@@ -75,9 +75,7 @@ header.solid { background: var(--navy-deep); }
 .breadcrumb-sep { color: var(--stone); }
 
 .discipline-visual { width: 100%; height: 340px; border-radius: 20px; overflow: hidden; position: relative; }
-.discipline-visual .grad { position: absolute; inset: 0; }
-.discipline-visual .icon-center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-.discipline-visual .icon-center svg { width: 80px; height: 80px; stroke: rgba(255,255,255,.6); fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 4px 16px rgba(0,0,0,.4)); }
+.discipline-visual img { width: 100%; height: 100%; object-fit: cover; }
 
 .discipline-content { padding: clamp(80px, 10vw, 120px) 0; background: var(--white); }
 .discipline-grid { display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: start; }
@@ -194,16 +192,8 @@ footer { background: var(--navy-deep); padding: 64px 0 0; border-top: 1px solid 
       </div>
 
       <div class="rv">
-        <div class="discipline-visual" role="img" aria-label="Ilustración decorativa Deportes de Tracción">
-          <div class="grad" style="background: linear-gradient(135deg, #1B2A4A 0%, #243656 40%, #357F8C 100%);"></div>
-          <div class="icon-center">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/>
-              <rect x="9" y="11" width="14" height="10" rx="2"/>
-              <circle cx="12" cy="21" r="1"/>
-              <circle cx="20" cy="21" r="1"/>
-            </svg>
-          </div>
+        <div class="discipline-visual">
+          <img src="/alianz-canine-worldwide-website/assets/images/sports/traccion.jpg" alt="Perros de trineo en competencia de deportes de tracción" width="800" height="450" loading="lazy">
         </div>
       </div>
 
