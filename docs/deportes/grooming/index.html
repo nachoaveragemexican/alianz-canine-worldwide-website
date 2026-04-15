@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grooming Profesional | Deportes y Disciplinas | Alianz Canine Worldwide</title>
+<meta name="description" content="Grooming Profesional ACW: competencias internacionales de estética canina con certificación y rankings oficiales reconocidos en más de 50 países.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Grooming Profesional | Alianz Canine Worldwide">
+<meta property="og:description" content="Competencias internacionales de estética canina con certificación y rankings oficiales reconocidos en más de 50 países.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #1B2A4A; --navy-deep: #0D1929; --navy-mid: #243656;
+  --gold: #C5A55A; --gold-soft: #D9C88C; --gold-dark: #A68B3E;
+  --teal: #2A7B88; --teal-soft: #357F8C;
+  --cream: #FAF8F4; --warm-gray: #F3F1ED; --stone: #E8E4DD;
+  --text: #1A1A1A; --text-mid: #5A5A5A; --text-light: #6B6B6B; --white: #FFFFFF;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'Outfit', system-ui, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+.eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 34px; font-family: var(--sans); font-size: .88rem; font-weight: 600; letter-spacing: .3px; border-radius: 8px; border: none; cursor: pointer; transition: all .35s var(--ease); }
+.btn-gold { background: var(--gold); color: var(--white); }
+.btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(197,165,90,.25); }
+.btn-outline { background: transparent; color: var(--gold-soft); border: 1.5px solid rgba(197,165,90,.4); }
+.btn-outline:hover { background: rgba(197,165,90,.08); border-color: var(--gold); }
+.btn-arrow { width: 18px; height: 18px; }
+
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,25,41,.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,.06); transition: background .4s; }
+header.solid { background: var(--navy-deep); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; max-width: 1400px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+.nav-cta { padding: 9px 22px !important; border: 1.5px solid rgba(197,165,90,.4) !important; border-radius: 6px; color: var(--gold-soft) !important; font-weight: 600 !important; }
+.nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; border-color: var(--gold) !important; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
+@media (max-width: 960px) {
+  .nav-menu { display: none; flex-direction: column; gap: 0; position: absolute; top: 70px; left: 0; right: 0; background: var(--navy-deep); border-bottom: 1px solid rgba(255,255,255,.08); padding: 16px 0; }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; }
+  .burger { display: flex; }
+}
+
+.page-hero { padding: 160px 0 80px; background: var(--navy); position: relative; overflow: hidden; }
+.page-hero::after { content: ''; position: absolute; top: -200px; right: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%); }
+.page-hero .wrap { position: relative; z-index: 2; }
+.page-hero .eyebrow { color: var(--gold-soft); }
+.page-hero h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.5rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 16px; }
+.page-hero p { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.8; max-width: 600px; }
+
+.breadcrumb { background: var(--warm-gray); border-bottom: 1px solid var(--stone); padding: 14px 0; }
+.breadcrumb-inner { display: flex; align-items: center; gap: 8px; font-size: .78rem; color: var(--text-light); }
+.breadcrumb-inner a { color: var(--teal); }
+.breadcrumb-inner a:hover { color: var(--navy); }
+.breadcrumb-sep { color: var(--stone); }
+
+.discipline-visual { width: 100%; height: 340px; border-radius: 20px; overflow: hidden; position: relative; }
+.discipline-visual .grad { position: absolute; inset: 0; }
+.discipline-visual .icon-center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.discipline-visual .icon-center svg { width: 80px; height: 80px; stroke: rgba(255,255,255,.6); fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 4px 16px rgba(0,0,0,.4)); }
+
+.discipline-content { padding: clamp(80px, 10vw, 120px) 0; background: var(--white); }
+.discipline-grid { display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: start; }
+@media (max-width: 900px) { .discipline-grid { grid-template-columns: 1fr; gap: 48px; } }
+.discipline-text h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.3rem); color: var(--navy); line-height: 1.2; margin-bottom: 24px; }
+.discipline-text p { font-size: .95rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 20px; }
+.discipline-text p:last-child { margin-bottom: 0; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; color: var(--teal); margin-top: 40px; }
+.back-link:hover { color: var(--navy); gap: 4px; }
+
+.features-section { padding: clamp(60px, 8vw, 100px) 0; background: var(--cream); }
+.features-head { text-align: center; margin-bottom: 52px; }
+.features-head h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--navy); line-height: 1.2; }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+.feature-card { background: var(--white); border-radius: 16px; border: 1px solid var(--stone); padding: 32px 24px; transition: all .5s var(--ease); }
+.feature-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(27,42,74,.06); border-color: transparent; }
+.feature-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.feature-icon svg { width: 22px; height: 22px; stroke: var(--gold-soft); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.feature-card h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; }
+.feature-card p { font-size: .83rem; color: var(--text-light); line-height: 1.7; }
+
+.cta-section { padding: clamp(80px, 10vw, 100px) 0; background: var(--navy); text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(197,165,90,.07), transparent 70%); }
+.cta-section .wrap { position: relative; z-index: 2; }
+.cta-section .eyebrow { color: var(--gold-soft); }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--white); line-height: 1.2; margin-bottom: 16px; }
+.cta-section p { font-size: .95rem; color: rgba(255,255,255,.45); line-height: 1.8; max-width: 480px; margin: 0 auto 32px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+footer { background: var(--navy-deep); padding: 64px 0 0; border-top: 1px solid rgba(255,255,255,.04); }
+.ft-grid { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.06); }
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all .3s; }
+.ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+.ft-col h4 { font-size: .68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
+.ft-col a:hover { color: var(--white); }
+.ft-bottom { padding: 24px 0; text-align: center; font-size: .72rem; color: rgba(255,255,255,.2); }
+.ft-bottom a { color: rgba(255,255,255,.2); }
+.ft-bottom a:hover { color: rgba(255,255,255,.5); }
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
+
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/alianz-canine-worldwide-website/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="/alianz-canine-worldwide-website/">Inicio</a>
+      <a href="/alianz-canine-worldwide-website/nosotros">Nosotros</a>
+      <a href="/alianz-canine-worldwide-website/eventos">Eventos</a>
+      <a href="/alianz-canine-worldwide-website/razas">Razas</a>
+      <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/deportes" class="current">Deportes</a>
+      <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
+      <a href="/alianz-canine-worldwide-website/blog">Blog</a>
+      <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
+      <a href="/alianz-canine-worldwide-website/cumbre-iberoamericana">Cumbre</a>
+      <a href="/alianz-canine-worldwide-website/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero" aria-label="Encabezado Grooming Profesional">
+  <div class="wrap">
+    <div class="eyebrow rv">Deportes y Disciplinas</div>
+    <h1 class="rv">Grooming Profesional</h1>
+    <p class="rv">Competencias internacionales de estética canina con certificación y rankings oficiales reconocidos en más de 50 países.</p>
+  </div>
+</section>
+
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <div class="wrap">
+    <div class="breadcrumb-inner">
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Grooming Profesional</span>
+    </div>
+  </div>
+</nav>
+
+<section class="discipline-content" aria-labelledby="discipline-heading">
+  <div class="wrap">
+    <div class="discipline-grid">
+
+      <div class="discipline-text rv">
+        <div class="eyebrow" style="color:var(--teal)">Arte y Técnica</div>
+        <h2 id="discipline-heading">Grooming: Donde la Estética Encuentra la Ciencia</h2>
+        <p>El Grooming profesional dentro de ACW va más allá de la estética: es una disciplina que combina el conocimiento anatómico, el manejo del animal y la creatividad artística. Las competencias internacionales de grooming certifican el nivel de los profesionales y establecen rankings oficiales reconocidos en más de 50 países.</p>
+        <p>Los jueces ACW especializados en grooming evalúan técnica, presentación, bienestar del animal durante el proceso y apego a los estándares de la raza. El resultado es un sistema de certificación que diferencia al groomer empírico del profesional validado internacionalmente, abriendo puertas a mercados y reconocimientos en toda la red Alianz.</p>
+
+        <a href="/alianz-canine-worldwide-website/deportes" class="back-link" aria-label="Volver al índice de deportes">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver a Deportes y Disciplinas
+        </a>
+      </div>
+
+      <div class="rv">
+        <div class="discipline-visual" role="img" aria-label="Ilustración decorativa Grooming Profesional">
+          <div class="grad" style="background: linear-gradient(135deg, #2A7B88 0%, #1B2A4A 50%, #C5A55A 100%);"></div>
+          <div class="icon-center">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="features-section" aria-labelledby="features-heading">
+  <div class="wrap">
+    <div class="features-head rv">
+      <div class="eyebrow" style="color:var(--teal)">Aspectos Clave</div>
+      <h2 id="features-heading">Lo Que Evalúa Esta Disciplina</h2>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Certificación Internacional</h3>
+        <p>Alianz certifica a los groomers por niveles técnicos, con validez en más de 50 países miembro y reconocimiento por jueces especializados de la red.</p>
+      </div>
+
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"/></svg>
+        </div>
+        <h3>Rankings Oficiales</h3>
+        <p>Las competencias ACW generan clasificaciones anuales por categoría y raza, diferenciando a los mejores profesionales de cada país miembro.</p>
+      </div>
+
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Arte y Técnica</h3>
+        <p>Se evalúan tanto la destreza técnica con herramientas de corte y baño como la creatividad artística en la presentación final del ejemplar.</p>
+      </div>
+
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        </div>
+        <h3>Estándares de Calidad</h3>
+        <p>El bienestar del animal durante el proceso forma parte de la evaluación: se valora el manejo respetuoso, el tiempo y la ausencia de estrés en el ejemplar.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="wrap">
+    <div class="eyebrow rv">Participa</div>
+    <h2 class="rv" id="cta-heading">¿Interesado en Certificarte?</h2>
+    <p class="rv">Contacta a Alianz para conocer el calendario de competencias de Grooming, los requisitos de inscripción y el proceso de certificación profesional.</p>
+    <div class="cta-actions rv">
+      <a href="/alianz-canine-worldwide-website/contacto" class="btn btn-gold">
+        Contactar Alianz
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/alianz-canine-worldwide-website/deportes" class="btn btn-outline">Ver Todas las Disciplinas</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/alianz-canine-worldwide-website/nosotros">Nosotros</a></li>
+          <li><a href="/alianz-canine-worldwide-website/eventos">Eventos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/razas">Razas</a></li>
+          <li><a href="/alianz-canine-worldwide-website/jueces">Jueces</a></li>
+          <li><a href="/alianz-canine-worldwide-website/deportes">Deportes</a></li>
+          <li><a href="/alianz-canine-worldwide-website/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Formación</a></li>
+          <li><a href="/alianz-canine-worldwide-website/contacto">Contacto</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>Ctra. Nacional 301, Km. 384</li>
+          <li>Molina de Segura, Murcia, España</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

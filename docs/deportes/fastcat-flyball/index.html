@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noticias y Novedades | Alianz Canine Worldwide</title>
-<meta name="description" content="Noticias, eventos, formación y novedades de Alianz Canine Worldwide. Actividad institucional y comunidad canina desde los cinco continentes.">
+<title>FastCat y FlyBall | Deportes y Disciplinas | Alianz Canine Worldwide</title>
+<meta name="description" content="Disciplinas de velocidad e instinto. FastCat y FlyBall evalúan la estructura ósea y muscular del perro bajo estándares internacionales ACW.">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Noticias y Novedades | Alianz Canine Worldwide">
-<meta property="og:description" content="Actividad institucional, eventos, formación y comunidad canina internacional. Noticias de Alianz Canine Worldwide.">
+<meta property="og:title" content="FastCat y FlyBall | Alianz Canine Worldwide">
+<meta property="og:description" content="Disciplinas de velocidad e instinto que canalizan la energía natural del perro y evalúan su estructura ósea y muscular óptima.">
 <meta property="og:type" content="website">
 
 <!-- Fonts -->
@@ -18,8 +18,7 @@
 
 <style>
 /* =============================================
-   ACW GLOBAL STYLES — blog.html
-   Paleta: Navy #1B2A4A | Gold #C5A55A | Teal #2A7B88
+   ACW GLOBAL STYLES — fastcat-flyball/index.html
    ============================================= */
 :root {
   --navy:       #1B2A4A;
@@ -53,14 +52,17 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
 
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 clamp(20px, 4vw, 40px);
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
 }
 
-/* ---- BUTTONS ---- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -79,16 +81,16 @@ a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
 .btn-gold:hover {
   background: var(--gold-dark);
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(197, 165, 90, .25);
+  box-shadow: 0 12px 32px rgba(197,165,90,.25);
 }
 .btn-outline {
   background: transparent;
-  color: var(--white);
-  border: 1.5px solid rgba(255, 255, 255, .3);
+  color: var(--gold-soft);
+  border: 1.5px solid rgba(197,165,90,.4);
 }
 .btn-outline:hover {
-  border-color: rgba(255, 255, 255, .7);
-  background: rgba(255, 255, 255, .06);
+  background: rgba(197,165,90,.08);
+  border-color: var(--gold);
 }
 .btn-arrow { width: 18px; height: 18px; }
 
@@ -99,14 +101,13 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(13, 25, 41, .85);
+  background: rgba(13,25,41,.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
   transition: background .4s;
 }
 header.solid { background: var(--navy-deep); }
-
 .header-inner {
   display: flex;
   align-items: center;
@@ -116,18 +117,15 @@ header.solid { background: var(--navy-deep); }
   margin: 0 auto;
   padding: 0 clamp(20px, 4vw, 40px);
 }
-
 .logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
 .logo-text em { font-style: italic; color: var(--gold-soft); }
-
 .nav-menu { display: flex; align-items: center; gap: 32px; }
 .nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
 .nav-menu a:hover { color: var(--white); }
 .nav-menu a.current { color: var(--gold-soft); }
-
 .nav-cta {
   padding: 9px 22px !important;
-  border: 1.5px solid rgba(197, 165, 90, .4) !important;
+  border: 1.5px solid rgba(197,165,90,.4) !important;
   border-radius: 6px;
   color: var(--gold-soft) !important;
   font-weight: 600 !important;
@@ -137,8 +135,7 @@ header.solid { background: var(--navy-deep); }
   color: var(--white) !important;
   border-color: var(--gold) !important;
 }
-
-.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
 
 @media (max-width: 960px) {
@@ -154,7 +151,7 @@ header.solid { background: var(--navy-deep); }
   }
   .nav-menu.open { display: flex; }
   .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
-  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; width: auto !important; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; }
   .burger { display: flex; }
 }
 
@@ -193,143 +190,200 @@ header.solid { background: var(--navy-deep); }
   max-width: 600px;
 }
 
-/* ---- Eyebrow ---- */
-.eyebrow {
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-
 /* =============================================
-   CATEGORY FILTERS
+   BREADCRUMB
    ============================================= */
-.filters {
-  padding: 40px 0;
-  background: var(--cream);
+.breadcrumb {
+  background: var(--warm-gray);
   border-bottom: 1px solid var(--stone);
+  padding: 14px 0;
 }
-.filter-pills {
+.breadcrumb-inner {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.filter-pill {
-  padding: 9px 20px;
-  border-radius: 100px;
-  font-family: var(--sans);
+  align-items: center;
+  gap: 8px;
   font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .3px;
-  border: 1.5px solid var(--stone);
-  background: var(--white);
-  color: var(--text-mid);
-  cursor: pointer;
-  transition: all .35s var(--ease);
+  color: var(--text-light);
 }
-.filter-pill:hover {
-  border-color: var(--teal);
-  color: var(--teal);
-}
-.filter-pill.active {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--white);
-}
+.breadcrumb-inner a { color: var(--teal); }
+.breadcrumb-inner a:hover { color: var(--navy); }
+.breadcrumb-sep { color: var(--stone); }
 
 /* =============================================
-   NEWS GRID
+   DISCIPLINE IMAGE PLACEHOLDER
    ============================================= */
-.news-section {
-  padding: clamp(80px, 10vw, 120px) 0;
-  background: var(--white);
-}
-.news-head {
-  margin-bottom: 48px;
-}
-.news-head .eyebrow { color: var(--teal); }
-.news-head h2 {
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  color: var(--navy);
-  line-height: 1.15;
-}
-
-.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.nw { transition: all .4s var(--ease); }
-.nw:hover { transform: translateY(-4px); }
-.nw-img { height: 220px; overflow: hidden; border-radius: 14px; margin-bottom: 20px; background: linear-gradient(135deg, var(--navy-mid), var(--teal)); }
-.nw-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-.nw:hover .nw-img img { transform: scale(1.04); }
-.nw-cat {
-  display: inline-block;
-  padding: 4px 10px;
-  background: rgba(42,123,136,.08);
-  border-radius: 100px;
-  font-size: .65rem;
-  font-weight: 600;
-  color: var(--teal);
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.nw-meta { font-size: .7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-.nw h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
-.nw p { font-size: .85rem; color: var(--text-light); line-height: 1.75; }
-.nw-link { display: inline-flex; align-items: center; gap: 4px; font-size: .82rem; font-weight: 600; color: var(--teal); margin-top: 12px; }
-.nw-link:hover { gap: 8px; }
-
-@media (max-width: 900px) { .news-grid { grid-template-columns: 1fr; max-width: 480px; } }
-
-/* =============================================
-   CTA
-   ============================================= */
-.cta {
-  padding: clamp(80px, 10vw, 120px) 0;
-  background: var(--navy-deep);
-  position: relative;
+.discipline-visual {
+  width: 100%;
+  height: 340px;
+  border-radius: 20px;
   overflow: hidden;
-  text-align: center;
-}
-.cta::before {
-  content: '';
-  position: absolute;
-  top: -250px; right: -150px;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(42,123,136,.12), transparent 70%);
-}
-.cta::after {
-  content: '';
-  position: absolute;
-  bottom: -250px; left: -150px;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(197,165,90,.06), transparent 70%);
-}
-.cta-inner {
   position: relative;
-  z-index: 2;
-  max-width: 640px;
-  margin: 0 auto;
+  margin-bottom: 0;
 }
-.cta-inner .eyebrow { color: var(--gold-soft); margin-bottom: 16px; }
-.cta-inner h2 {
+.discipline-visual .grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #1B2A4A 0%, #2A7B88 60%, #C5A55A 100%);
+}
+.discipline-visual .icon-center {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.discipline-visual .icon-center svg {
+  width: 80px; height: 80px;
+  stroke: rgba(255,255,255,.6);
+  fill: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.4));
+}
+
+/* =============================================
+   MAIN CONTENT
+   ============================================= */
+.discipline-content {
+  padding: clamp(80px, 10vw, 120px) 0;
+  background: var(--white);
+}
+.discipline-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: start;
+}
+@media (max-width: 900px) { .discipline-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.discipline-text h2 {
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--white);
+  font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+  color: var(--navy);
   line-height: 1.2;
+  margin-bottom: 24px;
+}
+.discipline-text p {
+  font-size: .95rem;
+  color: var(--text-mid);
+  line-height: 1.9;
   margin-bottom: 20px;
 }
-.cta-inner p {
-  font-size: 1rem;
-  color: rgba(255,255,255,.45);
-  line-height: 1.85;
-  margin-bottom: 40px;
+.discipline-text p:last-child { margin-bottom: 0; }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-top: 40px;
 }
-.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.back-link:hover { color: var(--navy); gap: 4px; }
+
+/* =============================================
+   KEY FEATURES
+   ============================================= */
+.features-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--cream);
+}
+.features-head {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.features-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--navy);
+  line-height: 1.2;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+
+.feature-card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--stone);
+  padding: 32px 24px;
+  transition: all .5s var(--ease);
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(27,42,74,.06);
+  border-color: transparent;
+}
+.feature-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.feature-icon svg {
+  width: 22px; height: 22px;
+  stroke: var(--gold-soft);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.feature-card h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.feature-card p {
+  font-size: .83rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* =============================================
+   CTA SECTION
+   ============================================= */
+.cta-section {
+  padding: clamp(80px, 10vw, 100px) 0;
+  background: var(--navy);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  bottom: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,165,90,.07), transparent 70%);
+}
+.cta-section .wrap { position: relative; z-index: 2; }
+.cta-section .eyebrow { color: var(--gold-soft); }
+.cta-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: .95rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /* =============================================
    FOOTER
@@ -349,7 +403,6 @@ footer {
 .ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
 .ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
 .ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
-
 .ft-social { display: flex; gap: 10px; margin-top: 20px; }
 .ft-social a {
   width: 36px; height: 36px;
@@ -361,7 +414,6 @@ footer {
 .ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
 .ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
 .ft-social a:hover svg { fill: var(--gold-soft); }
-
 .ft-col h4 {
   font-size: .68rem;
   font-weight: 700;
@@ -370,10 +422,9 @@ footer {
   color: var(--gold);
   margin-bottom: 20px;
 }
-.ft-col ul { display: flex; flex-direction: column; gap: 11px; list-style: none; }
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
 .ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
 .ft-col a:hover { color: var(--white); }
-
 .ft-bottom {
   padding: 24px 0;
   text-align: center;
@@ -382,7 +433,6 @@ footer {
 }
 .ft-bottom a { color: rgba(255,255,255,.2); }
 .ft-bottom a:hover { color: rgba(255,255,255,.5); }
-
 @media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
 @media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
 
@@ -407,9 +457,9 @@ footer {
       <a href="/alianz-canine-worldwide-website/eventos">Eventos</a>
       <a href="/alianz-canine-worldwide-website/razas">Razas</a>
       <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
-      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
+      <a href="/alianz-canine-worldwide-website/deportes" class="current">Deportes</a>
       <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
-      <a href="/alianz-canine-worldwide-website/blog" class="current">Blog</a>
+      <a href="/alianz-canine-worldwide-website/blog">Blog</a>
       <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
       <a href="/alianz-canine-worldwide-website/cumbre-iberoamericana">Cumbre</a>
       <a href="/alianz-canine-worldwide-website/404.html" class="nav-cta">Iniciar Sesión</a>
@@ -421,94 +471,116 @@ footer {
 </header>
 
 <!-- =================== PAGE HERO =================== -->
-<section class="page-hero" aria-label="Encabezado de página Blog">
+<section class="page-hero" aria-label="Encabezado FastCat y FlyBall">
   <div class="wrap">
-    <div class="eyebrow rv">Blog</div>
-    <h1 class="rv">Noticias y Novedades</h1>
-    <p class="rv">Actividad institucional, eventos, formación y comunidad canina desde los cinco continentes.</p>
+    <div class="eyebrow rv">Deportes y Disciplinas</div>
+    <h1 class="rv">FastCat y FlyBall</h1>
+    <p class="rv">Disciplinas de velocidad e instinto que canalizan la energía natural del perro y evalúan su estructura ósea y muscular óptima.</p>
   </div>
 </section>
 
-<!-- =================== CATEGORY FILTERS =================== -->
-<section class="filters" aria-label="Filtros de categoría">
+<!-- =================== BREADCRUMB =================== -->
+<nav class="breadcrumb" aria-label="Ruta de navegación">
   <div class="wrap">
-    <div class="filter-pills">
-      <button class="filter-pill active" data-cat="all">Todas</button>
-      <button class="filter-pill" data-cat="noticias">Noticias ACW</button>
-      <button class="filter-pill" data-cat="eventos">Eventos</button>
-      <button class="filter-pill" data-cat="comunidad">Comunidad</button>
+    <div class="breadcrumb-inner">
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span aria-current="page">FastCat y FlyBall</span>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== MAIN CONTENT =================== -->
+<section class="discipline-content" aria-labelledby="discipline-heading">
+  <div class="wrap">
+    <div class="discipline-grid">
+
+      <div class="discipline-text rv">
+        <div class="eyebrow" style="color:var(--teal)">Velocidad e Instinto</div>
+        <h2 id="discipline-heading">Disciplinas de Alta Velocidad Certificadas por ACW</h2>
+        <p>El FastCat se ha consolidado como la actividad deportiva de mayor crecimiento en el norte del continente americano. Se basa en la capacidad natural del perro para seguir una presa, utilizando un sistema de señuelo que despierta sus instintos más primarios en un entorno controlado y seguro. Hemos integrado esta disciplina para ayudar a balancear el estado físico y mental del animal, permitiendo que la energía acumulada se canalice de forma productiva.</p>
+        <p>El FlyBall representa la velocidad por excelencia. Es un deporte de equipo donde la coordinación entre el perro y el guía, así como la agilidad del ejemplar para superar obstáculos y activar el lanzador de pelotas, son evaluadas bajo estándares internacionales. Estas disciplinas no solo otorgan títulos de rendimiento, sino que son indicadores de una estructura ósea y muscular óptima.</p>
+
+        <a href="/alianz-canine-worldwide-website/deportes" class="back-link" aria-label="Volver al índice de deportes">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver a Deportes y Disciplinas
+        </a>
+      </div>
+
+      <div class="rv">
+        <div class="discipline-visual" role="img" aria-label="Ilustración decorativa FastCat y FlyBall">
+          <div class="grad"></div>
+          <div class="icon-center">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- =================== NEWS GRID =================== -->
-<section class="news-section" id="noticias" aria-labelledby="news-heading">
+<!-- =================== KEY FEATURES =================== -->
+<section class="features-section" aria-labelledby="features-heading">
   <div class="wrap">
-    <div class="news-head rv">
-      <div class="eyebrow">Últimas Publicaciones</div>
-      <h2 id="news-heading">Lo Más Reciente</h2>
+    <div class="features-head rv">
+      <div class="eyebrow" style="color:var(--teal)">Aspectos Clave</div>
+      <h2 id="features-heading">Lo Que Evalúan Estas Disciplinas</h2>
     </div>
+    <div class="features-grid">
 
-    <div class="news-grid">
-      <article class="nw rv" data-cat="noticias">
-        <div class="nw-img"><img src="../assets/images/plataforma-digital-acw.jpg" alt="Nueva plataforma digital ACW" loading="lazy" width="400" height="220"></div>
-        <span class="nw-cat">Noticias ACW</span>
-        <div class="nw-meta">Abril 2026</div>
-        <h3>Alianz Canine Worldwide estrena plataforma digital global</h3>
-        <p>Nueva web institucional con información actualizada de eventos, formación, registros genealógicos y acceso al sistema ADOS para miembros.</p>
-        <a href="/alianz-canine-worldwide-website/blog/plataforma-digital-acw" class="nw-link">Leer más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Velocidad e Instinto</h3>
+        <p>Se mide la capacidad innata del perro para seguir presas y reaccionar con precisión ante estímulos de movimiento rápido.</p>
+      </div>
 
-      <article class="nw rv" data-cat="eventos">
-        <div class="nw-img"><img src="../assets/images/seminario-combate-k9.png" alt="Seminário de Combate K9 — Edição Elite" loading="lazy" width="400" height="220"></div>
-        <span class="nw-cat">Eventos</span>
-        <div class="nw-meta">Febrero 2026</div>
-        <h3>Seminário de Combate K9 — Edição Elite</h3>
-        <p>Evento de alta especialización para profesionales del entrenamiento canino de seguridad y defensa. Participación de instructores certificados de Brasil, México y Portugal.</p>
-        <a href="/alianz-canine-worldwide-website/blog/seminario-combate-k9" class="nw-link">Leer más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Evaluación Física</h3>
+        <p>FastCat y FlyBall son indicadores objetivos de una estructura ósea y muscular saludable, con parámetros medibles y comparables.</p>
+      </div>
 
-      <article class="nw rv" data-cat="eventos">
-        <div class="nw-img"><img src="../assets/images/reto-painani-2026.jpg" alt="Reto Painani 2026" loading="lazy" width="400" height="220"></div>
-        <span class="nw-cat">Eventos</span>
-        <div class="nw-meta">Enero 2026</div>
-        <h3>Reto Painani 2026: resistencia, agilidad y vínculo humano-canino</h3>
-        <p>Evento insignia de resistencia canina inspirado en los corredores prehispánicos. Abierto a todas las razas y mestizos. Celebrado en el Parque Canódromo CMI.</p>
-        <a href="/alianz-canine-worldwide-website/blog/reto-painani-2026" class="nw-link">Leer más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        </div>
+        <h3>Títulos de Rendimiento</h3>
+        <p>Alianz emite certificaciones oficiales por nivel de rendimiento, reconocidas en todos los países miembro de la organización.</p>
+      </div>
 
-      <article class="nw rv" data-cat="noticias">
-        <div class="nw-img"><img src="../assets/images/feliz-ano-nuevo-2026.png" alt="Feliz Año Nuevo 2026" loading="lazy" width="400" height="220"></div>
-        <span class="nw-cat">Noticias ACW</span>
-        <div class="nw-meta">Diciembre 2025</div>
-        <h3>Feliz Año Nuevo 2026 desde Alianz Canine Worldwide</h3>
-        <p>Cierre de un año de crecimiento institucional con nuevas federaciones miembro, eventos en más de 50 países y la consolidación de convenios universitarios.</p>
-        <a href="/alianz-canine-worldwide-website/blog/feliz-ano-nuevo-2026" class="nw-link">Leer más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
+      <div class="feature-card rv">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Trabajo en Equipo</h3>
+        <p>FlyBall fomenta la coordinación binomio humano-canino y el trabajo colaborativo entre ejemplares dentro de un equipo competitivo.</p>
+      </div>
 
-      <article class="nw rv" data-cat="comunidad">
-        <div class="nw-img"><img src="../assets/images/federacion-cinologica-peruana.jpeg" alt="Federación Cinológica Peruana" loading="lazy" width="400" height="220"></div>
-        <span class="nw-cat">Comunidad</span>
-        <div class="nw-meta">Diciembre 2025</div>
-        <h3>Federación Cinológica Peruana nombra nuevo Director Nacional</h3>
-        <p>Iván Bavutti asume como Director Nacional de Razas Autóctonas del Perú. Compromiso con la preservación de razas nativas bajo estándares internacionales ACW.</p>
-        <a href="/alianz-canine-worldwide-website/blog/federacion-cinologica-peruana" class="nw-link">Leer más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
     </div>
   </div>
 </section>
 
 <!-- =================== CTA =================== -->
-<section class="cta" aria-labelledby="cta-heading">
+<section class="cta-section" aria-labelledby="cta-heading">
   <div class="wrap">
-    <div class="cta-inner rv">
-      <div class="eyebrow">Mantente Informado</div>
-      <h2 id="cta-heading">Sigue la Actividad de Alianz</h2>
-      <p>Eventos, certificaciones, convenios y novedades de la comunidad canina internacional. Síguenos en redes sociales o contacta a tu federación miembro para recibir actualizaciones.</p>
-      <div class="cta-btns">
-        <a href="/alianz-canine-worldwide-website/contacto" class="btn btn-gold">Contactar</a>
-        <a href="/alianz-canine-worldwide-website/eventos" class="btn btn-outline">Ver Eventos</a>
-      </div>
+    <div class="eyebrow rv">Participa</div>
+    <h2 class="rv" id="cta-heading">¿Interesado en Competir?</h2>
+    <p class="rv">Contacta a Alianz para conocer el calendario de competencias, los requisitos de inscripción y el proceso de certificación en FastCat y FlyBall.</p>
+    <div class="cta-actions rv">
+      <a href="/alianz-canine-worldwide-website/contacto" class="btn btn-gold">
+        Contactar Alianz
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/alianz-canine-worldwide-website/deportes" class="btn btn-outline">
+        Ver Todas las Disciplinas
+      </a>
     </div>
   </div>
 </section>
@@ -544,6 +616,7 @@ footer {
         <h4>Recursos</h4>
         <ul>
           <li><a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Formación</a></li>
           <li><a href="/alianz-canine-worldwide-website/contacto">Contacto</a></li>
           <li><a href="/alianz-canine-worldwide-website/404.html">Área de Miembros</a></li>
         </ul>
@@ -570,38 +643,20 @@ footer {
 <script>
 const hdr = document.getElementById('hdr');
 window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
-
 document.getElementById('burgerBtn').addEventListener('click', function () {
   const nav = document.getElementById('navMenu');
   const open = nav.classList.toggle('open');
   this.setAttribute('aria-expanded', open);
 });
-
-// Category filter
-document.querySelectorAll('.filter-pill').forEach(pill => {
-  pill.addEventListener('click', function () {
-    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-    this.classList.add('active');
-    const cat = this.dataset.cat;
-    document.querySelectorAll('.nw').forEach(card => {
-      if (cat === 'all' || card.dataset.cat === cat) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-});
-
-const revealObs = new IntersectionObserver((entries) => {
+const obs = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
       setTimeout(() => entry.target.classList.add('vis'), i * 80);
-      revealObs.unobserve(entry.target);
+      obs.unobserve(entry.target);
     }
   });
 }, { threshold: .08 });
-document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
