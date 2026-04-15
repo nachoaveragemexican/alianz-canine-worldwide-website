@@ -747,14 +747,18 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     return;
   }
 
-  // TODO: Replace with actual GHL webhook POST
-  // fetch('https://services.leadconnectorhq.com/hooks/...', {
+  // ⚠️ GHL INTEGRATION REQUIRED — form is NOT connected to any backend.
+  // Replace the placeholder below with the GoHighLevel webhook endpoint:
+  //
+  // fetch('https://services.leadconnectorhq.com/hooks/YOUR_WEBHOOK_ID', {
   //   method: 'POST',
   //   headers: { 'Content-Type': 'application/json' },
   //   body: JSON.stringify(Object.fromEntries(new FormData(this)))
-  // });
+  // }).then(() => { /* show success */ }).catch(() => { /* show error */ });
+  //
+  console.warn('[ACW] Contact form submitted but NO backend is connected. Wire GHL webhook before launch.');
 
-  // Show success message
+  // Show success message (placeholder until GHL webhook is live)
   this.style.display = 'none';
   document.getElementById('formSuccess').classList.add('visible');
   document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
