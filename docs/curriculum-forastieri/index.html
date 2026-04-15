@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ricardo Forastieri — Currículum | Alianz Canine Worldwide</title>
+<meta name="description" content="Currículum vitae del Dr. Ricardo G. Forastieri González — Director General de la Fundación Alianz Canine Worldwide. Más de 40 años de trayectoria en cinología, medicina veterinaria y formación canina.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dr. Ricardo Forastieri — Currículum | Alianz Canine Worldwide">
+<meta property="og:description" content="Director General de ACW. Veterinario, psicólogo, juez internacional All-Breed y entrenador canino profesional con más de 40 años de experiencia.">
+<meta property="og:type" content="profile">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:       #1B2A4A;
+  --navy-deep:  #0D1929;
+  --navy-mid:   #243656;
+  --gold:       #C5A55A;
+  --gold-soft:  #D9C88C;
+  --gold-dark:  #A68B3E;
+  --teal:       #2A7B88;
+  --teal-soft:  #357F8C;
+  --cream:      #FAF8F4;
+  --warm-gray:  #F3F1ED;
+  --stone:      #E8E4DD;
+  --text:       #1A1A1A;
+  --text-mid:   #5A5A5A;
+  --text-light: #6B6B6B;
+  --white:      #FFFFFF;
+  --serif:      'DM Serif Display', Georgia, serif;
+  --sans:       'Outfit', system-ui, sans-serif;
+  --ease:       cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all .35s var(--ease);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, .3);
+}
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .06);
+}
+.btn-navy {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--stone);
+}
+.btn-navy:hover {
+  border-color: var(--navy);
+  background: rgba(27, 42, 74, .04);
+}
+.btn-arrow {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---- Eyebrow ---- */
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13, 25, 41, .85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  transition: background .4s;
+}
+header.solid { background: var(--navy-deep); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+
+.nav-cta {
+  padding: 9px 22px !important;
+  border: 1.5px solid rgba(197, 165, 90, .4) !important;
+  border-radius: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600 !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: 16px 0;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; width: auto !important; }
+  .burger { display: flex; }
+}
+
+/* =============================================
+   CV HERO
+   ============================================= */
+.cv-hero {
+  padding: 160px 0 80px;
+  background: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+.cv-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(42,123,136,.12), transparent),
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(197,165,90,.08), transparent);
+}
+.cv-hero .wrap {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.cv-photo-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(197, 165, 90, .3);
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--navy-mid), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cv-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cv-photo-placeholder {
+  font-size: .75rem;
+  color: rgba(255,255,255,.35);
+  text-align: center;
+  padding: 16px;
+}
+.cv-hero-info .eyebrow { color: var(--gold-soft); margin-bottom: 8px; }
+.cv-hero-info h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.cv-hero-info h1 em { font-style: italic; color: var(--gold-soft); }
+.cv-hero-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--teal-soft);
+  margin-bottom: 16px;
+}
+.cv-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.cv-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .85rem;
+  color: rgba(255,255,255,.5);
+}
+.cv-meta-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--gold-soft);
+  fill: none;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+.cv-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .cv-hero .wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+  .cv-photo-wrap { width: 160px; height: 160px; }
+  .cv-hero-meta { justify-content: center; }
+  .cv-hero-actions { justify-content: center; }
+}
+
+/* =============================================
+   CV SECTIONS
+   ============================================= */
+.cv-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+.cv-section:nth-child(even) { background: var(--cream); }
+.cv-section:nth-child(odd) { background: var(--white); }
+
+.cv-section-header {
+  margin-bottom: 40px;
+}
+.cv-section-header .eyebrow { color: var(--teal); }
+.cv-section-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--navy);
+  line-height: 1.15;
+}
+
+/* ---- Timeline ---- */
+.cv-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+.cv-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--stone);
+  border-radius: 2px;
+}
+.cv-timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+.cv-timeline-item:last-child { margin-bottom: 0; }
+.cv-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 2px solid var(--white);
+}
+.cv-section:nth-child(even) .cv-timeline-item::before {
+  border-color: var(--cream);
+}
+.cv-timeline-date {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+.cv-timeline-item h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.cv-timeline-item p {
+  font-size: .88rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* ---- Card grid ---- */
+.cv-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.cv-card {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all .4s var(--ease);
+}
+.cv-section:nth-child(odd) .cv-card { background: var(--cream); border-color: var(--stone); }
+.cv-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(27,42,74,.06);
+  border-color: transparent;
+}
+.cv-card svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--teal);
+  fill: none;
+  stroke-width: 1.5;
+  margin-bottom: 12px;
+}
+.cv-card h4 {
+  font-family: var(--serif);
+  font-size: .95rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.cv-card p {
+  font-size: .82rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.cv-card .cv-card-year {
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+
+/* ---- Achievement badges ---- */
+.cv-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 100px;
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--navy);
+  transition: all .3s var(--ease);
+}
+.cv-badge:hover {
+  border-color: var(--gold);
+  background: rgba(197, 165, 90, .04);
+}
+.cv-badge svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+/* ---- List style ---- */
+.cv-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cv-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: .9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+.cv-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--navy-deep);
+  padding: 64px 0 0;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
+
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+
+.ft-col h4 {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; list-style: none; }
+.ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
+.ft-col a:hover { color: var(--white); }
+
+.ft-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .72rem;
+  color: rgba(255,255,255,.2);
+}
+.ft-bottom a { color: rgba(255,255,255,.2); }
+.ft-bottom a:hover { color: rgba(255,255,255,.5); }
+
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px) { .ft-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+
+<body>
+
+<!-- ========== HEADER ========== -->
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/alianz-canine-worldwide-website/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="/alianz-canine-worldwide-website/">Inicio</a>
+      <a href="/alianz-canine-worldwide-website/nosotros">Nosotros</a>
+      <a href="/alianz-canine-worldwide-website/eventos">Eventos</a>
+      <a href="/alianz-canine-worldwide-website/razas">Razas</a>
+      <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
+      <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
+      <a href="/alianz-canine-worldwide-website/blog">Blog</a>
+      <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
+      <a href="/alianz-canine-worldwide-website/cumbre-iberoamericana">Cumbre</a>
+      <a href="/alianz-canine-worldwide-website/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== CV HERO ========== -->
+<section class="cv-hero" aria-label="Dr. Ricardo Forastieri — Perfil profesional">
+  <div class="wrap">
+    <div class="cv-photo-wrap rv">
+      <img src="../assets/images/leader-forastieri.png" alt="Dr. Ricardo G. Forastieri González" width="200" height="200" loading="eager">
+    </div>
+    <div class="cv-hero-info">
+      <p class="eyebrow rv">Currículum Vitae</p>
+      <h1 class="rv">Dr. Ricardo G. <em>Forastieri</em> González</h1>
+      <p class="cv-hero-title rv">Director General — Fundación Alianz Canine Worldwide</p>
+      <div class="cv-hero-meta rv">
+        <span class="cv-meta-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          24 de abril de 1965
+        </span>
+        <span class="cv-meta-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ciudad de México
+        </span>
+        <span class="cv-meta-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          40+ años en cinología
+        </span>
+      </div>
+      <div class="cv-hero-actions rv">
+        <a href="/alianz-canine-worldwide-website/nosotros" class="btn btn-outline">
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver a Nosotros
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FORMACIÓN ACADÉMICA ========== -->
+<section class="cv-section" aria-label="Formación académica">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Formación</p>
+      <h2>Formación Académica</h2>
+    </div>
+    <div class="cv-card-grid rv">
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+        <h4>Medicina Veterinaria y Zootecnia</h4>
+        <p>Universidad Nacional Autónoma de México (UNAM)</p>
+      </div>
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <h4>Psicología</h4>
+        <p>Centro Universitario Coyotl — Cédula Profesional 12207630</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CERTIFICACIONES ========== -->
+<section class="cv-section" aria-label="Certificaciones y diplomados">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Certificaciones</p>
+      <h2>Diplomados y Especialidades</h2>
+    </div>
+    <div class="cv-card-grid rv">
+      <div class="cv-card">
+        <p class="cv-card-year">1987</p>
+        <h4>Psicología Canina</h4>
+        <p>Especialización en comportamiento y psicología del perro</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">1994</p>
+        <h4>Crianza del Caballo Pura Raza Española</h4>
+        <p>Especialización en cría equina de pura raza</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">1995</p>
+        <h4>Doma Clásica — Master Class</h4>
+        <p>Formación avanzada en doma clásica ecuestre</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">1996</p>
+        <h4>Zootecnia del Perro y el Gato</h4>
+        <p>Especialización en zootecnia de pequeñas especies</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">1997</p>
+        <h4>Juez de Conformación All-Breed</h4>
+        <p>Certificación como juez de todas las razas</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">2003</p>
+        <h4>Especialidad en Pastor Alemán</h4>
+        <p>Certificación especializada en la raza Pastor Alemán</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">2005</p>
+        <h4>Academia de Policía — SSPT</h4>
+        <p>Formación en seguridad pública y técnicas policiales</p>
+      </div>
+      <div class="cv-card">
+        <p class="cv-card-year">2006</p>
+        <h4>Habilidades Críticas Antiterrorismo</h4>
+        <p>Formación avanzada en operaciones de contraterrorismo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCIA PROFESIONAL ========== -->
+<section class="cv-section" aria-label="Experiencia profesional">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Trayectoria</p>
+      <h2>Experiencia Profesional</h2>
+    </div>
+    <div class="cv-timeline rv">
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2025 — Presente</p>
+        <h4>Director General — Fundación Alianz Canine Worldwide</h4>
+        <p>Dirección estratégica y operativa de la fundación a nivel internacional.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2025 — Presente</p>
+        <h4>Fundador — Cinología México Internacional</h4>
+        <p>Creación de una nueva plataforma de formación y proyección cinológica internacional desde México.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2000 — Presente</p>
+        <h4>Juez Internacional All-Breed</h4>
+        <p>Juez de conformación de todas las razas con asignaciones en múltiples países. Juez especialista Schutzhund/IPO/IGP desde 1998.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">1992 — Presente</p>
+        <h4>Fundador y Maestro — Uno Entrenamiento Canino</h4>
+        <p>Fundador de la escuela canina reconocida como Mejor Escuela Canina en el año 2000. Formación integral de perros de trabajo, deporte y compañía.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">1992 — Presente</p>
+        <h4>Director, Veterinario en Jefe y Criador — Criadero Caliente</h4>
+        <p>Dirección general, atención veterinaria y programa de cría del criadero de referencia.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">1991 — Presente</p>
+        <h4>Veterinario y Especialista en Comportamiento — Parque Zoológico Internacional de Tijuana</h4>
+        <p>Atención veterinaria y especialización en comportamiento animal en uno de los zoológicos más importantes de la región.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2005 — 2007</p>
+        <h4>Fundador y Jefe de Unidad K-9 — Seguridad Pública Municipal de Tijuana</h4>
+        <p>Creación y dirección de la unidad canina policial de la ciudad de Tijuana.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2006</p>
+        <h4>Maestro de Búsqueda y Rescate — INM Grupo Beta, Gobierno Federal</h4>
+        <p>Formación de equipos de búsqueda y rescate con binomios caninos para el Instituto Nacional de Migración.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2002 — 2005</p>
+        <h4>Fundador e Instructor Jefe — Cruz Roja Tijuana, Búsqueda y Rescate</h4>
+        <p>Creación y dirección del programa de búsqueda y rescate con perros de la Cruz Roja en Tijuana.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">2003 — 2014</p>
+        <h4>Miembro de la Directiva — FCM (Federación Canófila Mexicana)</h4>
+        <p>Participación en la junta directiva de la principal federación canófila de México.</p>
+      </div>
+      <div class="cv-timeline-item">
+        <p class="cv-timeline-date">1980 — Presente</p>
+        <h4>Entrenador Canino Profesional</h4>
+        <p>Más de 40 años de experiencia en entrenamiento y formación canina profesional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LIDERAZGO Y ASOCIACIONES ========== -->
+<section class="cv-section" aria-label="Liderazgo y asociaciones">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Liderazgo</p>
+      <h2>Presidencias y Asociaciones</h2>
+    </div>
+    <ul class="cv-list rv">
+      <li>Presidente del Club Canófilo Caliente</li>
+      <li>Presidente del Club Mexicano del Xoloitzcuintle</li>
+      <li>Presidente de múltiples clubes cinófilos en México</li>
+      <li>Productor y presentador del programa de televisión «Siguiendo Huellas»</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== LOGROS DESTACADOS ========== -->
+<section class="cv-section" aria-label="Logros destacados">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Reconocimientos</p>
+      <h2>Logros Destacados</h2>
+    </div>
+    <div class="cv-badges rv">
+      <span class="cv-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        Handler del Año 1997
+      </span>
+      <span class="cv-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        Criador del Año 1996
+      </span>
+      <span class="cv-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        Criador del Año 1997
+      </span>
+      <span class="cv-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        Primer trial K-9 internacional en México (1995)
+      </span>
+      <span class="cv-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Rescatista en el terremoto de Ciudad de México 1985
+      </span>
+      <span class="cv-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Carrera internacional de juzgamiento en múltiples países
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/alianz-canine-worldwide-website/nosotros">Nosotros</a></li>
+          <li><a href="/alianz-canine-worldwide-website/eventos">Eventos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/razas">Razas</a></li>
+          <li><a href="/alianz-canine-worldwide-website/jueces">Jueces</a></li>
+          <li><a href="/alianz-canine-worldwide-website/deportes">Deportes</a></li>
+          <li><a href="/alianz-canine-worldwide-website/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Formación</a></li>
+          <li><a href="/alianz-canine-worldwide-website/contacto">Contacto</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>Ctra. Nacional 301, Km. 384</li>
+          <li>Molina de Segura, Murcia, España</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Header scroll */
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+
+/* Burger menu */
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+/* Scroll reveal */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
+</script>
+
+</body>
+</html>
