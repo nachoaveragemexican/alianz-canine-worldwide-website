@@ -316,12 +316,32 @@ header.solid { background: var(--navy-deep); }
 @media (max-width: 900px) { .judges-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px)  { .judges-grid { grid-template-columns: 1fr; } }
 
+
 .judge-card {
   background: var(--cream);
   border: 1px solid var(--stone);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 16px;
   transition: all .35s var(--ease);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.judge-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--stone);
+  background: var(--warm-gray);
+}
+.judge-photo--placeholder {
+  border-color: transparent;
+}
+.judge-info {
+  min-width: 0;
 }
 .judge-card:hover {
   background: var(--white);
@@ -545,20 +565,12 @@ footer {
         <span class="country-count">6 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card">
-          <div class="judge-name">Juan Carlos Velastegui</div>
-          <div class="judge-specialty">Todas las Razas — All Rounder</div>
-          <span class="judge-extra">+ Adiestramiento</span>
-        </article>
-        <article class="judge-card"><div class="judge-name">Diego Rivadeneira</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Patricio Fuentes</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Jhury Galiano</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Klever Ordoñez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card">
-          <div class="judge-name">Vero Pardo</div>
-          <div class="judge-specialty">Todas las Razas — All Rounder</div>
-          <span class="judge-extra">+ Peluquería Canina</span>
-        </article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/juan-carlos-velastegui.png" alt="Foto de Juan Carlos Velastegui" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Juan Carlos Velastegui</div><div class="judge-specialty">Todas las Razas — All Rounder</div><span class="judge-extra">+ Adiestramiento</span></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ing-diego-rivadeneira.png" alt="Foto de Diego Rivadeneira" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Diego Rivadeneira</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/dr-patricio-fuentes.png" alt="Foto de Patricio Fuentes" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Patricio Fuentes</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/jhury-galiano.png" alt="Foto de Jhury Galiano" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Jhury Galiano</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ing-klever-ordonez.png" alt="Foto de Klever Ordoñez" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Klever Ordoñez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/vero-pardo.png" alt="Foto de Vero Pardo" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Vero Pardo</div><div class="judge-specialty">Todas las Razas — All Rounder</div><span class="judge-extra">+ Peluquería Canina</span></div></article>
       </div>
     </div>
 
@@ -569,16 +581,12 @@ footer {
         <span class="country-count">6 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Damian Murcia Perez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Carolina Arozarena</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Ruben Martinez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Silvia Thierry</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Leonardo Fusaro</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card">
-          <div class="judge-name">Jose Antonio Gerardi</div>
-          <div class="judge-specialty">Todas las Razas — All Rounder</div>
-          <span class="judge-extra">+ Peluquería Canina</span>
-        </article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/damian-murcia-perez.png" alt="Foto de Damian Murcia Perez" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Damian Murcia Perez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/carolina-arozarena.png" alt="Foto de Carolina Arozarena" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Carolina Arozarena</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ruben-martinez.png" alt="Foto de Ruben Martinez" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ruben Martinez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/silvia-thierry.png" alt="Foto de Silvia Thierry" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Silvia Thierry</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/leonardo-fusaro.png" alt="Foto de Leonardo Fusaro" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Leonardo Fusaro</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/jose-antonio-gerardi.png" alt="Foto de Jose Antonio Gerardi" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Jose Antonio Gerardi</div><div class="judge-specialty">Todas las Razas — All Rounder</div><span class="judge-extra">+ Peluquería Canina</span></div></article>
       </div>
     </div>
 
@@ -589,8 +597,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Ruisdael Maia</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Paulo Eduardo Costa</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ruisdael-maia.png" alt="Foto de Ruisdael Maia" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ruisdael Maia</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/paulo-eduardo-costa.png" alt="Foto de Paulo Eduardo Costa" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Paulo Eduardo Costa</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -601,8 +609,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Cristopher Vega González</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Claudio Escobar</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/cristopher-vega-gonzalez.png" alt="Foto de Cristopher Vega González" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Cristopher Vega González</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/claudio-escobar.jpg" alt="Foto de Claudio Escobar" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Claudio Escobar</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -613,8 +621,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Anderson Sigfred Galeano Lozano</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Gustavo Fernández</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/anderson-sigfred-galeano-lozano.png" alt="Foto de Anderson Sigfred Galeano Lozano" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Anderson Sigfred Galeano Lozano</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/gustavo-fernandez.jpg" alt="Foto de Gustavo Fernández" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Gustavo Fernández</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -625,7 +633,7 @@ footer {
         <span class="country-count">1 juez</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Helena Milanes</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/helena-milanes.png" alt="Foto de Helena Milanes" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Helena Milanes</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -636,10 +644,10 @@ footer {
         <span class="country-count">4 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Gloria Kerr</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Sharon Redmer</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Richard Reynolds</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Karen Hynek</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/gloria-kerr.png" alt="Foto de Gloria Kerr" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Gloria Kerr</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/sharon-redmer.jpeg" alt="Foto de Sharon Redmer" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Sharon Redmer</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/richard-reynolds.png" alt="Foto de Richard Reynolds" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Richard Reynolds</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/karen-hynek.jpeg" alt="Foto de Karen Hynek" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Karen Hynek</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -650,11 +658,11 @@ footer {
         <span class="country-count">5 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Renata Santiago</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Diego Palomeque</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Hector Luna</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Andrés Altamira</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Ricardo Forastieri</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/renata-santiago.png" alt="Foto de Renata Santiago" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Renata Santiago</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/diego-palomeque.png" alt="Foto de Diego Palomeque" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Diego Palomeque</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/hector-luna.png" alt="Foto de Hector Luna" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Hector Luna</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/andres-altamira.png" alt="Foto de Andrés Altamira" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Andrés Altamira</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ricardo-forastieri.png" alt="Foto de Ricardo Forastieri" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ricardo Forastieri</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -665,8 +673,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">José Ángel Ramírez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Mario Enrique Chan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/jose-angel-ramirez.jpg" alt="Foto de José Ángel Ramírez" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">José Ángel Ramírez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/mario-enrique-chan.jpg" alt="Foto de Mario Enrique Chan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Mario Enrique Chan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -677,8 +685,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Cesar Armando Tuyo Bernal</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Iván Enrique Bavutti Bravo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/cesar-armando-tuyo-bernal.jpeg" alt="Foto de Cesar Armando Tuyo Bernal" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Cesar Armando Tuyo Bernal</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ivan-enrique-bavutti-bravo.jpeg" alt="Foto de Iván Enrique Bavutti Bravo" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Iván Enrique Bavutti Bravo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 

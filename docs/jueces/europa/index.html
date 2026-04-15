@@ -318,12 +318,32 @@ header.solid { background: var(--navy-deep); }
 @media (max-width: 900px) { .judges-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px)  { .judges-grid { grid-template-columns: 1fr; } }
 
+
 .judge-card {
   background: var(--cream);
   border: 1px solid var(--stone);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 16px;
   transition: all .35s var(--ease);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.judge-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--stone);
+  background: var(--warm-gray);
+}
+.judge-photo--placeholder {
+  border-color: transparent;
+}
+.judge-info {
+  min-width: 0;
 }
 .judge-card:hover {
   background: var(--white);
@@ -536,16 +556,16 @@ footer {
         <span class="country-count">10 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Alexander Probst</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Heiko Anton</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Glenn Eckerstofer</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Martina Koblikowa</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Michael Franke</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Gisela Hennings</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Silvio Wiegand</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Thomas Mehner</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Andras Seemann</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Kirsten Konkol</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/alexander-probst.png" alt="Foto de Alexander Probst" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Alexander Probst</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/heiko-anton.png" alt="Foto de Heiko Anton" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Heiko Anton</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/glenn-eckerstofer.png" alt="Foto de Glenn Eckerstofer" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Glenn Eckerstofer</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/martina-koblikowa.jpg" alt="Foto de Martina Koblikowa" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Martina Koblikowa</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/michael-franke.jpg" alt="Foto de Michael Franke" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Michael Franke</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/gisela-hennings.jpg" alt="Foto de Gisela Hennings" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Gisela Hennings</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/silvio-wiegand.jpg" alt="Foto de Silvio Wiegand" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Silvio Wiegand</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/thomas-mehner.png" alt="Foto de Thomas Mehner" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Thomas Mehner</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/andras-seemann.jpg" alt="Foto de Andras Seemann" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Andras Seemann</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/kirsten-konkol.jpg" alt="Foto de Kirsten Konkol" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Kirsten Konkol</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -556,7 +576,7 @@ footer {
         <span class="country-count">1 juez</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Violeta Gabrielyan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/violeta-gabrielyan.png" alt="Foto de Violeta Gabrielyan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Violeta Gabrielyan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -567,7 +587,7 @@ footer {
         <span class="country-count">1 juez</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Eva Klein</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/eva-klein.jpg" alt="Foto de Eva Klein" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Eva Klein</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -578,9 +598,9 @@ footer {
         <span class="country-count">3 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Van den Brande Felix</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Leys Francois</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Andres Christine</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/van-den-brande-felix.png" alt="Foto de Van den Brande Felix" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Van den Brande Felix</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/leys-francois.png" alt="Foto de Leys Francois" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Leys Francois</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/andres-christine.png" alt="Foto de Andres Christine" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Andres Christine</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -591,7 +611,7 @@ footer {
         <span class="country-count">1 juez</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Marek Harmata</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/marek-harmata.png" alt="Foto de Marek Harmata" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Marek Harmata</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -602,10 +622,10 @@ footer {
         <span class="country-count">4 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Mª Eugenia Ribelles Ferrer</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Pedro A. Serrano Gilabert</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Nayara Garcia</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Juan Carbó</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/m-eugenia-ribelles-ferrer.png" alt="Foto de Mª Eugenia Ribelles Ferrer" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Mª Eugenia Ribelles Ferrer</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/pedro-a-serrano-gilabert.png" alt="Foto de Pedro A. Serrano Gilabert" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Pedro A. Serrano Gilabert</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/nayara-garcia.png" alt="Foto de Nayara Garcia" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Nayara Garcia</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/juan-carbo.png" alt="Foto de Juan Carbó" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Juan Carbó</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -616,11 +636,11 @@ footer {
         <span class="country-count">5 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Julia Uceda Pérez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Marco Antonangeli</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Fabrizio Di Giallorenzo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Tiziano Guasti</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Antonio Pepi</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/julia-uceda-perez.jpg" alt="Foto de Julia Uceda Pérez" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Julia Uceda Pérez</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/marco-antonangeli.jpg" alt="Foto de Marco Antonangeli" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Marco Antonangeli</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/fabrizio-di-giallorenzo.jpg" alt="Foto de Fabrizio Di Giallorenzo" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Fabrizio Di Giallorenzo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/tiziano-guasti.jpg" alt="Foto de Tiziano Guasti" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Tiziano Guasti</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/antonio-pepi.jpg" alt="Foto de Antonio Pepi" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Antonio Pepi</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -631,17 +651,17 @@ footer {
         <span class="country-count">11 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Evgenia Golcova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Ineta Valdava</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Irina Seveljova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Marina Kukjan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Nadezhda Gorbunova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Oksana Kirilova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Svetlana Aleksejenok</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Svetlana Belika</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Svetlana Greiskane</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Zanna Ilcenko</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Stasys Cerniauskas</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/evgenia-golcova.jpg" alt="Foto de Evgenia Golcova" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Evgenia Golcova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ineta-valdava.jpg" alt="Foto de Ineta Valdava" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ineta Valdava</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/irina-seveljova.jpg" alt="Foto de Irina Seveljova" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Irina Seveljova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/marina-kukjan.jpg" alt="Foto de Marina Kukjan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Marina Kukjan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/nadezhda-gorbunova.jpg" alt="Foto de Nadezhda Gorbunova" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Nadezhda Gorbunova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/oksana-kirilova.jpg" alt="Foto de Oksana Kirilova" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Oksana Kirilova</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/svetlana-aleksejenok.jpg" alt="Foto de Svetlana Aleksejenok" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Svetlana Aleksejenok</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/svetlana-belika.jpg" alt="Foto de Svetlana Belika" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Svetlana Belika</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/svetlana-greiskane.jpg" alt="Foto de Svetlana Greiskane" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Svetlana Greiskane</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/zanna-ilcenko.jpg" alt="Foto de Zanna Ilcenko" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Zanna Ilcenko</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/stasys-cerniauskas.png" alt="Foto de Stasys Cerniauskas" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Stasys Cerniauskas</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -652,13 +672,13 @@ footer {
         <span class="country-count">7 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Fuglevik Elisabeth</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Gjeldsvik Vibeke Wold</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Gjelsvik Yngve</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Kopperud Kristine</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Sagar Tina</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Norhall Lisbeth</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Rijn Kristine van</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/fuglevik-elisabeth.png" alt="Foto de Fuglevik Elisabeth" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Fuglevik Elisabeth</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/gjeldsvik-vibeke-wold.png" alt="Foto de Gjeldsvik Vibeke Wold" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Gjeldsvik Vibeke Wold</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/gjelsvik-yngve.png" alt="Foto de Gjelsvik Yngve" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Gjelsvik Yngve</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/kopperud-kristine.png" alt="Foto de Kopperud Kristine" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Kopperud Kristine</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/sagar-tina.png" alt="Foto de Sagar Tina" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Sagar Tina</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/norhall-lisbeth.png" alt="Foto de Norhall Lisbeth" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Norhall Lisbeth</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/rijn-kristine-van.png" alt="Foto de Rijn Kristine van" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Rijn Kristine van</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -669,9 +689,9 @@ footer {
         <span class="country-count">3 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Barbara Marcinowska</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Grazyna Halina Pukocz</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Piotr Dworak-Sokolowski</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/barbara-marcinowska.png" alt="Foto de Barbara Marcinowska" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Barbara Marcinowska</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/grazyna-halina-pukocz.png" alt="Foto de Grazyna Halina Pukocz" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Grazyna Halina Pukocz</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/piotr-dworak-sokolowski.png" alt="Foto de Piotr Dworak-Sokolowski" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Piotr Dworak-Sokolowski</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -682,14 +702,14 @@ footer {
         <span class="country-count">8 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Ciolac Paul</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Comin Neagu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Cristina Epuras</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Flavian Savescu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Florin Cimiluc</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Martín Razvan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Mihaela Chivu Georgeta</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Adrian Diplan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ciolac-paul.png" alt="Foto de Ciolac Paul" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ciolac Paul</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/comin-neagu.png" alt="Foto de Comin Neagu" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Comin Neagu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/cristina-epuras.png" alt="Foto de Cristina Epuras" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Cristina Epuras</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/flavian-savescu.png" alt="Foto de Flavian Savescu" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Flavian Savescu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/florin-cimiluc.png" alt="Foto de Florin Cimiluc" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Florin Cimiluc</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/martin-razvan.png" alt="Foto de Martín Razvan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Martín Razvan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/mihaela-chivu-georgeta.png" alt="Foto de Mihaela Chivu Georgeta" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Mihaela Chivu Georgeta</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/adrian-diplan.png" alt="Foto de Adrian Diplan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Adrian Diplan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -700,8 +720,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Mustafa Helalpara</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Akin Tülübas</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/mustafa-helalpara.png" alt="Foto de Mustafa Helalpara" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Mustafa Helalpara</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/akin-tulubas.png" alt="Foto de Akin Tülübas" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Akin Tülübas</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -712,9 +732,9 @@ footer {
         <span class="country-count">3 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Binkovskyi Konstantin Petrovych</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Oksana Igorivna Shokhalevych</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Shchepinska Tetyana Vasylivna</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/binkovskyi-konstantin-petrovych.png" alt="Foto de Binkovskyi Konstantin Petrovych" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Binkovskyi Konstantin Petrovych</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/oksana-igorivna-shokhalevych.png" alt="Foto de Oksana Igorivna Shokhalevych" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Oksana Igorivna Shokhalevych</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/shchepinska-tetyana-vasylivna.png" alt="Foto de Shchepinska Tetyana Vasylivna" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Shchepinska Tetyana Vasylivna</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 

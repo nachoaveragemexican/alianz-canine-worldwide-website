@@ -316,12 +316,32 @@ header.solid { background: var(--navy-deep); }
 @media (max-width: 900px) { .judges-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px)  { .judges-grid { grid-template-columns: 1fr; } }
 
+
 .judge-card {
   background: var(--cream);
   border: 1px solid var(--stone);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 16px;
   transition: all .35s var(--ease);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.judge-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--stone);
+  background: var(--warm-gray);
+}
+.judge-photo--placeholder {
+  border-color: transparent;
+}
+.judge-info {
+  min-width: 0;
 }
 .judge-card:hover {
   background: var(--white);
@@ -532,16 +552,16 @@ footer {
         <span class="country-count">10 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Sol Shu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Wang Xiaoqing</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Shen Yanliang</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Lai Guangnan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Ye Yuanqing</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Wang Kai</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Li Xue Shan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Chen Risheng</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Zhou Hao</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Xu Rui</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/sol-shu.png" alt="Foto de Sol Shu" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Sol Shu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/wang-xiaoqing.jpeg" alt="Foto de Wang Xiaoqing" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Wang Xiaoqing</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/shen-yanliang.png" alt="Foto de Shen Yanliang" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Shen Yanliang</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/lai-guangnan.png" alt="Foto de Lai Guangnan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Lai Guangnan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ye-yuanqing.jpeg" alt="Foto de Ye Yuanqing" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ye Yuanqing</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/wang-kai.png" alt="Foto de Wang Kai" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Wang Kai</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/li-xue-shan.png" alt="Foto de Li Xue Shan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Li Xue Shan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/chen-risheng.png" alt="Foto de Chen Risheng" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Chen Risheng</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/zhou-hao.png" alt="Foto de Zhou Hao" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Zhou Hao</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/xu-rui.jpeg" alt="Foto de Xu Rui" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Xu Rui</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -552,7 +572,7 @@ footer {
         <span class="country-count">1 juez</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Mohamed Al Mass</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/mohamed-al-mass.jpg" alt="Foto de Mohamed Al Mass" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Mohamed Al Mass</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -563,9 +583,9 @@ footer {
         <span class="country-count">3 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Edgardo Cruz</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Jester Jo Ong Chuan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Joseph Ong Chuan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/edgardo-cruz.jpg" alt="Foto de Edgardo Cruz" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Edgardo Cruz</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/jester-jo-ong-chuan.jpg" alt="Foto de Jester Jo Ong Chuan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Jester Jo Ong Chuan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/joseph-ong-chuan.jpg" alt="Foto de Joseph Ong Chuan" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Joseph Ong Chuan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -576,9 +596,9 @@ footer {
         <span class="country-count">3 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Danny Tam</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Xiong Zhenguang</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Ley Waichuen</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/danny-tam.jpeg" alt="Foto de Danny Tam" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Danny Tam</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/xiong-zhenguang.png" alt="Foto de Xiong Zhenguang" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Xiong Zhenguang</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ley-waichuen.png" alt="Foto de Ley Waichuen" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ley Waichuen</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -589,12 +609,12 @@ footer {
         <span class="country-count">6 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Oshima Chihiro</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Sadao Nomura</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Yukio Okita</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Thoru Naka</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Yoshito Watanabe</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Atsushi Nomura</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/oshima-chihiro.jpg" alt="Foto de Oshima Chihiro" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Oshima Chihiro</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/sadao-nomura.jpg" alt="Foto de Sadao Nomura" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Sadao Nomura</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/yukio-okita.jpg" alt="Foto de Yukio Okita" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Yukio Okita</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/thoru-naka.jpg" alt="Foto de Thoru Naka" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Thoru Naka</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/yoshito-watanabe.jpg" alt="Foto de Yoshito Watanabe" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Yoshito Watanabe</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/atsushi-nomura.jpg" alt="Foto de Atsushi Nomura" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Atsushi Nomura</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -605,8 +625,8 @@ footer {
         <span class="country-count">2 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Bader Alsayegh</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Mohammed Amir Sarab</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/bader-alsayegh.jpg" alt="Foto de Bader Alsayegh" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Bader Alsayegh</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/mohammed-amir-sarab.jpg" alt="Foto de Mohammed Amir Sarab" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Mohammed Amir Sarab</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -617,20 +637,20 @@ footer {
         <span class="country-count">14 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Shin Gyu-Cheol</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Jung Chang-sik</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Anne Park</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Ahn Sung-goo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Kim Kook-han</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Lee Joon-yong</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Yoon Il-seob</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Lim Young-bai</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Cho Myung-jin</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Lee Pal-ho</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Yoo Byung-ju</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Kwak Soo-bok</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Lew Kyung-won</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Shin Kil-ho</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/shin-gyu-cheol.png" alt="Foto de Shin Gyu-Cheol" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Shin Gyu-Cheol</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/jung-chang-sik.png" alt="Foto de Jung Chang-sik" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Jung Chang-sik</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/anne-park.png" alt="Foto de Anne Park" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Anne Park</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/ahn-sung-goo.png" alt="Foto de Ahn Sung-goo" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Ahn Sung-goo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/kim-kook-han.png" alt="Foto de Kim Kook-han" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Kim Kook-han</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/lee-joon-yong.jpg" alt="Foto de Lee Joon-yong" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Lee Joon-yong</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/yoon-il-seob.png" alt="Foto de Yoon Il-seob" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Yoon Il-seob</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/lim-young-bai.png" alt="Foto de Lim Young-bai" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Lim Young-bai</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/cho-myung-jin.png" alt="Foto de Cho Myung-jin" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Cho Myung-jin</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/lee-pal-ho.png" alt="Foto de Lee Pal-ho" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Lee Pal-ho</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/yoo-byung-ju.jpg" alt="Foto de Yoo Byung-ju" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Yoo Byung-ju</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/kwak-soo-bok.png" alt="Foto de Kwak Soo-bok" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Kwak Soo-bok</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/lew-kyung-won.png" alt="Foto de Lew Kyung-won" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Lew Kyung-won</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/shin-kil-ho.jpg" alt="Foto de Shin Kil-ho" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Shin Kil-ho</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
@@ -641,9 +661,9 @@ footer {
         <span class="country-count">3 jueces</span>
       </div>
       <div class="judges-grid">
-        <article class="judge-card"><div class="judge-name">Chuluunjav Ayanga</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Yumeni Arumo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
-        <article class="judge-card"><div class="judge-name">Yakito Listo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><img class="judge-photo" src="../photos/chuluunjav-ayanga.jpg" alt="Foto de Chuluunjav Ayanga" width="64" height="64" loading="lazy"><div class="judge-info"><div class="judge-name">Chuluunjav Ayanga</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo judge-photo--placeholder" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%20fill%3D%22none%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2240%22%20fill%3D%22%23E8E4DD%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2232%22%20r%3D%2212%22%20fill%3D%22%23C5C0B8%22%2F%3E%3Cellipse%20cx%3D%2240%22%20cy%3D%2262%22%20rx%3D%2220%22%20ry%3D%2214%22%20fill%3D%22%23C5C0B8%22%2F%3E%3C%2Fsvg%3E" alt="" width="64" height="64" aria-hidden="true"><div class="judge-info"><div class="judge-name">Yumeni Arumo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
+        <article class="judge-card"><img class="judge-photo judge-photo--placeholder" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%20fill%3D%22none%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2240%22%20fill%3D%22%23E8E4DD%22%2F%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2232%22%20r%3D%2212%22%20fill%3D%22%23C5C0B8%22%2F%3E%3Cellipse%20cx%3D%2240%22%20cy%3D%2262%22%20rx%3D%2220%22%20ry%3D%2214%22%20fill%3D%22%23C5C0B8%22%2F%3E%3C%2Fsvg%3E" alt="" width="64" height="64" aria-hidden="true"><div class="judge-info"><div class="judge-name">Yakito Listo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></div></article>
       </div>
     </div>
 
