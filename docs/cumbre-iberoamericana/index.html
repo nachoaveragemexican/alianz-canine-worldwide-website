@@ -732,6 +732,7 @@ footer {
   transition: color .3s var(--ease);
 }
 .popup-secondary:hover { color: var(--white); }
+.popup-secondary:focus-visible { outline: 2px solid var(--teal-soft); outline-offset: 2px; }
 </style>
 </head>
 
@@ -1125,20 +1126,55 @@ document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
   var overlay = document.getElementById('cumbrePopup');
   if (!overlay || localStorage.getItem(KEY)) return;
 
+  var modal = overlay.querySelector('.popup-modal');
+  var previousFocus = null;
+
+  function getFocusableElements() {
+    return modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+  }
+
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    var focusable = getFocusableElements();
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') closePopup();
+    trapFocus(e);
+  }
+
   function closePopup() {
     overlay.classList.remove('active');
     localStorage.setItem(KEY, '1');
     document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeydown);
+    if (previousFocus) previousFocus.focus();
   }
+
   function closeAndScroll(target) {
+    previousFocus = null;
     closePopup();
     var el = document.querySelector(target);
     if (el) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth' }); }, 300);
   }
 
   setTimeout(function () {
+    previousFocus = document.activeElement;
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKeydown);
+    overlay.addEventListener('transitionend', function onShown() {
+      overlay.removeEventListener('transitionend', onShown);
+      document.getElementById('popupClose').focus();
+    });
   }, 600);
 
   document.getElementById('popupClose').addEventListener('click', closePopup);
@@ -1150,7 +1186,6 @@ document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
   document.getElementById('popupSecondary').addEventListener('click', function () {
     closeAndScroll('#programa');
   });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopup(); });
 })();
 </script>
 
