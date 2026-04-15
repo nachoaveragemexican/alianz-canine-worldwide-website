@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jueces en Asia | Alianz Canine Worldwide</title>
+<meta name="description" content="Directorio de jueces certificados por Alianz Canine Worldwide en Asia. 42 jueces en 8 países — China, Corea del Sur, Japón, Filipinas y más.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Jueces en Asia | Alianz Canine Worldwide">
+<meta property="og:description" content="43 jueces certificados por Alianz en 8 países asiáticos. Evaluadores morfológicos bajo normativa cinológica internacional.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================
+   ACW GLOBAL STYLES — jueces/asia
+   Paleta: Navy #1B2A4A | Gold #C5A55A | Teal #2A7B88
+   ============================================= */
+:root {
+  --navy:       #1B2A4A;
+  --navy-deep:  #0D1929;
+  --navy-mid:   #243656;
+  --gold:       #C5A55A;
+  --gold-soft:  #D9C88C;
+  --gold-dark:  #A68B3E;
+  --teal:       #2A7B88;
+  --teal-soft:  #357F8C;
+  --cream:      #FAF8F4;
+  --warm-gray:  #F3F1ED;
+  --stone:      #E8E4DD;
+  --text:       #1A1A1A;
+  --text-mid:   #5A5A5A;
+  --text-light: #6B6B6B;
+  --white:      #FFFFFF;
+  --serif:      'DM Serif Display', Georgia, serif;
+  --sans:       'Outfit', system-ui, sans-serif;
+  --ease:       cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: all .35s var(--ease); }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+
+.eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13,25,41,.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background .4s;
+}
+header.solid { background: var(--navy-deep); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.logo-text { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: .5px; }
+.logo-text em { font-style: italic; color: var(--gold-soft); }
+
+.nav-menu { display: flex; align-items: center; gap: 32px; }
+.nav-menu a { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); letter-spacing: .4px; }
+.nav-menu a:hover { color: var(--white); }
+.nav-menu a.current { color: var(--gold-soft); }
+.nav-cta {
+  padding: 9px 22px !important;
+  border: 1.5px solid rgba(197,165,90,.4) !important;
+  border-radius: 6px;
+  color: var(--gold-soft) !important;
+  font-weight: 600 !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border-color: var(--gold) !important;
+}
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.burger span { width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; transition: all .3s; }
+
+@media (max-width: 960px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding: 16px 0;
+  }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px clamp(20px, 4vw, 40px); width: 100%; }
+  .nav-cta { margin: 8px clamp(20px, 4vw, 40px) !important; width: auto !important; }
+  .burger { display: flex; }
+}
+
+/* =============================================
+   PAGE HERO
+   ============================================= */
+.page-hero {
+  padding: 160px 0 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,79,106,.18), transparent 70%);
+}
+.page-hero .wrap { position: relative; z-index: 2; }
+.page-hero .eyebrow { color: var(--gold-soft); }
+.page-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-hero p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* =============================================
+   BREADCRUMB
+   ============================================= */
+.breadcrumb {
+  background: var(--cream);
+  border-bottom: 1px solid var(--stone);
+  padding: 14px 0;
+}
+.breadcrumb-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+.breadcrumb-inner a { color: var(--teal); }
+.breadcrumb-inner a:hover { color: var(--navy); }
+.breadcrumb-sep { color: var(--stone); }
+
+/* =============================================
+   STATS STRIP
+   ============================================= */
+.stats-strip {
+  padding: clamp(36px, 5vw, 56px) 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--stone);
+}
+.stats-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  text-align: center;
+  max-width: 480px;
+}
+.stats-strip-item {
+  padding: 0 32px;
+  border-right: 1px solid var(--stone);
+}
+.stats-strip-item:last-child { border-right: none; }
+.stats-strip-num {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stats-strip-lbl {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+/* =============================================
+   SEARCH / FILTER
+   ============================================= */
+.search-section {
+  background: var(--cream);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--stone);
+}
+.search-box {
+  position: relative;
+  max-width: 480px;
+}
+.search-box input {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--white);
+  border: 1.5px solid var(--stone);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .3s, box-shadow .3s;
+}
+.search-box input::placeholder { color: var(--text-light); }
+.search-box input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(42,123,136,.1);
+}
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px; height: 18px;
+  stroke: var(--text-light);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+#searchCount {
+  margin-top: 10px;
+  font-size: .78rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* =============================================
+   JUDGES DIRECTORY
+   ============================================= */
+.directory {
+  padding: clamp(56px, 7vw, 88px) 0;
+  background: var(--white);
+}
+
+.country-section {
+  margin-bottom: 56px;
+}
+.country-section:last-of-type { margin-bottom: 0; }
+
+.country-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--stone);
+}
+.country-heading h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  color: var(--navy);
+  font-weight: 400;
+}
+.country-count {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(42,123,136,.08);
+  border: 1px solid rgba(42,123,136,.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.judges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 900px) { .judges-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .judges-grid { grid-template-columns: 1fr; } }
+
+.judge-card {
+  background: var(--cream);
+  border: 1px solid var(--stone);
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: all .35s var(--ease);
+}
+.judge-card:hover {
+  background: var(--white);
+  border-color: rgba(42,123,136,.3);
+  box-shadow: 0 8px 24px rgba(27,42,74,.07);
+  transform: translateY(-2px);
+}
+.judge-name {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.judge-specialty {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.judge-card.hidden { display: none; }
+.country-section.hidden { display: none; }
+
+/* =============================================
+   BACK LINK
+   ============================================= */
+.back-section {
+  padding: 48px 0 72px;
+  background: var(--cream);
+  border-top: 1px solid var(--stone);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: .2px;
+  transition: gap .3s, color .3s;
+}
+.back-link:hover { color: var(--navy); gap: 4px; }
+.back-link svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-light);
+  font-size: .95rem;
+}
+.no-results.visible { display: block; }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: var(--navy-deep);
+  padding: 64px 0 0;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.ft-brand h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--white); margin-bottom: 12px; }
+.ft-brand h3 em { font-style: italic; color: var(--gold-soft); }
+.ft-brand p { font-size: .82rem; color: rgba(255,255,255,.3); line-height: 1.75; max-width: 280px; }
+.ft-social { display: flex; gap: 10px; margin-top: 20px; }
+.ft-social a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.ft-social a:hover { border-color: var(--gold); background: rgba(197,165,90,.08); }
+.ft-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,.4); }
+.ft-social a:hover svg { fill: var(--gold-soft); }
+.ft-col h4 {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.ft-col ul { display: flex; flex-direction: column; gap: 11px; }
+.ft-col a { font-size: .82rem; color: rgba(255,255,255,.35); }
+.ft-col a:hover { color: var(--white); }
+.ft-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: .72rem;
+  color: rgba(255,255,255,.2);
+}
+.ft-bottom a { color: rgba(255,255,255,.2); }
+.ft-bottom a:hover { color: rgba(255,255,255,.5); }
+
+@media (max-width: 768px) { .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 500px)  { .ft-grid { grid-template-columns: 1fr; } }
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+.rv { opacity: 0; transform: translateY(28px); transition: all .8s var(--ease); }
+.rv.vis { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header id="hdr">
+  <div class="header-inner">
+    <a href="/alianz-canine-worldwide-website/" class="logo">
+      <span class="logo-text">Alianz <em>Canine Worldwide</em></span>
+    </a>
+    <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+      <a href="/alianz-canine-worldwide-website/">Inicio</a>
+      <a href="/alianz-canine-worldwide-website/nosotros">Nosotros</a>
+      <a href="/alianz-canine-worldwide-website/eventos">Eventos</a>
+      <a href="/alianz-canine-worldwide-website/razas">Razas</a>
+      <a href="/alianz-canine-worldwide-website/jueces" class="current">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
+      <a href="/alianz-canine-worldwide-website/blog">Blog</a>
+      <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
+      <a href="/alianz-canine-worldwide-website/cumbre-iberoamericana">Cumbre</a>
+      <a href="/alianz-canine-worldwide-website/404.html" class="nav-cta">Iniciar Sesión</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =================== PAGE HERO =================== -->
+<section class="page-hero" aria-label="Encabezado de página Jueces Asia">
+  <div class="wrap">
+    <div class="eyebrow rv">JUECES INTERNACIONALES</div>
+    <h1 class="rv">Jueces en Asia</h1>
+    <p class="rv">Cuarenta y tres jueces certificados en ocho países asiáticos. Una presencia creciente en los mercados cinológicos más dinámicos de Oriente, bajo los mismos estándares de evaluación morfológica que rigen la red global Alianz.</p>
+  </div>
+</section>
+
+<!-- =================== BREADCRUMB =================== -->
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <div class="wrap">
+    <div class="breadcrumb-inner">
+      <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Asia</span>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== STATS STRIP =================== -->
+<section class="stats-strip" aria-label="Estadísticas de jueces en Asia">
+  <div class="wrap">
+    <div class="stats-strip-inner rv">
+      <div class="stats-strip-item">
+        <div class="stats-strip-num">42</div>
+        <div class="stats-strip-lbl">Jueces Certificados</div>
+      </div>
+      <div class="stats-strip-item">
+        <div class="stats-strip-num">8</div>
+        <div class="stats-strip-lbl">Países Representados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SEARCH =================== -->
+<section class="search-section" aria-label="Buscar jueces">
+  <div class="wrap">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input
+        type="search"
+        id="judgeSearch"
+        placeholder="Buscar por nombre o país…"
+        aria-label="Buscar jueces por nombre o país"
+        autocomplete="off"
+      >
+    </div>
+    <div id="searchCount" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- =================== JUDGES DIRECTORY =================== -->
+<main class="directory" id="main-content" aria-label="Directorio de jueces en Asia">
+  <div class="wrap">
+
+    <div id="noResults" class="no-results" role="status">
+      No se encontraron jueces con ese término de búsqueda.
+    </div>
+
+    <!-- CHINA -->
+    <div class="country-section rv" data-country="China">
+      <div class="country-heading">
+        <h2>China</h2>
+        <span class="country-count">10 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Sol Shu</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Wang Xiaoqing</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Shen Yanliang</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Lai Guangnan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Ye Yuanqing</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Wang Kai</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Li Xue Shan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Chen Risheng</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Zhou Hao</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Xu Rui</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- BARÉIN -->
+    <div class="country-section rv" data-country="Baréin">
+      <div class="country-heading">
+        <h2>Baréin</h2>
+        <span class="country-count">1 juez</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Mohamed Al Mass</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- FILIPINAS -->
+    <div class="country-section rv" data-country="Filipinas">
+      <div class="country-heading">
+        <h2>Filipinas</h2>
+        <span class="country-count">3 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Edgardo Cruz</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Jester Jo Ong Chuan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Joseph Ong Chuan</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- HONG KONG -->
+    <div class="country-section rv" data-country="Hong Kong">
+      <div class="country-heading">
+        <h2>Hong Kong</h2>
+        <span class="country-count">3 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Danny Tam</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Xiong Zhenguang</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Ley Waichuen</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- JAPÓN -->
+    <div class="country-section rv" data-country="Japón">
+      <div class="country-heading">
+        <h2>Japón</h2>
+        <span class="country-count">6 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Oshima Chihiro</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Sadao Nomura</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Yukio Okita</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Thoru Naka</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Yoshito Watanabe</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Atsushi Nomura</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- KUWAIT -->
+    <div class="country-section rv" data-country="Kuwait">
+      <div class="country-heading">
+        <h2>Kuwait</h2>
+        <span class="country-count">2 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Bader Alsayegh</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Mohammed Amir Sarab</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- COREA DEL SUR -->
+    <div class="country-section rv" data-country="Corea del Sur">
+      <div class="country-heading">
+        <h2>Corea del Sur</h2>
+        <span class="country-count">14 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Shin Gyu-Cheol</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Jung Chang-sik</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Anne Park</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Ahn Sung-goo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Kim Kook-han</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Lee Joon-yong</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Yoon Il-seob</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Lim Young-bai</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Cho Myung-jin</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Lee Pal-ho</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Yoo Byung-ju</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Kwak Soo-bok</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Lew Kyung-won</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Shin Kil-ho</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+    <!-- MALASIA -->
+    <div class="country-section rv" data-country="Malasia">
+      <div class="country-heading">
+        <h2>Malasia</h2>
+        <span class="country-count">3 jueces</span>
+      </div>
+      <div class="judges-grid">
+        <article class="judge-card"><div class="judge-name">Chuluunjav Ayanga</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Yumeni Arumo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+        <article class="judge-card"><div class="judge-name">Yakito Listo</div><div class="judge-specialty">Todas las Razas — All Rounder</div></article>
+      </div>
+    </div>
+
+  </div><!-- /.wrap -->
+</main>
+
+<!-- =================== BACK LINK =================== -->
+<section class="back-section" aria-label="Volver al directorio">
+  <div class="wrap">
+    <a href="/alianz-canine-worldwide-website/jueces" class="back-link">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      Volver a Directorio de Jueces
+    </a>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <h3>Alianz <em>Canine Worldwide</em></h3>
+        <p>Organización Cinológica Internacional. Fundación de utilidad pública con más de 30 años de trayectoria, reconocida bajo normativa de la Unión Europea.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/AlianzCanineWorld" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alianzcanineworldwide" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/alianz-canine-worldwide-website/nosotros">Nosotros</a></li>
+          <li><a href="/alianz-canine-worldwide-website/eventos">Eventos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/razas">Razas</a></li>
+          <li><a href="/alianz-canine-worldwide-website/jueces">Jueces</a></li>
+          <li><a href="/alianz-canine-worldwide-website/deportes">Deportes</a></li>
+          <li><a href="/alianz-canine-worldwide-website/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Formación</a></li>
+          <li><a href="/alianz-canine-worldwide-website/contacto">Contacto</a></li>
+          <li><a href="/alianz-canine-worldwide-website/404.html">Área de Miembros</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@alianzcanineworldwide.org">info@alianzcanineworldwide.org</a></li>
+          <li><a href="https://wa.me/526625183938">+52 662 518 3938</a></li>
+          <li>Ctra. Nacional 301, Km. 384</li>
+          <li>Molina de Segura, Murcia, España</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      © 2026 Alianz Canine Worldwide. Todos los derechos reservados.
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Privacidad</a>
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Aviso Legal</a>
+      &nbsp;·&nbsp; <a href="/alianz-canine-worldwide-website/404.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky header
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 60));
+
+// Mobile burger
+document.getElementById('burgerBtn').addEventListener('click', function () {
+  const nav = document.getElementById('navMenu');
+  const open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+});
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('vis'), i * 80);
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// Live search / filter
+const searchInput = document.getElementById('judgeSearch');
+const searchCount = document.getElementById('searchCount');
+const noResults   = document.getElementById('noResults');
+const allSections = document.querySelectorAll('.country-section');
+
+searchInput.addEventListener('input', function () {
+  const q = this.value.trim().toLowerCase();
+  let totalVisible = 0;
+
+  allSections.forEach(section => {
+    const country = section.dataset.country.toLowerCase();
+    const cards   = section.querySelectorAll('.judge-card');
+    let sectionVisible = 0;
+
+    cards.forEach(card => {
+      const name = card.querySelector('.judge-name').textContent.toLowerCase();
+      const match = !q || name.includes(q) || country.includes(q);
+      card.classList.toggle('hidden', !match);
+      if (match) sectionVisible++;
+    });
+
+    section.classList.toggle('hidden', sectionVisible === 0);
+    totalVisible += sectionVisible;
+  });
+
+  noResults.classList.toggle('visible', totalVisible === 0 && q.length > 0);
+  searchCount.textContent = q
+    ? `${totalVisible} juez${totalVisible !== 1 ? 'ces' : ''} encontrado${totalVisible !== 1 ? 's' : ''}`
+    : '';
+});
+</script>
+
+</body>
+</html>

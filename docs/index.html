@@ -625,6 +625,7 @@ header.solid { background: var(--navy-deep); }
 .news-head a:hover { gap: 10px; }
 
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.nw-link { display: block; text-decoration: none; color: inherit; }
 .nw { transition: all .4s var(--ease); }
 .nw:hover { transform: translateY(-4px); }
 .nw-img { height: 220px; overflow: hidden; border-radius: 14px; margin-bottom: 20px; }
@@ -773,6 +774,7 @@ footer {
       <a href="/alianz-canine-worldwide-website/eventos">Eventos</a>
       <a href="/alianz-canine-worldwide-website/razas">Razas</a>
       <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
       <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
       <a href="/alianz-canine-worldwide-website/blog">Blog</a>
       <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
@@ -813,7 +815,7 @@ footer {
       <div class="stat rv"><div class="stat-num">50+</div><div class="stat-lbl">Países Miembro</div></div>
       <div class="stat rv"><div class="stat-num">30+</div><div class="stat-lbl">Años de Trayectoria</div></div>
       <div class="stat rv"><div class="stat-num">8</div><div class="stat-lbl">Grupos de Razas</div></div>
-      <div class="stat rv"><div class="stat-num">1000+</div><div class="stat-lbl">Jueces Certificados</div></div>
+      <div class="stat rv"><div class="stat-num">141</div><div class="stat-lbl">Jueces Certificados</div></div>
     </div>
   </div>
 </section>
@@ -959,7 +961,7 @@ footer {
       <article class="ev rv">
         <div class="ev-img">
           <img src="assets/images/igp-tijuana.png" alt="IGP Tijuana Trial" loading="lazy" width="400" height="200">
-          <div class="ev-date"><div class="ev-date-m">Abr</div><div class="ev-date-d">25</div><div class="ev-date-y">2026</div></div>
+          <div class="ev-date"><div class="ev-date-m">Abr</div><div class="ev-date-d">26</div><div class="ev-date-y">2026</div></div>
         </div>
         <div class="ev-body">
           <h3>IGP Tijuana Trial</h3>
@@ -1020,22 +1022,28 @@ footer {
 
     <div class="news-grid">
       <article class="nw rv">
-        <div class="nw-img"><img src="assets/images/seminario-combate-k9-elite.png" alt="Seminário de Combate K9 — Edição Elite" loading="lazy" width="400" height="220"></div>
-        <div class="nw-meta">Febrero 2026</div>
-        <h3>Seminário de Combate K9 — Edição Elite</h3>
-        <p>Evento de alta especialización para profesionales del entrenamiento canino de seguridad y defensa.</p>
+        <a href="/alianz-canine-worldwide-website/blog/seminario-combate-k9/" class="nw-link" aria-label="Leer artículo: Seminário de Combate K9">
+          <div class="nw-img"><img src="assets/images/seminario-combate-k9-elite.png" alt="Seminário de Combate K9 — Edição Elite" loading="lazy" width="400" height="220"></div>
+          <div class="nw-meta">Febrero 2026</div>
+          <h3>Seminário de Combate K9 — Edição Elite</h3>
+          <p>Evento de alta especialización para profesionales del entrenamiento canino de seguridad y defensa.</p>
+        </a>
       </article>
       <article class="nw rv">
-        <div class="nw-img"><img src="assets/images/feliz-ano-nuevo-2026-alianz.png" alt="Feliz Año Nuevo 2026" loading="lazy" width="400" height="220"></div>
-        <div class="nw-meta">Diciembre 2025</div>
-        <h3>¡Feliz Año Nuevo 2026 desde Alianz Canine Worldwide!</h3>
-        <p>Un nuevo año lleno de eventos internacionales, comunidad global y excelencia canina.</p>
+        <a href="/alianz-canine-worldwide-website/blog/feliz-ano-nuevo-2026/" class="nw-link" aria-label="Leer artículo: Feliz Año Nuevo 2026">
+          <div class="nw-img"><img src="assets/images/feliz-ano-nuevo-2026-alianz.png" alt="Feliz Año Nuevo 2026" loading="lazy" width="400" height="220"></div>
+          <div class="nw-meta">Diciembre 2025</div>
+          <h3>¡Feliz Año Nuevo 2026 desde Alianz Canine Worldwide!</h3>
+          <p>Un nuevo año lleno de eventos internacionales, comunidad global y excelencia canina.</p>
+        </a>
       </article>
       <article class="nw rv">
-        <div class="nw-img"><img src="assets/images/federacion-cinologica-peruana.jpeg" alt="Federación Cinológica Peruana" loading="lazy" width="400" height="220"></div>
-        <div class="nw-meta">Diciembre 2025</div>
-        <h3>Federación Cinológica Peruana nombra nuevo Director Nacional</h3>
-        <p>Iván Bavutti asume como Director Nacional de Razas Autóctonas del Perú.</p>
+        <a href="/alianz-canine-worldwide-website/blog/federacion-cinologica-peruana/" class="nw-link" aria-label="Leer artículo: Federación Cinológica Peruana">
+          <div class="nw-img"><img src="assets/images/federacion-cinologica-peruana.jpeg" alt="Federación Cinológica Peruana" loading="lazy" width="400" height="220"></div>
+          <div class="nw-meta">Diciembre 2025</div>
+          <h3>Federación Cinológica Peruana nombra nuevo Director Nacional</h3>
+          <p>Iván Bavutti asume como Director Nacional de Razas Autóctonas del Perú.</p>
+        </a>
       </article>
     </div>
   </div>
@@ -1080,6 +1088,7 @@ footer {
           <li><a href="/alianz-canine-worldwide-website/eventos">Eventos</a></li>
           <li><a href="/alianz-canine-worldwide-website/razas">Razas</a></li>
           <li><a href="/alianz-canine-worldwide-website/jueces">Jueces</a></li>
+          <li><a href="/alianz-canine-worldwide-website/deportes">Deportes</a></li>
           <li><a href="/alianz-canine-worldwide-website/blog">Blog</a></li>
         </ul>
       </div>

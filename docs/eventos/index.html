@@ -391,6 +391,7 @@ header.solid { background: var(--navy-deep); }
 }
 
 .past-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+a.past-card { text-decoration: none; color: inherit; display: block; }
 .past-card {
   background: var(--white);
   border-radius: 16px;
@@ -539,6 +540,7 @@ footer {
       <a href="/alianz-canine-worldwide-website/eventos" class="current">Eventos</a>
       <a href="/alianz-canine-worldwide-website/razas">Razas</a>
       <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
       <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
       <a href="/alianz-canine-worldwide-website/blog">Blog</a>
       <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
@@ -575,7 +577,7 @@ footer {
       <article class="ev rv">
         <div class="ev-img">
           <img src="../assets/images/igp-tijuana.png" alt="IGP Tijuana Trial" loading="lazy" width="400" height="200">
-          <div class="ev-date"><div class="ev-date-m">Abr</div><div class="ev-date-d">25</div><div class="ev-date-y">2026</div></div>
+          <div class="ev-date"><div class="ev-date-m">Abr</div><div class="ev-date-d">26</div><div class="ev-date-y">2026</div></div>
         </div>
         <div class="ev-body">
           <span class="ev-type">Deportes / IGP</span>
@@ -585,7 +587,7 @@ footer {
             Tijuana, México
           </div>
           <p class="ev-desc">Prueba oficial de IGP con evaluación en rastreo, obediencia y protección. Jueces certificados por Alianz. Abierto a ejemplares registrados con pedigree ACW.</p>
-          <a href="#contacto" class="ev-link">Más Información <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/alianz-canine-worldwide-website/eventos/igp-tijuana-trial" class="ev-link">Más Información <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </article>
 
@@ -602,7 +604,7 @@ footer {
             México
           </div>
           <p class="ev-desc">Evento insignia de Alianz Canine Worldwide. Exposiciones de conformación, deportes caninos, grooming profesional y congreso de formación. Participación de jueces y criadores de más de 30 países.</p>
-          <a href="#contacto" class="ev-link">Más Información <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/alianz-canine-worldwide-website/eventos/feria-mundial-acw-2027" class="ev-link">Más Información <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </article>
     </div>
@@ -679,35 +681,55 @@ footer {
     </div>
 
     <div class="past-grid">
-      <article class="past-card rv">
+      <a href="/alianz-canine-worldwide-website/eventos/curso-perros-rescate" class="past-card rv">
         <div class="past-card-img">
           <img src="../assets/images/perros-de-rescate.png" alt="Curso de Titulación: Perros de Rescate" loading="lazy" width="400" height="160">
         </div>
         <div class="past-card-body">
           <h3>Curso de Titulación: Perros de Rescate</h3>
-          <div class="past-card-meta">Marzo 2026 · Baja California, México</div>
+          <div class="past-card-meta">22 de marzo de 2026 · Baja California, México</div>
         </div>
-      </article>
+      </a>
 
-      <article class="past-card rv">
+      <a href="/alianz-canine-worldwide-website/eventos/exposicion-biomec%C3%A1nica" class="past-card rv">
         <div class="past-card-img">
-          <img src="../assets/images/cumbre-iberoamericana-2025.jpg" alt="Cumbre Iberoamericana ACW 2025" loading="lazy" width="400" height="160">
+          <img src="../assets/images/equinoccio-grooming-2025.jpg" alt="Exposición Biomecánica ACW" loading="lazy" width="400" height="160">
         </div>
         <div class="past-card-body">
-          <h3>Cumbre Iberoamericana ACW 2025</h3>
-          <div class="past-card-meta">Noviembre 2025 · España</div>
+          <h3>Exposición Biomecánica ACW</h3>
+          <div class="past-card-meta">8 de marzo de 2026 · Ecuador</div>
         </div>
-      </article>
+      </a>
 
-      <article class="past-card rv">
+      <a href="/alianz-canine-worldwide-website/eventos/equinoccio-grooming" class="past-card rv">
         <div class="past-card-img">
-          <img src="../assets/images/equinoccio-grooming-2025.jpg" alt="Equinoccio Grooming 2025" loading="lazy" width="400" height="160">
+          <img src="../assets/images/equinoccio-grooming-2025.jpg" alt="Equinoccio Grooming 2026" loading="lazy" width="400" height="160">
         </div>
         <div class="past-card-body">
-          <h3>Equinoccio Grooming 2025</h3>
-          <div class="past-card-meta">Septiembre 2025 · México</div>
+          <h3>Equinoccio Grooming 2026</h3>
+          <div class="past-card-meta">6 de marzo de 2026 · Ecuador</div>
         </div>
-      </article>
+      </a>
+
+      <a href="/alianz-canine-worldwide-website/eventos/cumbre-iberoamericana-ecuador" class="past-card rv">
+        <div class="past-card-img">
+          <img src="../assets/images/cumbre-iberoamericana-2025.jpg" alt="Cumbre Iberoamericana Ecuador ACW" loading="lazy" width="400" height="160">
+        </div>
+        <div class="past-card-body">
+          <h3>Cumbre Iberoamericana Ecuador ACW</h3>
+          <div class="past-card-meta">2–5 de marzo de 2026 · Ecuador</div>
+        </div>
+      </a>
+
+      <a href="/alianz-canine-worldwide-website/eventos/exposicion-murcia-2025" class="past-card rv">
+        <div class="past-card-img">
+          <img src="../assets/images/seminario-fastcat-2025.jpg" alt="Exposición Murcia 2025" loading="lazy" width="400" height="160">
+        </div>
+        <div class="past-card-body">
+          <h3>Exposición Murcia 2025</h3>
+          <div class="past-card-meta">30 de noviembre de 2025 · Murcia, España</div>
+        </div>
+      </a>
 
       <article class="past-card rv">
         <div class="past-card-img">
@@ -760,6 +782,7 @@ footer {
           <li><a href="/alianz-canine-worldwide-website/eventos">Eventos</a></li>
           <li><a href="/alianz-canine-worldwide-website/razas">Razas</a></li>
           <li><a href="/alianz-canine-worldwide-website/jueces">Jueces</a></li>
+          <li><a href="/alianz-canine-worldwide-website/deportes">Deportes</a></li>
           <li><a href="/alianz-canine-worldwide-website/blog">Blog</a></li>
         </ul>
       </div>

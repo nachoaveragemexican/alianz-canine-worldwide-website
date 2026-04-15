@@ -290,12 +290,14 @@ header.solid { background: var(--navy-deep); }
 
 /* Individual breed group card */
 .breed-card {
+  display: block;
   background: var(--white);
   border-radius: 16px;
   border: 1px solid var(--stone);
   overflow: hidden;
   transition: all .5s var(--ease);
   cursor: pointer;
+  color: inherit;
 }
 .breed-card:hover {
   transform: translateY(-4px);
@@ -565,6 +567,7 @@ footer {
       <a href="/alianz-canine-worldwide-website/eventos">Eventos</a>
       <a href="/alianz-canine-worldwide-website/razas" class="current">Razas</a>
       <a href="/alianz-canine-worldwide-website/jueces">Jueces</a>
+      <a href="/alianz-canine-worldwide-website/deportes">Deportes</a>
       <a href="/alianz-canine-worldwide-website/reglamentos">Reglamentos</a>
       <a href="/alianz-canine-worldwide-website/blog">Blog</a>
       <a href="/alianz-canine-worldwide-website/contacto">Contacto</a>
@@ -602,7 +605,7 @@ footer {
           <div class="razas-stat-lbl">Grupos de Razas</div>
         </div>
         <div class="razas-stat">
-          <div class="razas-stat-num">394</div>
+          <div class="razas-stat-num">439</div>
           <div class="razas-stat-lbl">Razas Reconocidas</div>
         </div>
         <div class="razas-stat">
@@ -630,7 +633,7 @@ footer {
     <div class="breed-grid">
 
       <!-- Grupo 1 -->
-      <article class="breed-card rv" aria-label="Grupo 1: Pastoreo y Guarda Mayor">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-1" class="breed-card rv" aria-label="Grupo 1: Pastoreo y Guarda Mayor">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 1</span>
           <img src="../assets/images/breed-group-1.jpg" alt="Pastoreo y Guarda Mayor — Grupo 1 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -639,12 +642,12 @@ footer {
           <div class="breed-card-num">Grupo 1</div>
           <h3>Pastoreo y Guarda Mayor</h3>
           <p>Pastores alemanes, collies, corgis y boyeros de todo el mundo: razas forjadas para conducir el ganado y custodiar el territorio, con inteligencia de trabajo sin igual.</p>
-          <div class="breed-card-count">Razas registradas: <span>87</span></div>
+          <div class="breed-card-count">Razas registradas: <span>90</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 2 -->
-      <article class="breed-card rv" aria-label="Grupo 2: Trabajo y Utilidad">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-2" class="breed-card rv" aria-label="Grupo 2: Trabajo y Utilidad">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 2</span>
           <img src="../assets/images/breed-group-2.jpg" alt="Trabajo y Utilidad — Grupo 2 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -655,10 +658,10 @@ footer {
           <p>Mastines, Dóbermans, Huskies Siberianos y Rottweilers: razas de gran porte criadas para la guarda, la tracción y el rescate en las condiciones más exigentes.</p>
           <div class="breed-card-count">Razas registradas: <span>49</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 3 -->
-      <article class="breed-card rv" aria-label="Grupo 3: Terriers">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-3" class="breed-card rv" aria-label="Grupo 3: Terriers">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 3</span>
           <img src="../assets/images/breed-group-3.jpg" alt="Terriers — Grupo 3 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -669,10 +672,10 @@ footer {
           <p>Todas las variedades de la familia, desde el Fox Terrier de pelo liso hasta el Airedale: carácter determinado, origen en la caza de madriguera y presencia reconocible a nivel mundial.</p>
           <div class="breed-card-count">Razas registradas: <span>36</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 4 -->
-      <article class="breed-card rv" aria-label="Grupo 4: Caza de Aves y Perdigueros">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-4" class="breed-card rv" aria-label="Grupo 4: Caza de Aves y Perdigueros">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 4</span>
           <img src="../assets/images/breed-group-4.jpg" alt="Caza de Aves y Perdigueros — Grupo 4 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -681,12 +684,12 @@ footer {
           <div class="breed-card-num">Grupo 4</div>
           <h3>Caza de Aves y Perdigueros</h3>
           <p>Bracos, Setters, Spanieles y Cobradores: perros de muestra y cobro seleccionados por su precisión olfativa y su capacidad de trabajo en estrecha colaboración con el cazador.</p>
-          <div class="breed-card-count">Razas registradas: <span>30</span></div>
+          <div class="breed-card-count">Razas registradas: <span>15</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 5 -->
-      <article class="breed-card rv" aria-label="Grupo 5: Caza Mayor">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-5" class="breed-card rv" aria-label="Grupo 5: Caza Mayor">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 5</span>
           <img src="../assets/images/breed-group-5.jpg" alt="Caza Mayor — Grupo 5 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -695,12 +698,12 @@ footer {
           <div class="breed-card-num">Grupo 5</div>
           <h3>Caza Mayor</h3>
           <p>Galgos, sabuesos, podencos y Teckels de talla estándar: razas concebidas para la caza en campo abierto, con velocidad, resistencia o olfato como herramienta principal según el tipo.</p>
-          <div class="breed-card-count">Razas registradas: <span>95</span></div>
+          <div class="breed-card-count">Razas registradas: <span>107</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 6 -->
-      <article class="breed-card rv" aria-label="Grupo 6: Compañía Mayor a 35 cm">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-6" class="breed-card rv" aria-label="Grupo 6: Compañía Mayor a 35 cm">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 6</span>
           <img src="../assets/images/breed-group-6.jpg" alt="Compañía Mayor a 35 cm — Grupo 6 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -709,12 +712,12 @@ footer {
           <div class="breed-card-num">Grupo 6</div>
           <h3>Compañía Mayor a 35 cm</h3>
           <p>Bulldogs, Dálmatas, Chow Chows, Spitz alemanes y Xoloitzcuintles: perros de compañía de talla media con historia propia, personalidad firme y presencia inconfundible.</p>
-          <div class="breed-card-count">Razas registradas: <span>32</span></div>
+          <div class="breed-card-count">Razas registradas: <span>31</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 7 -->
-      <article class="breed-card rv" aria-label="Grupo 7: Compañía Hasta 35 cm">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-7" class="breed-card rv" aria-label="Grupo 7: Compañía Hasta 35 cm">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 7</span>
           <img src="../assets/images/breed-group-7.jpg" alt="Compañía Hasta 35 cm — Grupo 7 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -725,10 +728,10 @@ footer {
           <p>Chihuahuas, Yorkshire Terriers, Pugs, Bichones y Pomeranios: las razas de pequeño formato con mayor implantación en hogares de todos los continentes.</p>
           <div class="breed-card-count">Razas registradas: <span>39</span></div>
         </div>
-      </article>
+      </a>
 
       <!-- Grupo 8 -->
-      <article class="breed-card rv" aria-label="Grupo 8: Misceláneos">
+      <a href="/alianz-canine-worldwide-website/razas/grupo-8" class="breed-card rv" aria-label="Grupo 8: Misceláneos">
         <div class="breed-card-img">
           <span class="breed-card-badge">Grupo 8</span>
           <img src="../assets/images/breed-group-8.jpg" alt="Misceláneos — Grupo 8 Alianz Canine Worldwide" loading="lazy" width="400" height="300">
@@ -737,9 +740,9 @@ footer {
           <div class="breed-card-num">Grupo 8</div>
           <h3>Misceláneos</h3>
           <p>Razas en proceso de reconocimiento, variedades experimentales y perros sin patrón establecido: un grupo en evolución que refleja la diversidad real del mundo canino.</p>
-          <div class="breed-card-count">Razas registradas: <span>80</span></div>
+          <div class="breed-card-count">Razas registradas: <span>72</span></div>
         </div>
-      </article>
+      </a>
 
     </div><!-- /breed-grid -->
   </div>
@@ -812,6 +815,7 @@ footer {
           <li><a href="/alianz-canine-worldwide-website/eventos">Eventos</a></li>
           <li><a href="/alianz-canine-worldwide-website/razas">Razas</a></li>
           <li><a href="/alianz-canine-worldwide-website/jueces">Jueces</a></li>
+          <li><a href="/alianz-canine-worldwide-website/deportes">Deportes</a></li>
           <li><a href="/alianz-canine-worldwide-website/blog">Blog</a></li>
         </ul>
       </div>
