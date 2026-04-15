@@ -10,6 +10,8 @@ desktop.ini
 
 # Node / build tools (if ever added)
 node_modules/
+package.json
+package-lock.json
 dist/
 .cache/
 
