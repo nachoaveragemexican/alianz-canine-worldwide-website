@@ -226,35 +226,30 @@ header.solid { background: var(--navy-deep); }
   line-height: 1.15;
   margin-bottom: 8px;
 }
-.cv-hero-info h1 em { font-style: italic; color: var(--gold-soft); }
 .cv-hero-title {
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--teal-soft);
   margin-bottom: 16px;
 }
-.cv-hero-meta {
+.cv-hero-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 24px;
-}
-.cv-meta-item {
-  display: flex;
-  align-items: center;
   gap: 8px;
-  font-size: .85rem;
-  color: rgba(255,255,255,.5);
+  margin-top: 20px;
 }
-.cv-meta-item svg {
-  width: 16px;
-  height: 16px;
+.cv-badge--hero {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(197,165,90,.25);
+  color: rgba(255,255,255,.8);
+}
+.cv-badge--hero:hover {
+  background: rgba(197,165,90,.12);
+  border-color: var(--gold-soft);
+}
+.cv-badge--hero svg {
   stroke: var(--gold-soft);
-  fill: none;
-  stroke-width: 1.5;
-  flex-shrink: 0;
 }
-.cv-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 @media (max-width: 600px) {
   .cv-hero .wrap {
@@ -263,8 +258,7 @@ header.solid { background: var(--navy-deep); }
     justify-items: center;
   }
   .cv-photo-wrap { width: 160px; height: 160px; }
-  .cv-hero-meta { justify-content: center; }
-  .cv-hero-actions { justify-content: center; }
+  .cv-hero-badges { justify-content: center; }
 }
 
 /* =============================================
@@ -536,33 +530,55 @@ footer {
 <section class="cv-hero" aria-label="Dr. Ricardo Forastieri — Perfil profesional">
   <div class="wrap">
     <div class="cv-photo-wrap rv">
-      <img src="../assets/images/leader-forastieri.svg" alt="Dr. Ricardo G. Forastieri González" width="200" height="200" loading="eager">
+      <img src="../assets/images/leader-forastieri.png" alt="Dr. Ricardo G. Forastieri González" width="200" height="200" loading="eager">
     </div>
     <div class="cv-hero-info">
       <p class="eyebrow rv">Currículum Vitae</p>
-      <h1 class="rv">Dr. Ricardo G. <em>Forastieri</em> González</h1>
+      <h1 class="rv">Dr. Ricardo G. Forastieri González</h1>
       <p class="cv-hero-title rv">Director General — Fundación Alianz Canine Worldwide</p>
-      <div class="cv-hero-meta rv">
-        <span class="cv-meta-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          24 de abril de 1965
+      <div class="cv-hero-badges rv">
+        <span class="cv-badge cv-badge--hero">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          Handler del Año 1997
         </span>
-        <span class="cv-meta-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Ciudad de México
+        <span class="cv-badge cv-badge--hero">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          Criador del Año 1996
         </span>
-        <span class="cv-meta-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          40+ años en cinología
+        <span class="cv-badge cv-badge--hero">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          Criador del Año 1997
         </span>
-      </div>
-      <div class="cv-hero-actions rv">
-        <a href="/alianz-canine-worldwide-website/nosotros" class="btn btn-outline">
-          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          Volver a Nosotros
-        </a>
+        <span class="cv-badge cv-badge--hero">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          Primer trial K-9 internacional en México (1995)
+        </span>
+        <span class="cv-badge cv-badge--hero">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Rescatista en el terremoto de Ciudad de México 1985
+        </span>
+        <span class="cv-badge cv-badge--hero">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Carrera internacional de juzgamiento
+        </span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== LIDERAZGO Y ASOCIACIONES ========== -->
+<section class="cv-section" aria-label="Liderazgo y asociaciones">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Liderazgo</p>
+      <h2>Presidencias y Asociaciones</h2>
+    </div>
+    <ul class="cv-list rv">
+      <li>Presidente del Club Canófilo Caliente</li>
+      <li>Presidente del Club Mexicano del Xoloitzcuintle</li>
+      <li>Presidente de múltiples clubes cinófilos en México</li>
+      <li>Productor y presentador del programa de televisión «Siguiendo Huellas»</li>
+    </ul>
   </div>
 </section>
 
@@ -728,58 +744,6 @@ footer {
         <h4>Entrenador Canino Profesional</h4>
         <p>Más de 40 años de experiencia en entrenamiento y formación canina profesional.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== LIDERAZGO Y ASOCIACIONES ========== -->
-<section class="cv-section" aria-label="Liderazgo y asociaciones">
-  <div class="wrap">
-    <div class="cv-section-header rv">
-      <p class="eyebrow">Liderazgo</p>
-      <h2>Presidencias y Asociaciones</h2>
-    </div>
-    <ul class="cv-list rv">
-      <li>Presidente del Club Canófilo Caliente</li>
-      <li>Presidente del Club Mexicano del Xoloitzcuintle</li>
-      <li>Presidente de múltiples clubes cinófilos en México</li>
-      <li>Productor y presentador del programa de televisión «Siguiendo Huellas»</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ========== LOGROS DESTACADOS ========== -->
-<section class="cv-section" aria-label="Logros destacados">
-  <div class="wrap">
-    <div class="cv-section-header rv">
-      <p class="eyebrow">Reconocimientos</p>
-      <h2>Logros Destacados</h2>
-    </div>
-    <div class="cv-badges rv">
-      <span class="cv-badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        Handler del Año 1997
-      </span>
-      <span class="cv-badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        Criador del Año 1996
-      </span>
-      <span class="cv-badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        Criador del Año 1997
-      </span>
-      <span class="cv-badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-        Primer trial K-9 internacional en México (1995)
-      </span>
-      <span class="cv-badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Rescatista en el terremoto de Ciudad de México 1985
-      </span>
-      <span class="cv-badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Carrera internacional de juzgamiento en múltiples países
-      </span>
     </div>
   </div>
 </section>
