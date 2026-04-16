@@ -1,0 +1,75 @@
+name: CI — Lint & Validate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  lint-html:
+    name: HTML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Lint HTML files
+        run: htmlhint "docs/**/*.html" --config .htmlhintrc
+
+  validate-structure:
+    name: Validate Site Structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check index.html exists
+        run: |
+          if [ ! -f docs/index.html ]; then
+            echo "ERROR: docs/index.html is missing"
+            exit 1
+          fi
+          echo "docs/index.html exists"
+
+      - name: Check for broken internal links
+        run: |
+          echo "Scanning for broken internal links..."
+          for html_file in $(find docs -name "*.html"); do
+            hrefs=$(grep -oP "href=\"(?!https?://|#|mailto:|tel:|javascript:)[^\"]*\"" "$html_file" | sed "s/href=\"//;s/\"//" || true)
+            for href in $hrefs; do
+              dir=$(dirname "$html_file")
+              target=$(realpath -m "$dir/$href" 2>/dev/null || echo "$dir/$href")
+              if [ ! -e "$target" ] && [ ! -e "${target}/index.html" ] && [ ! -e "${target%/}" ]; then
+                echo "WARN: Possible broken link in $html_file -> $href"
+              fi
+            done
+          done
+          echo "Internal link check complete"
+
+  check-images:
+    name: Validate Image References
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for missing image files
+        run: |
+          echo "Scanning for missing image references..."
+          for html_file in $(find docs -name "*.html"); do
+            srcs=$(grep -oP "src=\"(?!https?://|data:)[^\"]*\"" "$html_file" | sed "s/src=\"//;s/\"//" || true)
+            for src in $srcs; do
+              dir=$(dirname "$html_file")
+              target=$(realpath -m "$dir/$src" 2>/dev/null || echo "$dir/$src")
+              if [ ! -f "$target" ]; then
+                echo "WARN: Missing image in $html_file -> $src"
+              fi
+            done
+          done
+          echo "Image reference check complete"
