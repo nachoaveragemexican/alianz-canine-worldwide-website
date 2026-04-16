@@ -22,12 +22,18 @@ jobs:
         run: npm install -g htmlhint
 
       - name: Lint HTML files
+        # Soft-fail: 8 pre-existing tag-pairing errors in 4 blog posts
+        # (missing </tbody>, orphaned </a> tags). Making lint hard-fail
+        # would block all PRs until those are fixed. Once the legacy
+        # HTML is cleaned up, remove the "|| true" to enforce strict lint.
         run: |
           echo "Running HTMLHint on docs/**/*.html..."
           htmlhint "docs/**/*.html" --config .htmlhintrc || {
             echo ""
-            echo "::warning::HTMLHint found lint errors. Review the output above."
-            echo "Lint errors detected but not blocking CI. Fix these in a follow-up."
+            echo "::warning::HTMLHint found lint errors — see output above."
+            echo "Lint is soft-fail until pre-existing HTML issues are resolved."
+            echo "Tracked files: blog/parque-canino-mexico, blog/feria-mundial-mexico-2027,"
+            echo "  blog/fcp-cesar-tuyo-bernal, blog/campeonato-europeo-peluqueria"
           }
 
   validate-structure:
