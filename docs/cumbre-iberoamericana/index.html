@@ -483,88 +483,6 @@ header.solid { background: var(--navy-deep); }
 }
 
 /* =============================================
-   GALLERY — past editions
-   ============================================= */
-.cumbre-galeria {
-  padding: clamp(80px, 10vw, 120px) 0;
-  background: var(--cream);
-}
-.galeria-header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-.galeria-header .eyebrow { color: var(--teal); }
-.galeria-header h2 {
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  color: var(--navy);
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-.galeria-header p {
-  font-size: .95rem;
-  color: var(--text-mid);
-  line-height: 1.8;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.galeria-grid .gal-lg { grid-column: span 2; grid-row: span 2; }
-.galeria-item {
-  border-radius: 12px;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--navy-mid), var(--teal));
-  aspect-ratio: 16/10;
-  position: relative;
-  cursor: pointer;
-  transition: all .5s var(--ease);
-}
-.galeria-item.gal-lg { aspect-ratio: auto; }
-.galeria-item:hover { transform: scale(1.02); }
-.galeria-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .6s var(--ease);
-}
-.galeria-item:hover img { transform: scale(1.06); }
-.gal-overlay {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(13,25,41,.7), transparent);
-}
-.gal-overlay span {
-  font-size: .78rem;
-  font-weight: 500;
-  color: rgba(255,255,255,.8);
-}
-.gal-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: .78rem;
-  color: rgba(255,255,255,.35);
-  text-align: center;
-  padding: 16px;
-}
-
-@media (max-width: 768px) {
-  .galeria-grid { grid-template-columns: 1fr 1fr; }
-  .galeria-grid .gal-lg { grid-column: span 2; grid-row: span 1; aspect-ratio: 16/9; }
-}
-@media (max-width: 500px) {
-  .galeria-grid { grid-template-columns: 1fr; }
-  .galeria-grid .gal-lg { grid-column: span 1; }
-}
-
-/* =============================================
    FOOTER
    ============================================= */
 footer {
@@ -863,39 +781,6 @@ footer {
           <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="/alianz-canine-worldwide-website/contacto" class="btn btn-outline">Contactar para más información</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== GALLERY ========== -->
-<section class="cumbre-galeria" aria-label="Galería de ediciones anteriores">
-  <div class="wrap">
-    <div class="galeria-header">
-      <p class="eyebrow rv">Ediciones Anteriores</p>
-      <h2 class="rv">Momentos que inspiran</h2>
-      <p class="rv">Una mirada a las ediciones pasadas de la Cumbre Iberoamericana ACW.</p>
-    </div>
-
-    <div class="galeria-grid rv">
-      <div class="galeria-item gal-lg">
-        <div class="gal-placeholder">[Imagen principal — Edición anterior de la Cumbre]<br>Dimensiones: 800×600px</div>
-        <div class="gal-overlay"><span>[AWAITING COPY] — Año y sede</span></div>
-      </div>
-      <div class="galeria-item">
-        <div class="gal-placeholder">[Foto de exposición]<br>400×250px</div>
-      </div>
-      <div class="galeria-item">
-        <div class="gal-placeholder">[Foto de grooming]<br>400×250px</div>
-      </div>
-      <div class="galeria-item">
-        <div class="gal-placeholder">[Foto de conferencias]<br>400×250px</div>
-      </div>
-      <div class="galeria-item">
-        <div class="gal-placeholder">[Foto de premiación]<br>400×250px</div>
-      </div>
-      <div class="galeria-item">
-        <div class="gal-placeholder">[Foto de participantes]<br>400×250px</div>
       </div>
     </div>
   </div>
