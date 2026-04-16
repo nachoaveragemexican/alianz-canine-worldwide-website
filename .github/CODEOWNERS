@@ -1,0 +1,16 @@
+# CODEOWNERS — alianz-canine-worldwide-website
+# Maps file paths to code owners for automatic PR review assignment.
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @nachoaveragemexican
+
+# Documentation and process files
+/docs/ @nachoaveragemexican
+/reference/ @nachoaveragemexican
+CLAUDE.md @nachoaveragemexican
+README.md @nachoaveragemexican
+
+# Frontend assets and scripts
+/assets/ @nachoaveragemexican
+/scripts/ @nachoaveragemexican
