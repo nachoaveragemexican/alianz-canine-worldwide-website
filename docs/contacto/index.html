@@ -462,11 +462,11 @@ footer {
         <p>Completa el formulario y te responderemos en un plazo de 24 a 48 horas hábiles.</p>
 
         <!--
-          NOTA TÉCNICA: Formulario conectado a Web3Forms (servicio gratuito de envío de email).
+          NOTA TÉCNICA: Formulario conectado a Formsubmit.co (servicio gratuito de envío de email).
           Envía correos formateados a mario@marioforastieri.com con Reply-To del remitente.
-          Para activar: obtener access key en https://web3forms.com/#start y reemplazar
-          WEB3FORMS_KEY en el script. Para migración futura a GHL: reemplazar el fetch()
-          con el webhook de GoHighLevel manteniendo la misma estructura de datos.
+          Sin cuenta ni API key — solo requiere una confirmación por email la primera vez.
+          Para migración futura a GHL: reemplazar el fetch() con el webhook de GoHighLevel
+          manteniendo la misma estructura de datos.
         -->
         <form id="contactForm" novalidate>
           <div class="form-row">
@@ -705,10 +705,7 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: .08 });
 document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 
-// ---- Form submission via Web3Forms (free email forwarding) ----
-// ACCESS KEY: obtain from https://web3forms.com/#start using mario@marioforastieri.com
-var WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
-
+// ---- Form submission via Formsubmit.co (free, no account/key needed) ----
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -762,12 +759,12 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   // Build subject: [ACW Contacto] {Tipo de consulta} — {Nombre}
   var subject = '[ACW Contacto] ' + tipoTexto + ' \u2014 ' + nombre;
 
-  // Build plain-text email body with all fields
-  var body = 'Nombre: ' + nombre + '\n'
-           + 'Email: ' + email + '\n'
-           + 'Pa\u00eds: ' + pais + '\n'
-           + 'Tipo de consulta: ' + tipoTexto + '\n\n'
-           + 'Mensaje:\n' + mensaje;
+  // Build structured message body with all required fields
+  var fullMessage = 'Nombre: ' + nombre + '\n'
+                  + 'Email: ' + email + '\n'
+                  + 'Pa\u00eds: ' + pais + '\n'
+                  + 'Tipo de consulta: ' + tipoTexto + '\n\n'
+                  + 'Mensaje:\n' + mensaje;
 
   // Disable button and show sending state
   var btn = this.querySelector('.form-submit');
@@ -777,36 +774,34 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
   var form = this;
 
-  // POST to Web3Forms API
-  fetch('https://api.web3forms.com/submit', {
+  // POST to Formsubmit.co AJAX endpoint — no account or API key required
+  var formData = new FormData();
+  formData.append('name', nombre);
+  formData.append('email', email);
+  formData.append('message', fullMessage);
+  formData.append('_subject', subject);
+  formData.append('_replyto', email);
+  formData.append('_template', 'table');
+  formData.append('_captcha', 'false');
+
+  fetch('https://formsubmit.co/ajax/mario@marioforastieri.com', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      access_key: WEB3FORMS_KEY,
-      subject: subject,
-      from_name: 'ACW Contacto',
-      replyto: email,
-      name: nombre,
-      email: email,
-      message: body
-    })
+    headers: { 'Accept': 'application/json' },
+    body: formData
   })
   .then(function (res) { return res.json(); })
   .then(function (data) {
-    if (data.success) {
-      // Show inline success message
+    if (data.success === 'true' || data.success === true) {
       form.style.display = 'none';
       document.getElementById('formSuccess').classList.add('visible');
       document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
-      // Service returned an error
       btn.disabled = false;
       btn.innerHTML = btnOriginal;
       showFormError('No se pudo enviar el mensaje. Por favor, int\u00e9ntalo de nuevo.');
     }
   })
   .catch(function () {
-    // Network or unexpected error
     btn.disabled = false;
     btn.innerHTML = btnOriginal;
     showFormError('Error de conexi\u00f3n. Verifica tu internet e int\u00e9ntalo de nuevo.');
