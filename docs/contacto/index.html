@@ -462,10 +462,11 @@ footer {
         <p>Completa el formulario y te responderemos en un plazo de 24 a 48 horas hábiles.</p>
 
         <!--
-          NOTA TÉCNICA: Este formulario conecta al pipeline "Leads Web" en GoHighLevel.
-          Cada lead entra como contacto con tag automático según el tipo de consulta seleccionado.
-          Para integración GHL: reemplazar <form> con el snippet nativo de GHL Form Builder
-          o configurar el webhook correspondiente al campo "tipo".
+          NOTA TÉCNICA: Formulario conectado a Web3Forms (servicio gratuito de envío de email).
+          Envía correos formateados a mario@marioforastieri.com con Reply-To del remitente.
+          Para activar: obtener access key en https://web3forms.com/#start y reemplazar
+          WEB3FORMS_KEY en el script. Para migración futura a GHL: reemplazar el fetch()
+          con el webhook de GoHighLevel manteniendo la misma estructura de datos.
         -->
         <form id="contactForm" novalidate>
           <div class="form-row">
@@ -704,7 +705,10 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: .08 });
 document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 
-// ---- Form submission (client-side only — wire to GHL webhook in production) ----
+// ---- Form submission via Web3Forms (free email forwarding) ----
+// ACCESS KEY: obtain from https://web3forms.com/#start using mario@marioforastieri.com
+var WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -715,24 +719,23 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     el.style.borderColor = '';
   });
 
-  const required = this.querySelectorAll('[required]');
-  let valid = true;
+  var required = this.querySelectorAll('[required]');
+  var valid = true;
 
-  required.forEach(field => {
-    let errorMsg = '';
+  required.forEach(function (field) {
+    var errorMsg = '';
     if (!field.value.trim()) {
       errorMsg = 'Este campo es obligatorio.';
     } else if (field.type === 'email') {
-      // Validate email format since novalidate disables browser check
-      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRe.test(field.value.trim())) {
         errorMsg = 'Ingresa un correo electrónico válido.';
       }
     }
     if (errorMsg) {
-      field.style.borderColor = '#B91C1C'; /* red — not gold — for color-agnostic error */
+      field.style.borderColor = '#B91C1C';
       field.setAttribute('aria-invalid', 'true');
-      const err = document.createElement('span');
+      var err = document.createElement('span');
       err.className = 'field-error';
       err.setAttribute('role', 'alert');
       err.style.cssText = 'display:block;font-size:.75rem;color:#B91C1C;margin-top:4px;';
@@ -743,28 +746,84 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   });
 
   if (!valid) {
-    // Move focus to first invalid field for keyboard/screen reader users
-    const firstInvalid = this.querySelector('[aria-invalid]');
+    var firstInvalid = this.querySelector('[aria-invalid]');
     if (firstInvalid) firstInvalid.focus();
     return;
   }
 
-  // ⚠️ GHL INTEGRATION REQUIRED — form is NOT connected to any backend.
-  // Replace the placeholder below with the GoHighLevel webhook endpoint:
-  //
-  // fetch('https://services.leadconnectorhq.com/hooks/YOUR_WEBHOOK_ID', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(Object.fromEntries(new FormData(this)))
-  // }).then(() => { /* show success */ }).catch(() => { /* show error */ });
-  //
-  console.warn('[ACW] Contact form submitted but NO backend is connected. Wire GHL webhook before launch.');
+  // Gather form values
+  var nombre = document.getElementById('nombre').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var pais = document.getElementById('pais').value.trim() || 'No indicado';
+  var tipo = document.getElementById('tipo');
+  var tipoTexto = tipo.options[tipo.selectedIndex].text;
+  var mensaje = document.getElementById('mensaje').value.trim();
 
-  // Show success message (placeholder until GHL webhook is live)
-  this.style.display = 'none';
-  document.getElementById('formSuccess').classList.add('visible');
-  document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  // Build subject: [ACW Contacto] {Tipo de consulta} — {Nombre}
+  var subject = '[ACW Contacto] ' + tipoTexto + ' \u2014 ' + nombre;
+
+  // Build plain-text email body with all fields
+  var body = 'Nombre: ' + nombre + '\n'
+           + 'Email: ' + email + '\n'
+           + 'Pa\u00eds: ' + pais + '\n'
+           + 'Tipo de consulta: ' + tipoTexto + '\n\n'
+           + 'Mensaje:\n' + mensaje;
+
+  // Disable button and show sending state
+  var btn = this.querySelector('.form-submit');
+  var btnOriginal = btn.innerHTML;
+  btn.disabled = true;
+  btn.textContent = 'Enviando\u2026';
+
+  var form = this;
+
+  // POST to Web3Forms API
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      access_key: WEB3FORMS_KEY,
+      subject: subject,
+      from_name: 'ACW Contacto',
+      replyto: email,
+      name: nombre,
+      email: email,
+      message: body
+    })
+  })
+  .then(function (res) { return res.json(); })
+  .then(function (data) {
+    if (data.success) {
+      // Show inline success message
+      form.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('visible');
+      document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      // Service returned an error
+      btn.disabled = false;
+      btn.innerHTML = btnOriginal;
+      showFormError('No se pudo enviar el mensaje. Por favor, int\u00e9ntalo de nuevo.');
+    }
+  })
+  .catch(function () {
+    // Network or unexpected error
+    btn.disabled = false;
+    btn.innerHTML = btnOriginal;
+    showFormError('Error de conexi\u00f3n. Verifica tu internet e int\u00e9ntalo de nuevo.');
+  });
 });
+
+// Show a dismissible error banner below the submit button
+function showFormError(msg) {
+  var existing = document.querySelector('.form-error');
+  if (existing) existing.remove();
+  var el = document.createElement('div');
+  el.className = 'form-error';
+  el.setAttribute('role', 'alert');
+  el.style.cssText = 'padding:14px 18px;background:rgba(185,28,28,.08);border:1px solid rgba(185,28,28,.2);border-radius:10px;margin-top:16px;font-size:.88rem;color:#B91C1C;line-height:1.5;';
+  el.textContent = msg;
+  document.querySelector('.form-submit').insertAdjacentElement('afterend', el);
+}
 </script>
 </body>
 </html>
