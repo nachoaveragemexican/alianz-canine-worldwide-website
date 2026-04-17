@@ -1271,11 +1271,11 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: .08 });
 document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
 
-// ---- First-visit cumbre popup ----
+// ---- Per-session cumbre popup (sessionStorage resets each browser session) ----
 (function () {
   var KEY = 'acw-cumbre-popup-seen';
   var overlay = document.getElementById('cumbrePopup');
-  if (!overlay || localStorage.getItem(KEY)) return;
+  if (!overlay || sessionStorage.getItem(KEY)) return;
 
   var modal = overlay.querySelector('.popup-modal');
   var previousFocus = null;
@@ -1304,7 +1304,7 @@ document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
 
   function closePopup() {
     overlay.classList.remove('active');
-    localStorage.setItem(KEY, '1');
+    sessionStorage.setItem(KEY, '1');
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onKeydown);
     if (previousFocus) previousFocus.focus();
