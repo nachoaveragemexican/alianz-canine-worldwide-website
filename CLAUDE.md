@@ -70,6 +70,32 @@ Antes de escribir copy o datos institucionales:
 
 ---
 
+## Flujo de trabajo — Preview y despliegue
+
+El sitio se publica automáticamente via **GitHub Pages** desde la carpeta `docs/` en la rama `main`.
+
+**URL de preview:** https://agorabusinessworks.github.io/alianz-canine-worldwide-website/
+
+### Reglas de contribución
+
+1. **No hacer commits directos a `main`.** Todos los cambios van a una rama de feature (ej. `feature/nueva-seccion`, `fix/contacto-form`).
+2. **Abrir un Pull Request** contra `main` para cada cambio.
+3. **Publicar el link del PR** en el comentario de la tarea de Paperclip correspondiente.
+4. **Esperar aprobación** antes de hacer merge.
+5. **Verificar la URL de preview** después del merge para confirmar que los cambios se ven correctamente.
+6. **Solo importar a GoHighLevel** después de verificar el preview en GitHub Pages.
+
+### CI — Linting y validación
+
+Cada PR ejecuta automáticamente:
+- **HTML Lint** (HTMLHint) — valida sintaxis y buenas prácticas en `docs/**/*.html`
+- **Validación de estructura** — verifica que `docs/index.html` existe y busca enlaces internos rotos
+- **Validación de imágenes** — detecta referencias a imágenes faltantes
+
+La configuración de lint está en `.htmlhintrc`. El workflow de CI está en `.github/workflows/ci.yml`.
+
+---
+
 ## QA
 
 Todo HTML de producción en `docs/` debe ser revisado por Diego (QA Lead) antes de marcarse como listo.
