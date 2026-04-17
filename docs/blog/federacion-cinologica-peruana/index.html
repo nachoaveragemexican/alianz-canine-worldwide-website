@@ -49,9 +49,137 @@ footer{background:var(--navy-deep);padding:64px 0 0;border-top:1px solid rgba(25
 .ft-bottom{padding:24px 0;text-align:center;font-size:.72rem;color:rgba(255,255,255,.2);}.ft-bottom a{color:rgba(255,255,255,.2);}.ft-bottom a:hover{color:rgba(255,255,255,.5);}
 @media(max-width:768px){.ft-grid{grid-template-columns:1fr 1fr;gap:32px;}}@media(max-width:500px){.ft-grid{grid-template-columns:1fr;}}
 .rv{opacity:0;transform:translateY(28px);transition:all .8s var(--ease);}.rv.vis{opacity:1;transform:translateY(0);}
+/* =============================================
+   FIRST-VISIT CUMBRE POPUP MODAL
+   ============================================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(13, 25, 41, .7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s var(--ease), visibility .4s;
+}
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-modal {
+  background: var(--navy-deep);
+  border: 1px solid rgba(197, 165, 90, .2);
+  border-radius: 16px;
+  padding: clamp(32px, 5vw, 48px);
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  transform: translateY(24px) scale(.96);
+  transition: transform .5s var(--ease);
+}
+.popup-overlay.active .popup-modal {
+  transform: translateY(0) scale(1);
+}
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s var(--ease);
+}
+.popup-close:hover {
+  border-color: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .06);
+}
+.popup-close svg {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(255, 255, 255, .5);
+  stroke-width: 2;
+}
+.popup-close:hover svg { stroke: var(--white); }
+.popup-eyebrow {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.popup-modal h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.5vw, 2rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.popup-modal p {
+  font-size: .92rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, .55);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.popup-actions .btn-gold {
+  width: 100%;
+  justify-content: center;
+}
+.popup-secondary {
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--teal-soft);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--sans);
+  transition: color .3s var(--ease);
+}
+.popup-secondary:hover { color: var(--white); }
+.popup-secondary:focus-visible { outline: 2px solid var(--teal-soft); outline-offset: 2px; }
+
 </style>
 </head>
 <body>
+<!-- ========== FIRST-VISIT CUMBRE POPUP ========== -->
+<div class="popup-overlay" id="cumbrePopup" role="dialog" aria-modal="true" aria-label="Bienvenida a la Cumbre Iberoamericana">
+  <div class="popup-modal">
+    <button class="popup-close" id="popupClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <p class="popup-eyebrow">Cumbre Iberoamericana ACW 2026</p>
+    <h2>Bienvenido a la Cumbre Iberoamericana</h2>
+    <p>El encuentro cinológico más importante de Iberoamérica. Conferencias, exposiciones caninas, competencias de conformación y grooming profesional.<br><br>Inscríbete para asegurar tu lugar.</p>
+    <div class="popup-actions">
+      <a href="/alianz-canine-worldwide-website/cumbre-iberoamericana" class="btn btn-gold" id="popupCta">
+        Inscribirse ahora
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/alianz-canine-worldwide-website/cumbre-iberoamericana#programa" class="popup-secondary" id="popupSecondary">Explorar el programa</a>
+    </div>
+  </div>
+</div>
+
 
 <!-- =================== HEADER =================== -->
 <header id="hdr">
@@ -169,6 +297,61 @@ const hdr=document.getElementById('hdr');window.addEventListener('scroll',()=>hd
 document.getElementById('burgerBtn').addEventListener('click',function(){const nav=document.getElementById('navMenu');const open=nav.classList.toggle('open');this.setAttribute('aria-expanded',open);});
 const revealObs=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('vis'),i*80);revealObs.unobserve(entry.target);}});},{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>revealObs.observe(el));
+
+// ---- Per-session cumbre popup (sessionStorage resets each browser session) ----
+(function () {
+  var KEY = 'acw-cumbre-popup-seen';
+  var overlay = document.getElementById('cumbrePopup');
+  if (!overlay || sessionStorage.getItem(KEY)) return;
+
+  var modal = overlay.querySelector('.popup-modal');
+  var previousFocus = null;
+
+  function getFocusableElements() {
+    return modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+  }
+
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    var focusable = getFocusableElements();
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') closePopup();
+    trapFocus(e);
+  }
+
+  function closePopup() {
+    overlay.classList.remove('active');
+    sessionStorage.setItem(KEY, '1');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeydown);
+    if (previousFocus) previousFocus.focus();
+  }
+
+  setTimeout(function () {
+    previousFocus = document.activeElement;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKeydown);
+    overlay.addEventListener('transitionend', function onShown() {
+      overlay.removeEventListener('transitionend', onShown);
+      document.getElementById('popupClose').focus();
+    });
+  }, 600);
+
+  document.getElementById('popupClose').addEventListener('click', closePopup);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closePopup(); });
+})();
+
 </script>
 </body>
 </html>
