@@ -787,9 +787,14 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     headers: { 'Accept': 'application/json' },
     body: formData
   })
-  .then(function (res) { return res.json(); })
-  .then(function (data) {
-    if (data.success === 'true' || data.success === true) {
+  .then(function (res) {
+    var ok = res.ok;
+    return res.json()
+      .then(function (data) { return { ok: ok, data: data }; })
+      .catch(function () { return { ok: ok, data: {} }; });
+  })
+  .then(function (result) {
+    if (result.ok || result.data.success === 'true' || result.data.success === true) {
       form.style.display = 'none';
       document.getElementById('formSuccess').classList.add('visible');
       document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
