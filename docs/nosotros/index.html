@@ -466,18 +466,27 @@ header.solid { background: var(--navy-deep); }
   border: 1px solid var(--stone);
   transition: all .4s var(--ease);
 }
+/* Ensure <a> wrapper cards render identically to <div> cards */
+a.leader-card {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
 .leader-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 32px rgba(27,42,74,.06);
   border-color: transparent;
 }
-.leader-card h4 {
+.leader-card h4,
+a.leader-card h4 {
   font-family: var(--serif);
   font-size: 1.05rem;
   color: var(--navy);
   margin-bottom: 4px;
 }
-.leader-title {
+.leader-title,
+a.leader-card .leader-title {
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .8px;
@@ -485,7 +494,8 @@ header.solid { background: var(--navy-deep); }
   color: var(--teal);
   margin-bottom: 10px;
 }
-.leader-card p:last-child {
+.leader-card p:last-child,
+a.leader-card p:last-child {
   font-size: .82rem;
   color: var(--text-light);
   line-height: 1.75;
@@ -950,7 +960,7 @@ footer {
     </div>
     <div class="leadership-grid">
       <!-- Director General -->
-      <a href="/alianz-canine-worldwide-website/curriculum-forastieri" class="leader-card rv" style="display:block;cursor:pointer;text-decoration:none;color:inherit;">
+      <a href="/alianz-canine-worldwide-website/curriculum-forastieri" class="leader-card rv">
         <img src="../assets/images/leader-forastieri.png" alt="Ricardo Forastieri" class="leader-photo" width="365" height="365" loading="lazy">
         <div class="leader-info">
           <h4>Ricardo Forastieri</h4>
