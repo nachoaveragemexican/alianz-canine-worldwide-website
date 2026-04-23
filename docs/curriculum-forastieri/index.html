@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Ricardo Forastieri — Currículum | Alianz Canine Worldwide</title>
-<meta name="description" content="Currículum vitae del Dr. Ricardo G. Forastieri González — Director General de la Fundación Alianz Canine Worldwide. Más de 40 años de trayectoria en cinología, medicina veterinaria y formación canina.">
+<meta name="description" content="Currículum vitae del Dr. Ricardo G. Forastieri González — Especialista en Etología Canina, Juez Internacional FCI y Consultor de Seguridad K-9 con más de 50 años de trayectoria.">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Dr. Ricardo Forastieri — Currículum | Alianz Canine Worldwide">
-<meta property="og:description" content="Director General de ACW. Veterinario, psicólogo, juez internacional All-Breed y entrenador canino profesional con más de 40 años de experiencia.">
+<meta property="og:description" content="Especialista en Etología Canina, Juez Internacional FCI y Consultor K-9. Más de 50 años de experiencia en cinología, investigación y formación canina.">
 <meta property="og:type" content="profile">
 
 <!-- Fonts -->
@@ -282,6 +282,29 @@ header.solid { background: var(--navy-deep); }
   line-height: 1.15;
 }
 
+/* ---- Profile paragraph ---- */
+.cv-profile-text {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  max-width: 860px;
+}
+
+/* ---- Subsection headers ---- */
+.cv-subsection {
+  margin-bottom: 40px;
+}
+.cv-subsection:last-child { margin-bottom: 0; }
+.cv-subsection-title {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
 /* ---- Timeline ---- */
 .cv-timeline {
   position: relative;
@@ -436,6 +459,36 @@ header.solid { background: var(--navy-deep); }
   margin-top: 9px;
 }
 
+/* ---- Publications list ---- */
+.cv-pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cv-pub-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: .92rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+.cv-pub-list li svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--teal);
+  fill: none;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.cv-pub-list li em {
+  font-style: italic;
+  color: var(--navy);
+  font-weight: 500;
+}
+
 /* =============================================
    FOOTER
    ============================================= */
@@ -525,7 +578,7 @@ footer {
 </header>
 
 <main>
-<!-- ========== CV HERO ========== -->
+<!-- ========== CV HERO — Updated subtitle and 50 years ========== -->
 <section class="cv-hero" aria-label="Dr. Ricardo Forastieri — Perfil profesional">
   <div class="wrap">
     <div class="cv-photo-wrap rv">
@@ -534,50 +587,37 @@ footer {
     <div class="cv-hero-info">
       <p class="eyebrow rv">Currículum Vitae</p>
       <h1 class="rv">Dr. Ricardo G. Forastieri González</h1>
-      <p class="cv-hero-title rv">Director General — Fundación Alianz Canine Worldwide</p>
+      <p class="cv-hero-title rv">Especialista en Etología Canina · Juez Internacional FCI · Consultor de Seguridad K-9</p>
       <div class="cv-hero-badges rv">
         <span class="cv-badge cv-badge--hero">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          Handler del Año 1997
+          Criador del Año (FCM 1996)
         </span>
         <span class="cv-badge cv-badge--hero">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          Criador del Año 1996
+          Handler del Año (FCM 1997)
         </span>
         <span class="cv-badge cv-badge--hero">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          Criador del Año 1997
-        </span>
-        <span class="cv-badge cv-badge--hero">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-          Primer trial K-9 internacional en México (1995)
-        </span>
-        <span class="cv-badge cv-badge--hero">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Rescatista en el terremoto de Ciudad de México 1985
+          Mejor Escuela Canina de México (2000)
         </span>
         <span class="cv-badge cv-badge--hero">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Carrera internacional de juzgamiento
+          +50 años de experiencia cinológica
         </span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== LIDERAZGO Y ASOCIACIONES ========== -->
-<section class="cv-section" aria-label="Liderazgo y asociaciones">
+<!-- ========== PERFIL PROFESIONAL (NEW) ========== -->
+<section class="cv-section" aria-label="Perfil profesional">
   <div class="wrap">
     <div class="cv-section-header rv">
-      <p class="eyebrow">Liderazgo</p>
-      <h2>Presidencias y Asociaciones</h2>
+      <p class="eyebrow">Perfil</p>
+      <h2>Perfil Profesional</h2>
     </div>
-    <ul class="cv-list rv">
-      <li>Presidente del Club Canófilo Caliente</li>
-      <li>Presidente del Club Mexicano del Xoloitzcuintle</li>
-      <li>Presidente de múltiples clubes cinófilos en México</li>
-      <li>Productor y presentador del programa de televisión «Siguiendo Huellas»</li>
-    </ul>
+    <p class="cv-profile-text rv">Médico veterinario zootecnista y psicólogo con más de 50 años de experiencia en el ámbito cinológico. Pionero en la investigación genética de razas mexicanas, especialista en neuroetología canina y formado en las disciplinas complementarias de psicología y medicina veterinaria. Cuenta con amplia experiencia operativa en búsqueda y rescate (SAR) y tácticas policiales con unidades K-9. Fundador de instituciones líderes en cinología, autor de estándares de raza reconocidos internacionalmente y referente en la evolución del vínculo humano-animal a través de la ciencia.</p>
   </div>
 </section>
 
@@ -591,159 +631,201 @@ footer {
     <div class="cv-card-grid rv">
       <div class="cv-card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
-        <h4>Medicina Veterinaria y Zootecnia</h4>
-        <p>Universidad Nacional Autónoma de México (UNAM)</p>
+        <h4>Médico Veterinario Zootecnista</h4>
+        <p>Formación profesional en medicina veterinaria y zootecnia</p>
       </div>
       <div class="cv-card">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        <h4>Psicología</h4>
-        <p>Centro Universitario Coyotl — Cédula Profesional 12207630</p>
+        <h4>Licenciatura en Psicología</h4>
+        <p>Cédula Profesional 12207630</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== CERTIFICACIONES ========== -->
-<section class="cv-section" aria-label="Certificaciones y diplomados">
-  <div class="wrap">
-    <div class="cv-section-header rv">
-      <p class="eyebrow">Certificaciones</p>
-      <h2>Diplomados y Especialidades</h2>
-    </div>
-    <div class="cv-card-grid rv">
-      <div class="cv-card">
-        <p class="cv-card-year">1987</p>
-        <h4>Psicología Canina</h4>
-        <p>Especialización en comportamiento y psicología del perro</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">1994</p>
-        <h4>Crianza del Caballo Pura Raza Española</h4>
-        <p>Especialización en cría equina de pura raza</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">1995</p>
-        <h4>Doma Clásica — Master Class</h4>
-        <p>Formación avanzada en doma clásica ecuestre</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">1996</p>
-        <h4>Zootecnia del Perro y el Gato</h4>
-        <p>Especialización en zootecnia de pequeñas especies</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">1997</p>
-        <h4>Juez de Conformación All-Breed</h4>
-        <p>Certificación como juez de todas las razas</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2003</p>
-        <h4>Especialidad en Pastor Alemán</h4>
-        <p>Certificación especializada en la raza Pastor Alemán</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2005</p>
-        <h4>Academia de Policía — SSPT</h4>
-        <p>Formación en seguridad pública y técnicas policiales</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2005</p>
-        <h4>Análisis e Interpretación del Tatuaje Criminal</h4>
-        <p>Diplomado en técnicas de identificación y análisis criminal</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2005</p>
-        <h4>Inter-policía Hosting Práctica</h4>
-        <p>Formación práctica interinstitucional en técnicas policiales</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2005</p>
-        <h4>Armas y Tácticas Especiales</h4>
-        <p>Entrenamiento en respuesta a tirador activo y tácticas defensivas</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2005</p>
-        <h4>Academia de Policía</h4>
-        <p>Formación policial complementaria</p>
-      </div>
-      <div class="cv-card">
-        <p class="cv-card-year">2006</p>
-        <h4>Habilidades Críticas Antiterrorismo</h4>
-        <p>Formación avanzada en operaciones de contraterrorismo</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== EXPERIENCIA PROFESIONAL ========== -->
-<section class="cv-section" aria-label="Experiencia profesional">
+<!-- ========== TRAYECTORIA — 3 subsections ========== -->
+<section class="cv-section" aria-label="Trayectoria profesional">
   <div class="wrap">
     <div class="cv-section-header rv">
       <p class="eyebrow">Trayectoria</p>
-      <h2>Experiencia Profesional</h2>
+      <h2>Carrera Profesional</h2>
     </div>
-    <div class="cv-timeline rv">
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2025 — Presente</p>
-        <h4>Director General — Fundación Alianz Canine Worldwide</h4>
-        <p>Dirección estratégica y operativa de la fundación a nivel internacional.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2025 — Presente</p>
-        <h4>Fundador — Cinología México Internacional</h4>
-        <p>Creación de una nueva plataforma de formación y proyección cinológica internacional desde México.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2000 — Presente</p>
-        <h4>Juez Internacional All-Breed</h4>
-        <p>Juez de conformación de todas las razas con asignaciones en múltiples países. Juez especialista Schutzhund/IPO/IGP desde 1998.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">1992 — Presente</p>
-        <h4>Fundador y Maestro — Uno Entrenamiento Canino</h4>
-        <p>Fundador de la escuela canina reconocida como Mejor Escuela Canina en el año 2000. Formación integral de perros de trabajo, deporte y compañía.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">1992 — Presente</p>
-        <h4>Director, Veterinario en Jefe y Criador — Criadero Caliente</h4>
-        <p>Dirección general, atención veterinaria y programa de cría del criadero de referencia.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">1991 — Presente</p>
-        <h4>Veterinario y Especialista en Comportamiento — Parque Zoológico Internacional de Tijuana</h4>
-        <p>Atención veterinaria y especialización en comportamiento animal en uno de los zoológicos más importantes de la región.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">1989 — 1991</p>
-        <h4>Propietario y Gerente — Pet Clínica y Estética</h4>
-        <p>Primera clínica veterinaria y estética para mascotas, ubicada en Santa Mónica, Estado de México.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2005 — 2007</p>
-        <h4>Fundador y Jefe de Unidad K-9 — Seguridad Pública Municipal de Tijuana</h4>
-        <p>Creación y dirección de la unidad canina policial de la ciudad de Tijuana.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2006</p>
-        <h4>Maestro de Búsqueda y Rescate — INM Grupo Beta, Gobierno Federal</h4>
-        <p>Formación de equipos de búsqueda y rescate con binomios caninos para el Instituto Nacional de Migración.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2002 — 2005</p>
-        <h4>Fundador e Instructor Jefe — Cruz Roja Tijuana, Búsqueda y Rescate</h4>
-        <p>Creación y dirección del programa de búsqueda y rescate con perros de la Cruz Roja en Tijuana.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">2003 — 2014</p>
-        <h4>Miembro de la Directiva — FCM (Federación Canófila Mexicana)</h4>
-        <p>Participación en la junta directiva de la principal federación canófila de México.</p>
-      </div>
-      <div class="cv-timeline-item">
-        <p class="cv-timeline-date">1980 — Presente</p>
-        <h4>Entrenador Canino Profesional</h4>
-        <p>Más de 40 años de experiencia en entrenamiento y formación canina profesional.</p>
+
+    <!-- Subsection 1: Liderazgo Institucional y Ciencia Canina -->
+    <div class="cv-subsection rv">
+      <h3 class="cv-subsection-title">Liderazgo Institucional y Ciencia Canina</h3>
+      <div class="cv-timeline">
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">2025 — Presente</p>
+          <h4>Director y Fundador — Cinología México Internacional</h4>
+          <p>Plataforma de formación y proyección cinológica internacional desde México.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Investigación nacional</p>
+          <h4>Presidente de la Mesa Directiva Nacional del Xoloitzcuintle de México</h4>
+          <p>Investigación conjunta con INAH y CONACYT para la caracterización genética y preservación de la raza.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Presente</p>
+          <h4>Director General de Ciencia Canina — Alianz Canine Worldwide</h4>
+          <p>Dirección estratégica del área de ciencia canina a nivel internacional.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Desde 1998</p>
+          <h4>Juez Internacional All-Breed</h4>
+          <p>Certificado para todas las razas. Juez especialista en IGP/Schutzhund desde 1998.</p>
+        </div>
       </div>
     </div>
+
+    <!-- Subsection 2: Investigación y Conservación -->
+    <div class="cv-subsection rv">
+      <h3 class="cv-subsection-title">Investigación y Conservación</h3>
+      <div class="cv-timeline">
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Investigación multidisciplinaria</p>
+          <h4>Caracterización Genética del Xoloitzcuintle</h4>
+          <p>Investigación multidisciplinaria para la elaboración del estándar de raza internacional.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Desarrollo de raza</p>
+          <h4>Desarrollo de Raza: El Calupoh (Perro Lobo Mexicano)</h4>
+          <p>Registro nacional y proceso de aceptación internacional (ACW/AKC) del Perro Lobo Mexicano.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">1991 — Presente</p>
+          <h4>Especialista en Cánidos Silvestres — Parque Zoológico Internacional</h4>
+          <p>Manejo y estudio de lobos, coyotes y dingos. Veterinario y especialista en comportamiento animal.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subsection 3: Seguridad y Unidades K-9 -->
+    <div class="cv-subsection rv">
+      <h3 class="cv-subsection-title">Seguridad y Unidades K-9</h3>
+      <div class="cv-timeline">
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">2005 — 2007</p>
+          <h4>Fundador y Jefe de Unidad K-9 — Seguridad Pública de Tijuana</h4>
+          <p>Creación y dirección de la unidad canina policial de la ciudad de Tijuana.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Instructor maestro</p>
+          <h4>Maestro Instructor SAR — Grupo Beta (INM) y Cruz Roja Tijuana</h4>
+          <p>Formación de equipos de búsqueda y rescate con binomios caninos para el Instituto Nacional de Migración y la Cruz Roja.</p>
+        </div>
+        <div class="cv-timeline-item">
+          <p class="cv-timeline-date">Especialización táctica</p>
+          <h4>Especialista Táctico</h4>
+          <p>Instructor en tiro de precisión, conducción evasiva, rappel y contraterrorismo para Ejército, Marina y Policía.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOGROS Y RECONOCIMIENTOS ========== -->
+<section class="cv-section" aria-label="Logros y reconocimientos">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Reconocimientos</p>
+      <h2>Logros y Reconocimientos</h2>
+    </div>
+    <div class="cv-card-grid rv">
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        <h4>Criador y Handler del Año</h4>
+        <p>Reconocimiento de la Federación Canófila Mexicana (FCM) en 1996 y 1997.</p>
+      </div>
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <h4>Mejor Escuela de Entrenamiento Canino</h4>
+        <p>Reconocida como la Mejor Escuela Canina de México en el año 2000.</p>
+      </div>
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <h4>Autor y Educador</h4>
+        <p>Productor y presentador del programa de TV «Siguiendo Huellas» y de la revista «Planeta Canino».</p>
+      </div>
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <h4>Innovador en Nutrición</h4>
+        <p>Desarrollador de fórmulas de alimento de grado humano para perros de alto rendimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ÁREAS DE ESPECIALIZACIÓN (NEW) ========== -->
+<section class="cv-section" aria-label="Áreas de especialización">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Especialización</p>
+      <h2>Áreas de Especialización</h2>
+    </div>
+    <div class="cv-card-grid rv">
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <h4>Etología Científica</h4>
+        <p>Análisis de estructuras sociales y aprendizaje canino sin antropomorfismo.</p>
+      </div>
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <h4>Gestión Organizacional</h4>
+        <p>Administración de registros genealógicos y estándares de raza.</p>
+      </div>
+      <div class="cv-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h4>Formación Especializada</h4>
+        <p>Capacitación de jueces, handlers y equipos tácticos a nivel internacional (México, EE. UU., Guatemala).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PUBLICACIONES ========== -->
+<section class="cv-section" aria-label="Publicaciones">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Publicaciones</p>
+      <h2>Obras Publicadas</h2>
+    </div>
+    <ul class="cv-pub-list rv">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span><em>Manual Introductorio de Etología</em> — Guía fundamental para el estudio del comportamiento animal desde una perspectiva científica.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span><em>El Lobo Mexicano: El Calupoh</em> — Documentación del desarrollo y registro del Perro Lobo Mexicano como raza nacional.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span><em>Neuroetología Canina: Un Viaje para Comprender la Mente del Perro sin Antropomorfismo</em> — Obra sobre la neurociencia del comportamiento canino, libre de proyecciones humanas.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== META PERSONAL (NEW) ========== -->
+<section class="cv-section" aria-label="Meta personal">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Visión</p>
+      <h2>Meta Personal</h2>
+    </div>
+    <p class="cv-profile-text rv">Contribuir a la evolución del vínculo humano-animal a través de la ciencia, promoviendo el respeto por las especies y compartiendo décadas de observación clínica y de campo.</p>
+  </div>
+</section>
+
+<!-- ========== PERFIL BIOGRÁFICO (NEW) ========== -->
+<section class="cv-section" aria-label="Perfil biográfico">
+  <div class="wrap">
+    <div class="cv-section-header rv">
+      <p class="eyebrow">Biografía</p>
+      <h2>Perfil Biográfico</h2>
+    </div>
+    <p class="cv-profile-text rv">Con una formación dual en medicina veterinaria y psicología, el Dr. Ricardo G. Forastieri González ha desarrollado un enfoque único basado en la neuroetología para comprender el comportamiento canino. A lo largo de más de cinco décadas, ha ocupado roles institucionales clave: desde la presidencia de organizaciones cinológicas nacionales hasta la dirección de ciencia canina en Alianz Canine Worldwide. Su trabajo de investigación incluye la caracterización genética del Xoloitzcuintle en colaboración con INAH y CONACYT, y el desarrollo del Calupoh como raza reconocida internacionalmente. En el ámbito operativo, fundó y dirigió la unidad K-9 de Tijuana, formó equipos de búsqueda y rescate para el INM y la Cruz Roja, y se especializó como instructor táctico para fuerzas armadas y policiales. Es autor de tres obras de referencia: <em>Manual Introductorio de Etología</em>, <em>El Lobo Mexicano: El Calupoh</em> y <em>Neuroetología Canina: Un Viaje para Comprender la Mente del Perro sin Antropomorfismo</em>. Actualmente continúa su labor desde Tijuana, donde dirige Cinología México Internacional y colabora con ACW en la evolución de la ciencia canina global.</p>
   </div>
 </section>
 
